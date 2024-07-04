@@ -1,0 +1,3448 @@
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=214 format=3]
+
+[ext_resource type="Script" path="res://game_map.gd" id="1_d0ypq"]
+[ext_resource type="Script" path="res://logic_graph.gd" id="1_n4mqh"]
+[ext_resource type="Script" path="res://object.gd" id="2_lldes"]
+[ext_resource type="Script" path="res://logic_connection.gd" id="2_xw80r"]
+[ext_resource type="Script" path="res://logic_node.gd" id="3_jhs8i"]
+[ext_resource type="Script" path="res://map.gd" id="3_lwjbc"]
+[ext_resource type="Script" path="res://object_ref.gd" id="4_qbj13"]
+[ext_resource type="Script" path="res://logic_variable.gd" id="4_vegmi"]
+[ext_resource type="Script" path="res://room.gd" id="5_6363h"]
+[ext_resource type="Script" path="res://game_data.gd" id="6_fccv7"]
+[ext_resource type="Script" path="res://sprite_sheet.gd" id="7_kqug1"]
+[ext_resource type="Script" path="res://room_ref.gd" id="9_n4ugm"]
+
+[sub_resource type="Resource" id="Resource_kvrkf"]
+script = ExtResource("2_xw80r")
+from_node = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
+to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
+from_port = 0
+from_port_name = "init_x"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_676c1"]
+script = ExtResource("2_xw80r")
+from_node = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
+to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
+from_port = 1
+from_port_name = "init_y"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_64ejs"]
+script = ExtResource("2_xw80r")
+from_node = "22cf0828-b25a-4ac6-a209-6b4db24b0149"
+to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_h6tff"]
+script = ExtResource("2_xw80r")
+from_node = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+to_node = "bf882903-40cc-4711-ae3b-41f01eabe23c"
+from_port = 0
+from_port_name = "left"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5x25o"]
+script = ExtResource("2_xw80r")
+from_node = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+to_node = "c79fe70b-40f1-4dc4-8d6c-1087e7d1ec28"
+from_port = 1
+from_port_name = "right"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_nwl0t"]
+script = ExtResource("2_xw80r")
+from_node = "bf882903-40cc-4711-ae3b-41f01eabe23c"
+to_node = "4b066cbe-4004-418f-9528-9be8a7dd6814"
+from_port = 0
+from_port_name = "result"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_q606j"]
+script = ExtResource("2_xw80r")
+from_node = "c79fe70b-40f1-4dc4-8d6c-1087e7d1ec28"
+to_node = "4b066cbe-4004-418f-9528-9be8a7dd6814"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_dm0vu"]
+script = ExtResource("2_xw80r")
+from_node = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+to_node = "35651a89-8c6e-4003-8121-c7659def6688"
+from_port = 2
+from_port_name = "up"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5fg3q"]
+script = ExtResource("2_xw80r")
+from_node = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+to_node = "57895fab-0bc4-456f-8086-3693cbc17870"
+from_port = 3
+from_port_name = "down"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_vsyw3"]
+script = ExtResource("2_xw80r")
+from_node = "35651a89-8c6e-4003-8121-c7659def6688"
+to_node = "3b227b28-0da3-4779-897a-189bf555afc0"
+from_port = 0
+from_port_name = "result"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_to750"]
+script = ExtResource("2_xw80r")
+from_node = "57895fab-0bc4-456f-8086-3693cbc17870"
+to_node = "3b227b28-0da3-4779-897a-189bf555afc0"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ticmu"]
+script = ExtResource("2_xw80r")
+from_node = "57ce0b3f-a5aa-43df-a14a-db3dae31636e"
+to_node = "cd4bf3e9-6240-476c-956f-a3e16f602b17"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_1dkbm"]
+script = ExtResource("2_xw80r")
+from_node = "b257d854-57cb-4b22-a761-38813656bba5"
+to_node = "57ce0b3f-a5aa-43df-a14a-db3dae31636e"
+from_port = 1
+from_port_name = "collided_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_r6sly"]
+script = ExtResource("2_xw80r")
+from_node = "b257d854-57cb-4b22-a761-38813656bba5"
+to_node = "57ce0b3f-a5aa-43df-a14a-db3dae31636e"
+from_port = 2
+from_port_name = "collided"
+to_port = 1
+to_port_name = "ref"
+type = 2
+
+[sub_resource type="Resource" id="Resource_imfua"]
+script = ExtResource("2_xw80r")
+from_node = "cc1ea758-bcaf-4f8a-802c-46ca85004121"
+to_node = "5b5a9619-899f-40dd-8ef4-40a48d0f8862"
+from_port = 2
+from_port_name = "x"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_iuvo1"]
+script = ExtResource("2_xw80r")
+from_node = "3b227b28-0da3-4779-897a-189bf555afc0"
+to_node = "e3c143a7-874b-462e-b6dc-44a3a0989195"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_wtkfo"]
+script = ExtResource("2_xw80r")
+from_node = "cc1ea758-bcaf-4f8a-802c-46ca85004121"
+to_node = "e3c143a7-874b-462e-b6dc-44a3a0989195"
+from_port = 3
+from_port_name = "y"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_dhbui"]
+script = ExtResource("2_xw80r")
+from_node = "e3c143a7-874b-462e-b6dc-44a3a0989195"
+to_node = "b257d854-57cb-4b22-a761-38813656bba5"
+from_port = 0
+from_port_name = "result"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_15d0y"]
+script = ExtResource("2_xw80r")
+from_node = "5b5a9619-899f-40dd-8ef4-40a48d0f8862"
+to_node = "b257d854-57cb-4b22-a761-38813656bba5"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_k23ja"]
+script = ExtResource("2_xw80r")
+from_node = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+to_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
+from_port = 4
+from_port_name = "fire"
+to_port = 1
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_1b4qw"]
+script = ExtResource("2_xw80r")
+from_node = "cc1ea758-bcaf-4f8a-802c-46ca85004121"
+to_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+from_port = 2
+from_port_name = "x"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ou4jb"]
+script = ExtResource("2_xw80r")
+from_node = "cc1ea758-bcaf-4f8a-802c-46ca85004121"
+to_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+from_port = 3
+from_port_name = "y"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_l5rsc"]
+script = ExtResource("2_xw80r")
+from_node = "913a1a0b-f00a-47d6-ab10-8071c7a94bb0"
+to_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_xenig"]
+script = ExtResource("2_xw80r")
+from_node = "b257d854-57cb-4b22-a761-38813656bba5"
+to_node = "c928c9d0-2e5d-4054-9ff9-818afc85cdf0"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_dfp0c"]
+script = ExtResource("2_xw80r")
+from_node = "c928c9d0-2e5d-4054-9ff9-818afc85cdf0"
+to_node = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+from_port = 1
+from_port_name = "false_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_h30sb"]
+script = ExtResource("2_xw80r")
+from_node = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+to_node = "e706927d-54c0-41f3-9c0e-7483349a1f80"
+from_port = 0
+from_port_name = "true_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_mx1nx"]
+script = ExtResource("2_xw80r")
+from_node = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+to_node = "28c1cdd2-fe1f-4e50-b26b-68c6b011bb5b"
+from_port = 1
+from_port_name = "false_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_1cy37"]
+script = ExtResource("2_xw80r")
+from_node = "7c1b8777-6b4f-46f3-805a-5beb2646d366"
+to_node = "aff8875f-c630-473b-b4af-4bfe1f625d17"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_haxf2"]
+script = ExtResource("2_xw80r")
+from_node = "aff8875f-c630-473b-b4af-4bfe1f625d17"
+to_node = "b257d854-57cb-4b22-a761-38813656bba5"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_heg5o"]
+script = ExtResource("2_xw80r")
+from_node = "e5b543f7-3c43-4a28-9f01-1c2c1981ece7"
+to_node = "c928c9d0-2e5d-4054-9ff9-818afc85cdf0"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_6g7yn"]
+script = ExtResource("2_xw80r")
+from_node = "e5b543f7-3c43-4a28-9f01-1c2c1981ece7"
+to_node = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_e6bg4"]
+script = ExtResource("2_xw80r")
+from_node = "e5b543f7-3c43-4a28-9f01-1c2c1981ece7"
+to_node = "5b5a9619-899f-40dd-8ef4-40a48d0f8862"
+from_port = 0
+from_port_name = "val"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_i3max"]
+script = ExtResource("2_xw80r")
+from_node = "0317d53f-74a9-4ba1-b777-5f9bff10c969"
+to_node = "e705d343-1b9a-43d3-b961-49c3f405ad51"
+from_port = 0
+from_port_name = "val"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_djv2l"]
+script = ExtResource("2_xw80r")
+from_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+to_node = "e705d343-1b9a-43d3-b961-49c3f405ad51"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_ook0t"]
+script = ExtResource("2_xw80r")
+from_node = "4b066cbe-4004-418f-9528-9be8a7dd6814"
+to_node = "aff8875f-c630-473b-b4af-4bfe1f625d17"
+from_port = 0
+from_port_name = "result"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_so62a"]
+script = ExtResource("2_xw80r")
+from_node = "e706927d-54c0-41f3-9c0e-7483349a1f80"
+to_node = "e015b92c-3f45-4694-b627-6f422aee2b14"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_oj3bb"]
+script = ExtResource("2_xw80r")
+from_node = "28c1cdd2-fe1f-4e50-b26b-68c6b011bb5b"
+to_node = "e015b92c-3f45-4694-b627-6f422aee2b14"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_pa5dm"]
+script = ExtResource("2_xw80r")
+from_node = "e5b543f7-3c43-4a28-9f01-1c2c1981ece7"
+to_node = "e015b92c-3f45-4694-b627-6f422aee2b14"
+from_port = 0
+from_port_name = "val"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5a5ke"]
+script = ExtResource("2_xw80r")
+from_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
+to_node = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_kic2c"]
+script = ExtResource("2_xw80r")
+from_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+to_node = "e705d343-1b9a-43d3-b961-49c3f405ad51"
+from_port = 1
+from_port_name = "spawned_ref"
+to_port = 1
+to_port_name = "ref"
+type = 2
+
+[sub_resource type="Resource" id="Resource_qo8lr"]
+script = ExtResource("2_xw80r")
+from_node = "57ce0b3f-a5aa-43df-a14a-db3dae31636e"
+to_node = "cd4bf3e9-6240-476c-956f-a3e16f602b17"
+from_port = 2
+from_port_name = "val"
+to_port = 1
+to_port_name = "room"
+type = 1
+
+[sub_resource type="Resource" id="Resource_mayv7"]
+script = ExtResource("2_xw80r")
+from_node = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
+to_node = "4a07d4df-321f-4bc8-923d-661762027926"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_f0m26"]
+script = ExtResource("2_xw80r")
+from_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
+to_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_bwhsw"]
+script = ExtResource("2_xw80r")
+from_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
+to_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_mpmci"]
+script = ExtResource("2_xw80r")
+from_node = "f53377c1-c007-4beb-bc53-d371eb313d43"
+to_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
+from_port = 0
+from_port_name = ""
+to_port = 1
+to_port_name = ""
+type = 1
+
+[sub_resource type="Resource" id="Resource_uul8p"]
+script = ExtResource("2_xw80r")
+from_node = "e705d343-1b9a-43d3-b961-49c3f405ad51"
+to_node = "1ddec6bf-13af-4385-9fd2-574770cf2d04"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_ayx5c"]
+script = ExtResource("2_xw80r")
+from_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
+to_node = "ef6b1b89-cd7f-43cb-bcea-81824abcde00"
+from_port = 1
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_n5fl0"]
+script = ExtResource("3_jhs8i")
+id = "0317d53f-74a9-4ba1-b777-5f9bff10c969"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 1
+}
+position = Vector2(1180, 2160)
+
+[sub_resource type="Resource" id="Resource_n7vkj"]
+script = ExtResource("3_jhs8i")
+id = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 1,
+"object_type": 0,
+"variable": 1,
+"variable_name": ""
+}
+position = Vector2(1020, -280)
+
+[sub_resource type="Resource" id="Resource_g1cqb"]
+script = ExtResource("3_jhs8i")
+id = "22cf0828-b25a-4ac6-a209-6b4db24b0149"
+type = "7eeabba5-a095-4ea1-9e3a-5c10d352574d"
+properties = {}
+position = Vector2(180, -480)
+
+[sub_resource type="Resource" id="Resource_8vweg"]
+script = ExtResource("3_jhs8i")
+id = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
+type = "85776ba5-334c-421c-9797-8a630a0fe359"
+properties = {
+"const_x": 0,
+"const_y": 0,
+"object_type": 3
+}
+position = Vector2(1060, 1820)
+
+[sub_resource type="Resource" id="Resource_2sj5v"]
+script = ExtResource("3_jhs8i")
+id = "28c1cdd2-fe1f-4e50-b26b-68c6b011bb5b"
+type = "65005ffa-d937-4887-b6a1-cd39b6cebee6"
+properties = {
+"animation": 0,
+"rate": 0
+}
+position = Vector2(2360, 560)
+
+[sub_resource type="Resource" id="Resource_hkhnv"]
+script = ExtResource("3_jhs8i")
+id = "35651a89-8c6e-4003-8121-c7659def6688"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": -1,
+"operator": 2
+}
+position = Vector2(0, 1340)
+
+[sub_resource type="Resource" id="Resource_1mgca"]
+script = ExtResource("3_jhs8i")
+id = "3b227b28-0da3-4779-897a-189bf555afc0"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 0
+}
+position = Vector2(360, 1380)
+
+[sub_resource type="Resource" id="Resource_gty1y"]
+script = ExtResource("3_jhs8i")
+id = "4b066cbe-4004-418f-9528-9be8a7dd6814"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 0
+}
+position = Vector2(320, 660)
+
+[sub_resource type="Resource" id="Resource_0adoi"]
+script = ExtResource("3_jhs8i")
+id = "57895fab-0bc4-456f-8086-3693cbc17870"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 1,
+"operator": 2
+}
+position = Vector2(0, 1580)
+
+[sub_resource type="Resource" id="Resource_5jr4d"]
+script = ExtResource("3_jhs8i")
+id = "57ce0b3f-a5aa-43df-a14a-db3dae31636e"
+type = "c9b81783-09a0-4dda-bffb-776bbdcc4faa"
+properties = {
+"object_type": 1,
+"variable": "ROOM"
+}
+position = Vector2(1640, 1020)
+
+[sub_resource type="Resource" id="Resource_6v0uy"]
+script = ExtResource("3_jhs8i")
+id = "5b5a9619-899f-40dd-8ef4-40a48d0f8862"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 0
+}
+position = Vector2(920, 820)
+
+[sub_resource type="Resource" id="Resource_pkerr"]
+script = ExtResource("3_jhs8i")
+id = "64290e75-a622-47fd-8cca-1f2ac19c529b"
+type = "ca52338c-d006-4083-9ed0-794f54f2c3ec"
+properties = {}
+position = Vector2(-520, 1160)
+
+[sub_resource type="Resource" id="Resource_fea04"]
+script = ExtResource("3_jhs8i")
+id = "7c1b8777-6b4f-46f3-805a-5beb2646d366"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {}
+position = Vector2(300, 360)
+
+[sub_resource type="Resource" id="Resource_w4krg"]
+script = ExtResource("3_jhs8i")
+id = "913a1a0b-f00a-47d6-ab10-8071c7a94bb0"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {}
+position = Vector2(-460, 1880)
+
+[sub_resource type="Resource" id="Resource_g4wfy"]
+script = ExtResource("3_jhs8i")
+id = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(260, -280)
+
+[sub_resource type="Resource" id="Resource_flpe6"]
+script = ExtResource("3_jhs8i")
+id = "aff8875f-c630-473b-b4af-4bfe1f625d17"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 0,
+"variable_name": ""
+}
+position = Vector2(740, 380)
+
+[sub_resource type="Resource" id="Resource_c0we3"]
+script = ExtResource("3_jhs8i")
+id = "b257d854-57cb-4b22-a761-38813656bba5"
+type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(1280, 800)
+
+[sub_resource type="Resource" id="Resource_hwqst"]
+script = ExtResource("3_jhs8i")
+id = "bf882903-40cc-4711-ae3b-41f01eabe23c"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": -1,
+"operator": 2
+}
+position = Vector2(0, 600)
+
+[sub_resource type="Resource" id="Resource_oqhh0"]
+script = ExtResource("3_jhs8i")
+id = "c687700f-555b-4a5a-a4ff-f7a337b26958"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 5,
+"const_opb": 0
+}
+position = Vector2(20, 2060)
+
+[sub_resource type="Resource" id="Resource_2qc0q"]
+script = ExtResource("3_jhs8i")
+id = "c79fe70b-40f1-4dc4-8d6c-1087e7d1ec28"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 1,
+"operator": 2
+}
+position = Vector2(-20, 940)
+
+[sub_resource type="Resource" id="Resource_u63y5"]
+script = ExtResource("3_jhs8i")
+id = "c928c9d0-2e5d-4054-9ff9-818afc85cdf0"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 0,
+"const_opb": 0
+}
+position = Vector2(1580, 600)
+
+[sub_resource type="Resource" id="Resource_bxlj1"]
+script = ExtResource("3_jhs8i")
+id = "cc1ea758-bcaf-4f8a-802c-46ca85004121"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(360, 1020)
+
+[sub_resource type="Resource" id="Resource_c56aq"]
+script = ExtResource("3_jhs8i")
+id = "cd4bf3e9-6240-476c-956f-a3e16f602b17"
+type = "ed8d3797-bbab-456f-b34f-8aae9d3d8663"
+properties = {
+"room": 1
+}
+position = Vector2(2120, 1000)
+
+[sub_resource type="Resource" id="Resource_8bvn5"]
+script = ExtResource("3_jhs8i")
+id = "e015b92c-3f45-4694-b627-6f422aee2b14"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 1,
+"variable_name": ""
+}
+position = Vector2(2880, 420)
+
+[sub_resource type="Resource" id="Resource_fdjob"]
+script = ExtResource("3_jhs8i")
+id = "e3c143a7-874b-462e-b6dc-44a3a0989195"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 0
+}
+position = Vector2(680, 1160)
+
+[sub_resource type="Resource" id="Resource_0twhk"]
+script = ExtResource("3_jhs8i")
+id = "e5b543f7-3c43-4a28-9f01-1c2c1981ece7"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 0
+}
+position = Vector2(620, 700)
+
+[sub_resource type="Resource" id="Resource_28dy3"]
+script = ExtResource("3_jhs8i")
+id = "e705d343-1b9a-43d3-b961-49c3f405ad51"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 3,
+"variable": 0,
+"variable_name": "DIR"
+}
+position = Vector2(1580, 1940)
+
+[sub_resource type="Resource" id="Resource_o805y"]
+script = ExtResource("3_jhs8i")
+id = "e706927d-54c0-41f3-9c0e-7483349a1f80"
+type = "65005ffa-d937-4887-b6a1-cd39b6cebee6"
+properties = {
+"animation": 1,
+"rate": 0
+}
+position = Vector2(2360, 260)
+
+[sub_resource type="Resource" id="Resource_knc6f"]
+script = ExtResource("3_jhs8i")
+id = "ea10c944-8baa-44f9-893d-5723c7b8b524"
+type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(760, -280)
+
+[sub_resource type="Resource" id="Resource_h5d27"]
+script = ExtResource("3_jhs8i")
+id = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 2,
+"const_opb": 0
+}
+position = Vector2(1960, 380)
+
+[sub_resource type="Resource" id="Resource_4dkdw"]
+script = ExtResource("3_jhs8i")
+id = "4a07d4df-321f-4bc8-923d-661762027926"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 2,
+"variable_name": ""
+}
+position = Vector2(1340, -280)
+
+[sub_resource type="Resource" id="Resource_ycqkv"]
+script = ExtResource("3_jhs8i")
+id = "f53377c1-c007-4beb-bc53-d371eb313d43"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 2
+}
+position = Vector2(20, 1900)
+
+[sub_resource type="Resource" id="Resource_ys3b5"]
+script = ExtResource("3_jhs8i")
+id = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 0,
+"const_opb": 0
+}
+position = Vector2(440, 1860)
+
+[sub_resource type="Resource" id="Resource_ul6br"]
+script = ExtResource("3_jhs8i")
+id = "1ddec6bf-13af-4385-9fd2-574770cf2d04"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 1,
+"object_type": 0,
+"variable": 2,
+"variable_name": ""
+}
+position = Vector2(1960, 1940)
+
+[sub_resource type="Resource" id="Resource_s0tno"]
+script = ExtResource("3_jhs8i")
+id = "ef6b1b89-cd7f-43cb-bcea-81824abcde00"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 2,
+"variable_name": ""
+}
+position = Vector2(780, 2240)
+
+[sub_resource type="Resource" id="Resource_67gsy"]
+script = ExtResource("4_vegmi")
+name = "DIR"
+type = 2
+
+[sub_resource type="Resource" id="Resource_8gig3"]
+script = ExtResource("4_vegmi")
+name = "FACING"
+type = 2
+
+[sub_resource type="Resource" id="Resource_6ndm6"]
+script = ExtResource("4_vegmi")
+name = "DID_SHOOT"
+type = 2
+
+[sub_resource type="Resource" id="Resource_re2yo"]
+script = ExtResource("1_n4mqh")
+variables = Array[ExtResource("4_vegmi")]([SubResource("Resource_67gsy"), SubResource("Resource_8gig3"), SubResource("Resource_6ndm6")])
+nodes = {
+"0317d53f-74a9-4ba1-b777-5f9bff10c969": SubResource("Resource_n5fl0"),
+"1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a": SubResource("Resource_n7vkj"),
+"1ddec6bf-13af-4385-9fd2-574770cf2d04": SubResource("Resource_ul6br"),
+"22cf0828-b25a-4ac6-a209-6b4db24b0149": SubResource("Resource_g1cqb"),
+"27ccb65c-b471-4a6c-9c4a-a5229a1e70fa": SubResource("Resource_8vweg"),
+"28c1cdd2-fe1f-4e50-b26b-68c6b011bb5b": SubResource("Resource_2sj5v"),
+"35651a89-8c6e-4003-8121-c7659def6688": SubResource("Resource_hkhnv"),
+"3b227b28-0da3-4779-897a-189bf555afc0": SubResource("Resource_1mgca"),
+"4a07d4df-321f-4bc8-923d-661762027926": SubResource("Resource_4dkdw"),
+"4b066cbe-4004-418f-9528-9be8a7dd6814": SubResource("Resource_gty1y"),
+"57895fab-0bc4-456f-8086-3693cbc17870": SubResource("Resource_0adoi"),
+"57ce0b3f-a5aa-43df-a14a-db3dae31636e": SubResource("Resource_5jr4d"),
+"5b5a9619-899f-40dd-8ef4-40a48d0f8862": SubResource("Resource_6v0uy"),
+"64290e75-a622-47fd-8cca-1f2ac19c529b": SubResource("Resource_pkerr"),
+"71bf1f9e-053a-44c2-a1fb-85a722026f47": SubResource("Resource_ys3b5"),
+"7c1b8777-6b4f-46f3-805a-5beb2646d366": SubResource("Resource_fea04"),
+"913a1a0b-f00a-47d6-ab10-8071c7a94bb0": SubResource("Resource_w4krg"),
+"ab8977a0-ff4f-4ef2-beda-da73ccae67ef": SubResource("Resource_g4wfy"),
+"aff8875f-c630-473b-b4af-4bfe1f625d17": SubResource("Resource_flpe6"),
+"b257d854-57cb-4b22-a761-38813656bba5": SubResource("Resource_c0we3"),
+"bf882903-40cc-4711-ae3b-41f01eabe23c": SubResource("Resource_hwqst"),
+"c687700f-555b-4a5a-a4ff-f7a337b26958": SubResource("Resource_oqhh0"),
+"c79fe70b-40f1-4dc4-8d6c-1087e7d1ec28": SubResource("Resource_2qc0q"),
+"c928c9d0-2e5d-4054-9ff9-818afc85cdf0": SubResource("Resource_u63y5"),
+"cc1ea758-bcaf-4f8a-802c-46ca85004121": SubResource("Resource_bxlj1"),
+"cd4bf3e9-6240-476c-956f-a3e16f602b17": SubResource("Resource_c56aq"),
+"e015b92c-3f45-4694-b627-6f422aee2b14": SubResource("Resource_8bvn5"),
+"e3c143a7-874b-462e-b6dc-44a3a0989195": SubResource("Resource_fdjob"),
+"e5b543f7-3c43-4a28-9f01-1c2c1981ece7": SubResource("Resource_0twhk"),
+"e705d343-1b9a-43d3-b961-49c3f405ad51": SubResource("Resource_28dy3"),
+"e706927d-54c0-41f3-9c0e-7483349a1f80": SubResource("Resource_o805y"),
+"ea10c944-8baa-44f9-893d-5723c7b8b524": SubResource("Resource_knc6f"),
+"ef6b1b89-cd7f-43cb-bcea-81824abcde00": SubResource("Resource_s0tno"),
+"f53377c1-c007-4beb-bc53-d371eb313d43": SubResource("Resource_ycqkv"),
+"f988e749-12aa-470b-9bf8-ad107b1d41cf": SubResource("Resource_h5d27")
+}
+connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_kvrkf"), SubResource("Resource_676c1"), SubResource("Resource_64ejs"), SubResource("Resource_h6tff"), SubResource("Resource_5x25o"), SubResource("Resource_nwl0t"), SubResource("Resource_q606j"), SubResource("Resource_dm0vu"), SubResource("Resource_5fg3q"), SubResource("Resource_vsyw3"), SubResource("Resource_to750"), SubResource("Resource_ticmu"), SubResource("Resource_1dkbm"), SubResource("Resource_r6sly"), SubResource("Resource_imfua"), SubResource("Resource_iuvo1"), SubResource("Resource_wtkfo"), SubResource("Resource_dhbui"), SubResource("Resource_15d0y"), SubResource("Resource_k23ja"), SubResource("Resource_1b4qw"), SubResource("Resource_ou4jb"), SubResource("Resource_l5rsc"), SubResource("Resource_xenig"), SubResource("Resource_dfp0c"), SubResource("Resource_h30sb"), SubResource("Resource_mx1nx"), SubResource("Resource_1cy37"), SubResource("Resource_haxf2"), SubResource("Resource_heg5o"), SubResource("Resource_6g7yn"), SubResource("Resource_e6bg4"), SubResource("Resource_i3max"), SubResource("Resource_djv2l"), SubResource("Resource_ook0t"), SubResource("Resource_so62a"), SubResource("Resource_oj3bb"), SubResource("Resource_pa5dm"), SubResource("Resource_5a5ke"), SubResource("Resource_kic2c"), SubResource("Resource_qo8lr"), SubResource("Resource_mayv7"), SubResource("Resource_f0m26"), SubResource("Resource_bwhsw"), SubResource("Resource_mpmci"), SubResource("Resource_uul8p"), SubResource("Resource_ayx5c")])
+logic_container = null
+
+[sub_resource type="Resource" id="Resource_vh5fk"]
+script = ExtResource("7_kqug1")
+sheet_name = "Main"
+num_sprites = 9
+num_layers = 2
+sprite_width = 16
+sprite_height = 16
+num_pixels_per_sprite = 256
+sprite_data = [[Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0]), Array[int]([1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1])]]
+sprite_properties = Array[Dictionary]([{}, {}, {}, {}, {}, {}, {}, {}, {}])
+
+[sub_resource type="Resource" id="Resource_t7lwl"]
+script = ExtResource("2_lldes")
+object_name = "Player"
+animation_frames = Array[int]([2])
+animations = [Array[int]([2, 5, 2, 6]), [4, 7, 4, 8]]
+sprite_sheet = SubResource("Resource_vh5fk")
+object_logic = SubResource("Resource_re2yo")
+draw_mode = 3
+num_dynamic = 0
+
+[sub_resource type="Resource" id="Resource_k1igi"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_t7lwl")
+object_ref_name = "Player"
+initial_pos = Vector2i(24, 144)
+flags = {
+"collide": true,
+"collide_background": true
+}
+instance_variables = {
+"DIR": 0,
+"FACING": 0
+}
+
+[sub_resource type="Resource" id="Resource_1y3gs"]
+script = ExtResource("3_lwjbc")
+map_name = "unnamed"
+cells = {
+Vector2i(1, 1): 7,
+Vector2i(1, 2): 9,
+Vector2i(1, 3): 7,
+Vector2i(1, 4): 9,
+Vector2i(1, 5): 7,
+Vector2i(1, 6): 9,
+Vector2i(1, 7): 7,
+Vector2i(1, 8): 9,
+Vector2i(1, 9): 7,
+Vector2i(1, 10): 9,
+Vector2i(1, 11): 7,
+Vector2i(1, 12): 9,
+Vector2i(1, 13): 7,
+Vector2i(1, 14): 9,
+Vector2i(1, 15): 7,
+Vector2i(1, 16): 9,
+Vector2i(1, 17): 7,
+Vector2i(1, 18): 9,
+Vector2i(1, 19): 7,
+Vector2i(1, 20): 9,
+Vector2i(1, 21): 7,
+Vector2i(2, 1): 8,
+Vector2i(2, 2): 10,
+Vector2i(2, 3): 8,
+Vector2i(2, 4): 10,
+Vector2i(2, 5): 8,
+Vector2i(2, 6): 10,
+Vector2i(2, 7): 8,
+Vector2i(2, 8): 10,
+Vector2i(2, 9): 8,
+Vector2i(2, 10): 10,
+Vector2i(2, 11): 8,
+Vector2i(2, 12): 10,
+Vector2i(2, 13): 8,
+Vector2i(2, 14): 10,
+Vector2i(2, 15): 8,
+Vector2i(2, 16): 10,
+Vector2i(2, 17): 8,
+Vector2i(2, 18): 10,
+Vector2i(2, 19): 8,
+Vector2i(2, 20): 10,
+Vector2i(2, 21): 8,
+Vector2i(3, 1): 7,
+Vector2i(3, 2): 9,
+Vector2i(3, 20): 7,
+Vector2i(3, 21): 9,
+Vector2i(4, 1): 8,
+Vector2i(4, 2): 10,
+Vector2i(4, 20): 8,
+Vector2i(4, 21): 10,
+Vector2i(5, 1): 7,
+Vector2i(5, 2): 9,
+Vector2i(5, 20): 7,
+Vector2i(5, 21): 9,
+Vector2i(6, 1): 8,
+Vector2i(6, 2): 10,
+Vector2i(6, 20): 8,
+Vector2i(6, 21): 10,
+Vector2i(7, 1): 7,
+Vector2i(7, 2): 9,
+Vector2i(7, 20): 7,
+Vector2i(7, 21): 9,
+Vector2i(8, 1): 8,
+Vector2i(8, 2): 10,
+Vector2i(8, 20): 8,
+Vector2i(8, 21): 10,
+Vector2i(9, 1): 7,
+Vector2i(9, 2): 9,
+Vector2i(9, 20): 7,
+Vector2i(9, 21): 9,
+Vector2i(10, 1): 8,
+Vector2i(10, 2): 10,
+Vector2i(10, 17): 15,
+Vector2i(10, 18): 13,
+Vector2i(10, 19): 11,
+Vector2i(10, 20): 8,
+Vector2i(10, 21): 10,
+Vector2i(11, 1): 7,
+Vector2i(11, 2): 9,
+Vector2i(11, 17): 16,
+Vector2i(11, 18): 14,
+Vector2i(11, 19): 12,
+Vector2i(11, 20): 7,
+Vector2i(11, 21): 9,
+Vector2i(12, 1): 8,
+Vector2i(12, 2): 10,
+Vector2i(12, 20): 8,
+Vector2i(12, 21): 10,
+Vector2i(13, 1): 7,
+Vector2i(13, 2): 9,
+Vector2i(13, 20): 7,
+Vector2i(13, 21): 9,
+Vector2i(14, 1): 8,
+Vector2i(14, 2): 10,
+Vector2i(14, 20): 8,
+Vector2i(14, 21): 10,
+Vector2i(15, 1): 7,
+Vector2i(15, 2): 9,
+Vector2i(15, 20): 7,
+Vector2i(15, 21): 9,
+Vector2i(16, 1): 8,
+Vector2i(16, 2): 10,
+Vector2i(16, 20): 8,
+Vector2i(16, 21): 10,
+Vector2i(17, 1): 7,
+Vector2i(17, 2): 9,
+Vector2i(17, 20): 7,
+Vector2i(17, 21): 9,
+Vector2i(18, 1): 8,
+Vector2i(18, 2): 10,
+Vector2i(18, 20): 8,
+Vector2i(18, 21): 10,
+Vector2i(19, 1): 7,
+Vector2i(19, 2): 9,
+Vector2i(19, 20): 7,
+Vector2i(19, 21): 9,
+Vector2i(20, 1): 8,
+Vector2i(20, 2): 10,
+Vector2i(20, 20): 8,
+Vector2i(20, 21): 10,
+Vector2i(21, 1): 7,
+Vector2i(21, 2): 9,
+Vector2i(21, 20): 7,
+Vector2i(21, 21): 9,
+Vector2i(22, 1): 8,
+Vector2i(22, 2): 10,
+Vector2i(22, 20): 8,
+Vector2i(22, 21): 10,
+Vector2i(23, 1): 7,
+Vector2i(23, 2): 9,
+Vector2i(23, 20): 7,
+Vector2i(23, 21): 9,
+Vector2i(24, 1): 8,
+Vector2i(24, 2): 10,
+Vector2i(24, 20): 8,
+Vector2i(24, 21): 10,
+Vector2i(25, 1): 7,
+Vector2i(25, 2): 9,
+Vector2i(25, 20): 7,
+Vector2i(25, 21): 9,
+Vector2i(26, 1): 8,
+Vector2i(26, 2): 10,
+Vector2i(26, 20): 8,
+Vector2i(26, 21): 10,
+Vector2i(27, 1): 7,
+Vector2i(27, 2): 9,
+Vector2i(27, 20): 7,
+Vector2i(27, 21): 9,
+Vector2i(28, 1): 8,
+Vector2i(28, 2): 10,
+Vector2i(28, 20): 8,
+Vector2i(28, 21): 10,
+Vector2i(29, 1): 7,
+Vector2i(29, 2): 9,
+Vector2i(29, 20): 7,
+Vector2i(29, 21): 9,
+Vector2i(30, 1): 8,
+Vector2i(30, 2): 10,
+Vector2i(30, 7): 8,
+Vector2i(30, 8): 9,
+Vector2i(30, 9): 7,
+Vector2i(30, 10): 9,
+Vector2i(30, 11): 7,
+Vector2i(30, 12): 10,
+Vector2i(30, 13): 8,
+Vector2i(30, 14): 10,
+Vector2i(30, 15): 8,
+Vector2i(30, 20): 8,
+Vector2i(30, 21): 10,
+Vector2i(31, 1): 7,
+Vector2i(31, 2): 9,
+Vector2i(31, 7): 7,
+Vector2i(31, 8): 10,
+Vector2i(31, 9): 8,
+Vector2i(31, 10): 10,
+Vector2i(31, 11): 8,
+Vector2i(31, 12): 9,
+Vector2i(31, 13): 7,
+Vector2i(31, 14): 9,
+Vector2i(31, 15): 7,
+Vector2i(31, 20): 7,
+Vector2i(31, 21): 9
+}
+attrs = {
+Vector2i(1, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 3): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 4): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 5): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 6): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 7): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 8): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 9): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 10): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 11): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 12): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 13): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 14): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 15): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 16): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 17): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 18): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 19): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(1, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 3): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 4): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 5): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 6): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 7): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 8): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 9): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 10): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 11): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 12): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 13): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 14): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 15): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 16): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 17): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 18): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 19): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(2, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(3, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(3, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(3, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(3, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(4, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(4, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(4, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(4, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(5, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(5, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(5, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(5, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(6, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(6, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(6, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(6, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(7, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(7, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(7, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(7, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(8, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(8, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(8, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(8, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(9, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(9, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(9, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(9, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(10, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(10, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(10, 17): {
+"ink": 4,
+"paper": 0
+},
+Vector2i(10, 18): {
+"bright": false,
+"ink": 4,
+"paper": 0
+},
+Vector2i(10, 19): {
+"bright": false,
+"ink": 2,
+"paper": 0
+},
+Vector2i(10, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(10, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(11, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(11, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(11, 17): {
+"bright": false,
+"ink": 4,
+"paper": 0
+},
+Vector2i(11, 18): {
+"bright": false,
+"ink": 4,
+"paper": 0
+},
+Vector2i(11, 19): {
+"bright": false,
+"ink": 2,
+"paper": 0
+},
+Vector2i(11, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(11, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(12, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(12, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(12, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(12, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(13, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(13, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(13, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(13, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(14, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(14, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(14, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(14, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(15, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(15, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(15, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(15, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(16, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(16, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(16, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(16, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(17, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(17, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(17, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(17, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(18, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(18, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(18, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(18, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(19, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(19, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(19, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(19, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(20, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(20, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(20, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(20, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(21, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(21, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(21, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(21, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(22, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(22, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(22, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(22, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(23, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(23, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(23, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(23, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(24, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(24, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(24, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(24, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(25, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(25, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(25, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(25, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(26, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(26, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(26, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(26, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(27, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(27, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(27, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(27, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(28, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(28, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(28, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(28, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(29, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(29, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(29, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(29, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 7): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 8): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 9): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 10): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 11): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 12): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 13): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 14): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 15): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(30, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 1): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 2): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 7): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 8): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 9): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 10): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 11): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 12): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 13): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 14): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 15): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 20): {
+"bright": false,
+"ink": 2,
+"paper": 6
+},
+Vector2i(31, 21): {
+"bright": false,
+"ink": 2,
+"paper": 6
+}
+}
+
+[sub_resource type="Resource" id="Resource_7bf2b"]
+script = ExtResource("2_xw80r")
+from_node = "d8c60392-427b-407a-9e9b-9d4be2bd6f0e"
+to_node = "c722ab63-0fbd-4d84-bf73-ed139b352ff7"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_2dkar"]
+script = ExtResource("2_xw80r")
+from_node = "71acb1bc-cfd5-48ba-ae19-e2dadaee4592"
+to_node = "d2305abe-e637-4e69-a166-d5f0266d91cd"
+from_port = 0
+from_port_name = "val"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_6x558"]
+script = ExtResource("2_xw80r")
+from_node = "ccc09300-3816-4f03-9213-b287371a454f"
+to_node = "d2305abe-e637-4e69-a166-d5f0266d91cd"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_aqef0"]
+script = ExtResource("2_xw80r")
+from_node = "c722ab63-0fbd-4d84-bf73-ed139b352ff7"
+to_node = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_ja6jo"]
+script = ExtResource("2_xw80r")
+from_node = "71acb1bc-cfd5-48ba-ae19-e2dadaee4592"
+to_node = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ybmcr"]
+script = ExtResource("2_xw80r")
+from_node = "101f326b-a32f-4e2b-b990-4b000f3750a3"
+to_node = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+from_port = 0
+from_port_name = "val"
+to_port = 2
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_1djp4"]
+script = ExtResource("2_xw80r")
+from_node = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+to_node = "7aa7669c-6431-4fbe-866c-7bd76b4720fc"
+from_port = 0
+from_port_name = "true_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_mqdmd"]
+script = ExtResource("2_xw80r")
+from_node = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+to_node = "5bfd9cd9-c9be-461d-bc97-59f736aa41b9"
+from_port = 1
+from_port_name = "false_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_s5rm8"]
+script = ExtResource("2_xw80r")
+from_node = "71acb1bc-cfd5-48ba-ae19-e2dadaee4592"
+to_node = "5bfd9cd9-c9be-461d-bc97-59f736aa41b9"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5bb2t"]
+script = ExtResource("2_xw80r")
+from_node = "cf52e346-d614-464c-b461-5597a8b7f87e"
+to_node = "5bfd9cd9-c9be-461d-bc97-59f736aa41b9"
+from_port = 0
+from_port_name = "val"
+to_port = 2
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_kaap0"]
+script = ExtResource("2_xw80r")
+from_node = "5bfd9cd9-c9be-461d-bc97-59f736aa41b9"
+to_node = "51c10666-b828-4431-9223-3ebdbfccd1f6"
+from_port = 0
+from_port_name = "true_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_rmd6w"]
+script = ExtResource("2_xw80r")
+from_node = "25549481-64f8-47da-8ff2-14721757f34f"
+to_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_wul2p"]
+script = ExtResource("2_xw80r")
+from_node = "5af3866c-ba71-4377-a260-2b20ba16f1a4"
+to_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+from_port = 0
+from_port_name = "init_x"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5ennn"]
+script = ExtResource("2_xw80r")
+from_node = "42d9a738-4050-47f4-b466-a2826814e503"
+to_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+from_port = 0
+from_port_name = "val"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_6g3ow"]
+script = ExtResource("2_xw80r")
+from_node = "77db6431-c191-466e-b520-4b250d5ecdf1"
+to_node = "4b961e6f-3414-4c9a-9d42-31125e4a7506"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_xr5tk"]
+script = ExtResource("2_xw80r")
+from_node = "4b961e6f-3414-4c9a-9d42-31125e4a7506"
+to_node = "c7119aac-b428-4dcf-a6a0-fa6e7f2e967b"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_g4udr"]
+script = ExtResource("2_xw80r")
+from_node = "449f0098-ad47-4311-aec7-f0435798ec93"
+to_node = "4b961e6f-3414-4c9a-9d42-31125e4a7506"
+from_port = 1
+from_port_name = "init_y"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_37f7d"]
+script = ExtResource("2_xw80r")
+from_node = "d2305abe-e637-4e69-a166-d5f0266d91cd"
+to_node = "c722ab63-0fbd-4d84-bf73-ed139b352ff7"
+from_port = 0
+from_port_name = "result"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_sutda"]
+script = ExtResource("2_xw80r")
+from_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+to_node = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
+from_port = 1
+from_port_name = "collided_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_f7rse"]
+script = ExtResource("2_xw80r")
+from_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+to_node = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
+from_port = 2
+from_port_name = "collided"
+to_port = 1
+to_port_name = "ref"
+type = 2
+
+[sub_resource type="Resource" id="Resource_6vmmm"]
+script = ExtResource("2_xw80r")
+from_node = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
+to_node = "1f33a430-4b10-4ed8-8c68-9aa69d4ff694"
+from_port = 0
+from_port_name = "true_flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_hhcfo"]
+script = ExtResource("2_xw80r")
+from_node = "13098577-2a4f-4fef-916b-0f891bf2db6d"
+to_node = "1f33a430-4b10-4ed8-8c68-9aa69d4ff694"
+from_port = 0
+from_port_name = "result"
+to_port = 2
+to_port_name = "val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_o0ehb"]
+script = ExtResource("2_xw80r")
+from_node = "ec1a1fde-96a3-41e9-8864-58a3f61e718f"
+to_node = "13098577-2a4f-4fef-916b-0f891bf2db6d"
+from_port = 0
+from_port_name = "val"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_5pqnx"]
+script = ExtResource("2_xw80r")
+from_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
+to_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
+from_port = 2
+from_port_name = ""
+to_port = 1
+to_port_name = ""
+type = 2
+
+[sub_resource type="Resource" id="Resource_j2hwo"]
+script = ExtResource("2_xw80r")
+from_node = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
+to_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
+from_port = 1
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_mgrvj"]
+script = ExtResource("2_xw80r")
+from_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
+to_node = "8c1be0a3-3049-4403-848a-93da7c383fc7"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
+type = 0
+
+[sub_resource type="Resource" id="Resource_i7qf5"]
+script = ExtResource("3_jhs8i")
+id = "087fb24e-6a65-422b-9c28-200e8500f2e4"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 4,
+"const_opb": 0
+}
+position = Vector2(1060, 900)
+
+[sub_resource type="Resource" id="Resource_17b2v"]
+script = ExtResource("3_jhs8i")
+id = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
+type = "19244ef0-3b3f-4b5a-abc7-dfada8c4dfc3"
+properties = {
+"object_type": 2
+}
+position = Vector2(880, 1840)
+
+[sub_resource type="Resource" id="Resource_s8sau"]
+script = ExtResource("3_jhs8i")
+id = "101f326b-a32f-4e2b-b990-4b000f3750a3"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 0
+}
+position = Vector2(760, 1140)
+
+[sub_resource type="Resource" id="Resource_cjabw"]
+script = ExtResource("3_jhs8i")
+id = "13098577-2a4f-4fef-916b-0f891bf2db6d"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": -1,
+"operator": 2
+}
+position = Vector2(1000, 1600)
+
+[sub_resource type="Resource" id="Resource_qyh8c"]
+script = ExtResource("3_jhs8i")
+id = "1a3c08f1-b3ca-466a-be65-19199b533126"
+type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(580, 1700)
+
+[sub_resource type="Resource" id="Resource_05f4a"]
+script = ExtResource("3_jhs8i")
+id = "1f33a430-4b10-4ed8-8c68-9aa69d4ff694"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 3,
+"variable_name": ""
+}
+position = Vector2(1420, 1760)
+
+[sub_resource type="Resource" id="Resource_g4kmy"]
+script = ExtResource("3_jhs8i")
+id = "25549481-64f8-47da-8ff2-14721757f34f"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {}
+position = Vector2(80, 1560)
+
+[sub_resource type="Resource" id="Resource_vfsc8"]
+script = ExtResource("3_jhs8i")
+id = "42d9a738-4050-47f4-b466-a2826814e503"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 2
+}
+position = Vector2(200, 2040)
+
+[sub_resource type="Resource" id="Resource_2vwd2"]
+script = ExtResource("3_jhs8i")
+id = "449f0098-ad47-4311-aec7-f0435798ec93"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(100, 340)
+
+[sub_resource type="Resource" id="Resource_be6cd"]
+script = ExtResource("3_jhs8i")
+id = "4b961e6f-3414-4c9a-9d42-31125e4a7506"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"variable": 2
+}
+position = Vector2(520, 260)
+
+[sub_resource type="Resource" id="Resource_6167n"]
+script = ExtResource("3_jhs8i")
+id = "51c10666-b828-4431-9223-3ebdbfccd1f6"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": -1,
+"variable": 3
+}
+position = Vector2(1860, 1120)
+
+[sub_resource type="Resource" id="Resource_83s7d"]
+script = ExtResource("3_jhs8i")
+id = "5af3866c-ba71-4377-a260-2b20ba16f1a4"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(-20, 1700)
+
+[sub_resource type="Resource" id="Resource_eikmg"]
+script = ExtResource("3_jhs8i")
+id = "5bfd9cd9-c9be-461d-bc97-59f736aa41b9"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 0,
+"const_opb": 0
+}
+position = Vector2(1460, 1100)
+
+[sub_resource type="Resource" id="Resource_wiu0u"]
+script = ExtResource("3_jhs8i")
+id = "71acb1bc-cfd5-48ba-ae19-e2dadaee4592"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 2
+}
+position = Vector2(40, 940)
+
+[sub_resource type="Resource" id="Resource_opujy"]
+script = ExtResource("3_jhs8i")
+id = "77db6431-c191-466e-b520-4b250d5ecdf1"
+type = "7eeabba5-a095-4ea1-9e3a-5c10d352574d"
+properties = {}
+position = Vector2(120, 180)
+
+[sub_resource type="Resource" id="Resource_r1fcp"]
+script = ExtResource("3_jhs8i")
+id = "7aa7669c-6431-4fbe-866c-7bd76b4720fc"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 1,
+"variable": 3
+}
+position = Vector2(1460, 820)
+
+[sub_resource type="Resource" id="Resource_teht4"]
+script = ExtResource("3_jhs8i")
+id = "c7119aac-b428-4dcf-a6a0-fa6e7f2e967b"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": -1,
+"variable": 3
+}
+position = Vector2(1020, 320)
+
+[sub_resource type="Resource" id="Resource_ymd2i"]
+script = ExtResource("3_jhs8i")
+id = "c722ab63-0fbd-4d84-bf73-ed139b352ff7"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"variable": 2
+}
+position = Vector2(700, 780)
+
+[sub_resource type="Resource" id="Resource_1bw2w"]
+script = ExtResource("3_jhs8i")
+id = "ccc09300-3816-4f03-9213-b287371a454f"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 3
+}
+position = Vector2(40, 1140)
+
+[sub_resource type="Resource" id="Resource_swwyg"]
+script = ExtResource("3_jhs8i")
+id = "cf52e346-d614-464c-b461-5597a8b7f87e"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 1
+}
+position = Vector2(1040, 1320)
+
+[sub_resource type="Resource" id="Resource_laxv8"]
+script = ExtResource("3_jhs8i")
+id = "d2305abe-e637-4e69-a166-d5f0266d91cd"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 0
+}
+position = Vector2(400, 1100)
+
+[sub_resource type="Resource" id="Resource_lp3qn"]
+script = ExtResource("3_jhs8i")
+id = "d8c60392-427b-407a-9e9b-9d4be2bd6f0e"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {}
+position = Vector2(140, 740)
+
+[sub_resource type="Resource" id="Resource_1qw4u"]
+script = ExtResource("3_jhs8i")
+id = "ec1a1fde-96a3-41e9-8864-58a3f61e718f"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 3
+}
+position = Vector2(680, 1500)
+
+[sub_resource type="Resource" id="Resource_g5qlt"]
+script = ExtResource("3_jhs8i")
+id = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
+type = "19244ef0-3b3f-4b5a-abc7-dfada8c4dfc3"
+properties = {
+"object_type": 3
+}
+position = Vector2(1180, 2060)
+
+[sub_resource type="Resource" id="Resource_lirys"]
+script = ExtResource("3_jhs8i")
+id = "8c1be0a3-3049-4403-848a-93da7c383fc7"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 3,
+"variable_name": ""
+}
+position = Vector2(1500, 2080)
+
+[sub_resource type="Resource" id="Resource_6v2u1"]
+script = ExtResource("4_vegmi")
+name = "TOP"
+type = 2
+
+[sub_resource type="Resource" id="Resource_dpci3"]
+script = ExtResource("4_vegmi")
+name = "BOTTOM"
+type = 2
+
+[sub_resource type="Resource" id="Resource_darkx"]
+script = ExtResource("4_vegmi")
+name = "Yd"
+type = 2
+
+[sub_resource type="Resource" id="Resource_x4jol"]
+script = ExtResource("4_vegmi")
+name = "DIR"
+type = 2
+
+[sub_resource type="Resource" id="Resource_1i8g4"]
+script = ExtResource("1_n4mqh")
+variables = Array[ExtResource("4_vegmi")]([SubResource("Resource_6v2u1"), SubResource("Resource_dpci3"), SubResource("Resource_darkx"), SubResource("Resource_x4jol")])
+nodes = {
+"087fb24e-6a65-422b-9c28-200e8500f2e4": SubResource("Resource_i7qf5"),
+"0c532977-1a8a-4aad-8981-3ce1b4e9f9cf": SubResource("Resource_17b2v"),
+"101f326b-a32f-4e2b-b990-4b000f3750a3": SubResource("Resource_s8sau"),
+"13098577-2a4f-4fef-916b-0f891bf2db6d": SubResource("Resource_cjabw"),
+"1a3c08f1-b3ca-466a-be65-19199b533126": SubResource("Resource_qyh8c"),
+"1f33a430-4b10-4ed8-8c68-9aa69d4ff694": SubResource("Resource_05f4a"),
+"25549481-64f8-47da-8ff2-14721757f34f": SubResource("Resource_g4kmy"),
+"42d9a738-4050-47f4-b466-a2826814e503": SubResource("Resource_vfsc8"),
+"449f0098-ad47-4311-aec7-f0435798ec93": SubResource("Resource_2vwd2"),
+"4b961e6f-3414-4c9a-9d42-31125e4a7506": SubResource("Resource_be6cd"),
+"51c10666-b828-4431-9223-3ebdbfccd1f6": SubResource("Resource_6167n"),
+"5af3866c-ba71-4377-a260-2b20ba16f1a4": SubResource("Resource_83s7d"),
+"5bfd9cd9-c9be-461d-bc97-59f736aa41b9": SubResource("Resource_eikmg"),
+"71acb1bc-cfd5-48ba-ae19-e2dadaee4592": SubResource("Resource_wiu0u"),
+"77db6431-c191-466e-b520-4b250d5ecdf1": SubResource("Resource_opujy"),
+"7aa7669c-6431-4fbe-866c-7bd76b4720fc": SubResource("Resource_r1fcp"),
+"8c1be0a3-3049-4403-848a-93da7c383fc7": SubResource("Resource_lirys"),
+"b9fc9b3f-4663-41a5-8f48-a65a3ff7462e": SubResource("Resource_g5qlt"),
+"c7119aac-b428-4dcf-a6a0-fa6e7f2e967b": SubResource("Resource_teht4"),
+"c722ab63-0fbd-4d84-bf73-ed139b352ff7": SubResource("Resource_ymd2i"),
+"ccc09300-3816-4f03-9213-b287371a454f": SubResource("Resource_1bw2w"),
+"cf52e346-d614-464c-b461-5597a8b7f87e": SubResource("Resource_swwyg"),
+"d2305abe-e637-4e69-a166-d5f0266d91cd": SubResource("Resource_laxv8"),
+"d8c60392-427b-407a-9e9b-9d4be2bd6f0e": SubResource("Resource_lp3qn"),
+"ec1a1fde-96a3-41e9-8864-58a3f61e718f": SubResource("Resource_1qw4u")
+}
+connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_7bf2b"), SubResource("Resource_2dkar"), SubResource("Resource_6x558"), SubResource("Resource_aqef0"), SubResource("Resource_ja6jo"), SubResource("Resource_ybmcr"), SubResource("Resource_1djp4"), SubResource("Resource_mqdmd"), SubResource("Resource_s5rm8"), SubResource("Resource_5bb2t"), SubResource("Resource_kaap0"), SubResource("Resource_rmd6w"), SubResource("Resource_wul2p"), SubResource("Resource_5ennn"), SubResource("Resource_6g3ow"), SubResource("Resource_xr5tk"), SubResource("Resource_g4udr"), SubResource("Resource_37f7d"), SubResource("Resource_sutda"), SubResource("Resource_f7rse"), SubResource("Resource_6vmmm"), SubResource("Resource_hhcfo"), SubResource("Resource_o0ehb"), SubResource("Resource_5pqnx"), SubResource("Resource_j2hwo"), SubResource("Resource_mgrvj")])
+logic_container = null
+
+[sub_resource type="Resource" id="Resource_bemxf"]
+script = ExtResource("2_lldes")
+object_name = "Bubble"
+animation_frames = Array[int]([0, 6])
+animations = [Array[int]([0, 3])]
+sprite_sheet = SubResource("Resource_vh5fk")
+object_logic = SubResource("Resource_1i8g4")
+draw_mode = 3
+num_dynamic = 0
+
+[sub_resource type="Resource" id="Resource_nr4uw"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_bemxf")
+object_ref_name = "Bubble"
+initial_pos = Vector2i(128, 24)
+flags = {}
+instance_variables = {
+"BOTTOM": 144,
+"DIR": 0,
+"TOP": 24,
+"Yd": 0
+}
+
+[sub_resource type="Resource" id="Resource_h33in"]
+script = ExtResource("2_xw80r")
+from_node = "9ab92a6d-3990-49dc-9c0c-d06b5522d8cf"
+to_node = "b745a102-40c2-49b0-b0f7-fef2d0ce3a24"
+from_port = 0
+from_port_name = "init_x"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ob8of"]
+script = ExtResource("2_xw80r")
+from_node = "9ab92a6d-3990-49dc-9c0c-d06b5522d8cf"
+to_node = "b745a102-40c2-49b0-b0f7-fef2d0ce3a24"
+from_port = 1
+from_port_name = "init_y"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_vymb5"]
+script = ExtResource("2_xw80r")
+from_node = "2c8346a1-90c0-4180-ac70-5496ead08073"
+to_node = "b745a102-40c2-49b0-b0f7-fef2d0ce3a24"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_i5s6r"]
+script = ExtResource("3_jhs8i")
+id = "2c8346a1-90c0-4180-ac70-5496ead08073"
+type = "7eeabba5-a095-4ea1-9e3a-5c10d352574d"
+properties = {}
+position = Vector2(0, 160)
+
+[sub_resource type="Resource" id="Resource_fyyrc"]
+script = ExtResource("3_jhs8i")
+id = "9ab92a6d-3990-49dc-9c0c-d06b5522d8cf"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(60, 380)
+
+[sub_resource type="Resource" id="Resource_t17u7"]
+script = ExtResource("3_jhs8i")
+id = "b745a102-40c2-49b0-b0f7-fef2d0ce3a24"
+type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(420, 260)
+
+[sub_resource type="Resource" id="Resource_akpwm"]
+script = ExtResource("4_vegmi")
+name = "ROOM"
+type = 2
+
+[sub_resource type="Resource" id="Resource_mjj2q"]
+script = ExtResource("1_n4mqh")
+variables = Array[ExtResource("4_vegmi")]([SubResource("Resource_akpwm")])
+nodes = {
+"2c8346a1-90c0-4180-ac70-5496ead08073": SubResource("Resource_i5s6r"),
+"9ab92a6d-3990-49dc-9c0c-d06b5522d8cf": SubResource("Resource_fyyrc"),
+"b745a102-40c2-49b0-b0f7-fef2d0ce3a24": SubResource("Resource_t17u7")
+}
+connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_h33in"), SubResource("Resource_ob8of"), SubResource("Resource_vymb5")])
+logic_container = null
+
+[sub_resource type="Resource" id="Resource_60d3b"]
+script = ExtResource("2_lldes")
+object_name = "Portal"
+animation_frames = Array[int]([])
+animations = []
+sprite_sheet = SubResource("Resource_vh5fk")
+object_logic = SubResource("Resource_mjj2q")
+draw_mode = 0
+num_dynamic = 0
+
+[sub_resource type="Resource" id="Resource_mnml3"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Portal1"
+initial_pos = Vector2i(272, 136)
+flags = {
+"collide": false,
+"collide_background": false
+}
+instance_variables = {
+"ROOM": 2
+}
+
+[sub_resource type="Resource" id="Resource_vd7k3"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Portal2"
+initial_pos = Vector2i(272, 32)
+flags = {
+"collide": false,
+"collide_background": false
+}
+instance_variables = {
+"ROOM": 1
+}
+
+[sub_resource type="Resource" id="Resource_h8yl2"]
+script = ExtResource("5_6363h")
+room_name = "StartRoom"
+map = SubResource("Resource_1y3gs")
+object_refs = Array[ExtResource("4_qbj13")]([SubResource("Resource_nr4uw"), SubResource("Resource_mnml3"), SubResource("Resource_vd7k3")])
+
+[sub_resource type="Resource" id="Resource_gtucp"]
+script = ExtResource("9_n4ugm")
+room = SubResource("Resource_h8yl2")
+room_ref_name = "StartRoom"
+pos = Vector2i(0, 0)
+
+[sub_resource type="Resource" id="Resource_4b0tb"]
+script = ExtResource("3_lwjbc")
+map_name = "unnamed"
+cells = {
+Vector2i(0, 1): 9,
+Vector2i(0, 2): 10,
+Vector2i(0, 3): 9,
+Vector2i(0, 4): 10,
+Vector2i(0, 5): 9,
+Vector2i(0, 6): 10,
+Vector2i(0, 7): 9,
+Vector2i(0, 8): 9,
+Vector2i(0, 9): 7,
+Vector2i(0, 10): 9,
+Vector2i(0, 11): 7,
+Vector2i(0, 12): 7,
+Vector2i(0, 13): 9,
+Vector2i(0, 18): 7,
+Vector2i(0, 19): 9,
+Vector2i(0, 20): 10,
+Vector2i(0, 21): 9,
+Vector2i(0, 22): 7,
+Vector2i(0, 23): 9,
+Vector2i(1, 1): 7,
+Vector2i(1, 2): 9,
+Vector2i(1, 3): 7,
+Vector2i(1, 4): 9,
+Vector2i(1, 5): 7,
+Vector2i(1, 6): 9,
+Vector2i(1, 7): 7,
+Vector2i(1, 8): 10,
+Vector2i(1, 9): 8,
+Vector2i(1, 10): 10,
+Vector2i(1, 11): 8,
+Vector2i(1, 12): 8,
+Vector2i(1, 13): 10,
+Vector2i(1, 18): 8,
+Vector2i(1, 19): 10,
+Vector2i(1, 20): 9,
+Vector2i(1, 21): 7,
+Vector2i(1, 22): 8,
+Vector2i(1, 23): 10,
+Vector2i(2, 1): 8,
+Vector2i(2, 2): 10,
+Vector2i(2, 22): 7,
+Vector2i(2, 23): 9,
+Vector2i(3, 1): 7,
+Vector2i(3, 2): 9,
+Vector2i(3, 22): 8,
+Vector2i(3, 23): 10,
+Vector2i(4, 1): 8,
+Vector2i(4, 2): 10,
+Vector2i(4, 22): 7,
+Vector2i(4, 23): 9,
+Vector2i(5, 1): 7,
+Vector2i(5, 2): 9,
+Vector2i(5, 22): 8,
+Vector2i(5, 23): 10,
+Vector2i(6, 1): 8,
+Vector2i(6, 2): 10,
+Vector2i(6, 22): 7,
+Vector2i(6, 23): 9,
+Vector2i(7, 1): 7,
+Vector2i(7, 2): 9,
+Vector2i(7, 22): 8,
+Vector2i(7, 23): 10,
+Vector2i(8, 1): 8,
+Vector2i(8, 2): 10,
+Vector2i(8, 22): 7,
+Vector2i(8, 23): 9,
+Vector2i(9, 1): 7,
+Vector2i(9, 2): 9,
+Vector2i(9, 22): 8,
+Vector2i(9, 23): 10,
+Vector2i(10, 1): 8,
+Vector2i(10, 2): 10,
+Vector2i(10, 22): 7,
+Vector2i(10, 23): 9,
+Vector2i(11, 1): 7,
+Vector2i(11, 2): 9,
+Vector2i(11, 22): 8,
+Vector2i(11, 23): 10,
+Vector2i(12, 1): 8,
+Vector2i(12, 2): 10,
+Vector2i(12, 22): 7,
+Vector2i(12, 23): 9,
+Vector2i(13, 1): 7,
+Vector2i(13, 2): 9,
+Vector2i(13, 22): 8,
+Vector2i(13, 23): 10,
+Vector2i(14, 1): 7,
+Vector2i(14, 2): 7,
+Vector2i(15, 1): 8,
+Vector2i(15, 2): 8,
+Vector2i(16, 1): 7,
+Vector2i(16, 2): 7,
+Vector2i(17, 1): 8,
+Vector2i(17, 2): 8,
+Vector2i(18, 1): 8,
+Vector2i(18, 2): 10,
+Vector2i(18, 22): 7,
+Vector2i(18, 23): 9,
+Vector2i(19, 1): 7,
+Vector2i(19, 2): 9,
+Vector2i(19, 22): 8,
+Vector2i(19, 23): 10,
+Vector2i(20, 1): 8,
+Vector2i(20, 2): 10,
+Vector2i(20, 22): 7,
+Vector2i(20, 23): 9,
+Vector2i(21, 1): 7,
+Vector2i(21, 2): 9,
+Vector2i(21, 22): 8,
+Vector2i(21, 23): 10,
+Vector2i(22, 1): 7,
+Vector2i(22, 2): 9,
+Vector2i(22, 22): 7,
+Vector2i(22, 23): 9,
+Vector2i(23, 1): 8,
+Vector2i(23, 2): 10,
+Vector2i(23, 22): 8,
+Vector2i(23, 23): 10,
+Vector2i(24, 1): 7,
+Vector2i(24, 2): 9,
+Vector2i(24, 22): 7,
+Vector2i(24, 23): 9,
+Vector2i(25, 1): 8,
+Vector2i(25, 2): 10,
+Vector2i(25, 22): 8,
+Vector2i(25, 23): 10,
+Vector2i(26, 1): 7,
+Vector2i(26, 2): 9,
+Vector2i(26, 3): 7,
+Vector2i(26, 4): 9,
+Vector2i(26, 5): 7,
+Vector2i(26, 6): 9,
+Vector2i(26, 7): 7,
+Vector2i(26, 8): 7,
+Vector2i(26, 9): 9,
+Vector2i(26, 10): 7,
+Vector2i(26, 11): 9,
+Vector2i(26, 12): 7,
+Vector2i(26, 13): 9,
+Vector2i(26, 14): 7,
+Vector2i(26, 15): 9,
+Vector2i(26, 16): 7,
+Vector2i(26, 17): 9,
+Vector2i(26, 18): 7,
+Vector2i(26, 19): 9,
+Vector2i(26, 20): 8,
+Vector2i(26, 21): 10,
+Vector2i(26, 22): 7,
+Vector2i(26, 23): 10,
+Vector2i(27, 1): 8,
+Vector2i(27, 2): 10,
+Vector2i(27, 3): 8,
+Vector2i(27, 4): 10,
+Vector2i(27, 5): 8,
+Vector2i(27, 6): 10,
+Vector2i(27, 7): 8,
+Vector2i(27, 8): 8,
+Vector2i(27, 9): 10,
+Vector2i(27, 10): 8,
+Vector2i(27, 11): 10,
+Vector2i(27, 12): 8,
+Vector2i(27, 13): 10,
+Vector2i(27, 14): 8,
+Vector2i(27, 15): 10,
+Vector2i(27, 16): 8,
+Vector2i(27, 17): 10,
+Vector2i(27, 18): 8,
+Vector2i(27, 19): 10,
+Vector2i(27, 20): 7,
+Vector2i(27, 21): 9,
+Vector2i(27, 22): 8,
+Vector2i(27, 23): 10
+}
+attrs = {}
+
+[sub_resource type="Resource" id="Resource_msax0"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_bemxf")
+object_ref_name = "Bubble"
+initial_pos = Vector2i(183, 144)
+flags = {}
+instance_variables = {
+"BOTTOM": 144,
+"DIR": 0,
+"TOP": 82,
+"Yd": 0
+}
+
+[sub_resource type="Resource" id="Resource_g28jy"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Enemy1"
+initial_pos = Vector2i(-16, 120)
+flags = {}
+instance_variables = {
+"ROOM": 0
+}
+
+[sub_resource type="Resource" id="Resource_qk5s2"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Enemy11"
+initial_pos = Vector2i(120, 208)
+flags = {}
+instance_variables = {
+"ROOM": 2
+}
+
+[sub_resource type="Resource" id="Resource_70rae"]
+script = ExtResource("5_6363h")
+room_name = "SecondRoom"
+map = SubResource("Resource_4b0tb")
+object_refs = Array[ExtResource("4_qbj13")]([SubResource("Resource_msax0"), SubResource("Resource_g28jy"), SubResource("Resource_qk5s2")])
+
+[sub_resource type="Resource" id="Resource_u7khs"]
+script = ExtResource("9_n4ugm")
+room = SubResource("Resource_70rae")
+room_ref_name = "SecondRoom"
+pos = Vector2i(256, -88)
+
+[sub_resource type="Resource" id="Resource_gn6o8"]
+script = ExtResource("3_lwjbc")
+map_name = "unnamed"
+cells = {
+Vector2i(0, 1): 9,
+Vector2i(0, 2): 10,
+Vector2i(0, 3): 7,
+Vector2i(0, 8): 7,
+Vector2i(0, 9): 7,
+Vector2i(0, 10): 9,
+Vector2i(0, 11): 7,
+Vector2i(0, 12): 10,
+Vector2i(0, 13): 9,
+Vector2i(0, 14): 10,
+Vector2i(0, 15): 8,
+Vector2i(0, 16): 7,
+Vector2i(0, 17): 9,
+Vector2i(0, 18): 7,
+Vector2i(0, 19): 9,
+Vector2i(0, 20): 10,
+Vector2i(0, 21): 9,
+Vector2i(1, 1): 7,
+Vector2i(1, 2): 9,
+Vector2i(1, 3): 8,
+Vector2i(1, 8): 8,
+Vector2i(1, 9): 8,
+Vector2i(1, 10): 10,
+Vector2i(1, 11): 8,
+Vector2i(1, 12): 9,
+Vector2i(1, 13): 7,
+Vector2i(1, 14): 9,
+Vector2i(1, 15): 7,
+Vector2i(1, 16): 8,
+Vector2i(1, 17): 10,
+Vector2i(1, 18): 8,
+Vector2i(1, 19): 10,
+Vector2i(1, 20): 9,
+Vector2i(1, 21): 7,
+Vector2i(2, 1): 8,
+Vector2i(2, 2): 10,
+Vector2i(2, 20): 10,
+Vector2i(2, 21): 8,
+Vector2i(3, 1): 7,
+Vector2i(3, 2): 9,
+Vector2i(3, 20): 7,
+Vector2i(3, 21): 9,
+Vector2i(4, 1): 8,
+Vector2i(4, 2): 10,
+Vector2i(4, 20): 8,
+Vector2i(4, 21): 10,
+Vector2i(5, 1): 7,
+Vector2i(5, 2): 9,
+Vector2i(5, 20): 7,
+Vector2i(5, 21): 9,
+Vector2i(6, 1): 8,
+Vector2i(6, 2): 10,
+Vector2i(6, 20): 8,
+Vector2i(6, 21): 10,
+Vector2i(7, 1): 7,
+Vector2i(7, 2): 9,
+Vector2i(7, 20): 7,
+Vector2i(7, 21): 9,
+Vector2i(8, 1): 8,
+Vector2i(8, 2): 10,
+Vector2i(8, 20): 8,
+Vector2i(8, 21): 10,
+Vector2i(9, 1): 7,
+Vector2i(9, 2): 9,
+Vector2i(9, 20): 7,
+Vector2i(9, 21): 9,
+Vector2i(10, 1): 8,
+Vector2i(10, 2): 10,
+Vector2i(10, 20): 8,
+Vector2i(10, 21): 10,
+Vector2i(11, 1): 7,
+Vector2i(11, 2): 9,
+Vector2i(11, 20): 7,
+Vector2i(11, 21): 9,
+Vector2i(12, 1): 8,
+Vector2i(12, 2): 10,
+Vector2i(12, 20): 8,
+Vector2i(12, 21): 10,
+Vector2i(13, 1): 7,
+Vector2i(13, 2): 9,
+Vector2i(13, 20): 7,
+Vector2i(13, 21): 9,
+Vector2i(14, 20): 7,
+Vector2i(14, 21): 9,
+Vector2i(15, 20): 8,
+Vector2i(15, 21): 10,
+Vector2i(16, 20): 7,
+Vector2i(16, 21): 9,
+Vector2i(17, 20): 8,
+Vector2i(17, 21): 10,
+Vector2i(18, 1): 8,
+Vector2i(18, 2): 10,
+Vector2i(18, 20): 8,
+Vector2i(18, 21): 10,
+Vector2i(19, 1): 7,
+Vector2i(19, 2): 9,
+Vector2i(19, 20): 7,
+Vector2i(19, 21): 9,
+Vector2i(20, 1): 8,
+Vector2i(20, 2): 10,
+Vector2i(20, 3): 9,
+Vector2i(20, 4): 7,
+Vector2i(20, 5): 9,
+Vector2i(20, 6): 7,
+Vector2i(20, 7): 9,
+Vector2i(20, 8): 7,
+Vector2i(20, 9): 9,
+Vector2i(20, 20): 8,
+Vector2i(20, 21): 10,
+Vector2i(21, 1): 7,
+Vector2i(21, 2): 9,
+Vector2i(21, 3): 10,
+Vector2i(21, 4): 8,
+Vector2i(21, 5): 10,
+Vector2i(21, 6): 8,
+Vector2i(21, 7): 10,
+Vector2i(21, 8): 8,
+Vector2i(21, 9): 10,
+Vector2i(21, 20): 7,
+Vector2i(21, 21): 9,
+Vector2i(22, 8): 7,
+Vector2i(22, 9): 9,
+Vector2i(22, 20): 8,
+Vector2i(22, 21): 10,
+Vector2i(23, 8): 8,
+Vector2i(23, 9): 10,
+Vector2i(23, 20): 7,
+Vector2i(23, 21): 9,
+Vector2i(24, 8): 7,
+Vector2i(24, 9): 9,
+Vector2i(24, 20): 8,
+Vector2i(24, 21): 10,
+Vector2i(25, 8): 8,
+Vector2i(25, 9): 10,
+Vector2i(25, 20): 7,
+Vector2i(25, 21): 9,
+Vector2i(26, 8): 7,
+Vector2i(26, 9): 9,
+Vector2i(26, 10): 7,
+Vector2i(26, 11): 9,
+Vector2i(26, 12): 7,
+Vector2i(26, 13): 9,
+Vector2i(26, 14): 7,
+Vector2i(26, 15): 9,
+Vector2i(26, 16): 7,
+Vector2i(26, 17): 9,
+Vector2i(26, 18): 7,
+Vector2i(26, 19): 9,
+Vector2i(26, 20): 8,
+Vector2i(26, 21): 10,
+Vector2i(27, 8): 8,
+Vector2i(27, 9): 10,
+Vector2i(27, 10): 8,
+Vector2i(27, 11): 10,
+Vector2i(27, 12): 8,
+Vector2i(27, 13): 10,
+Vector2i(27, 14): 8,
+Vector2i(27, 15): 10,
+Vector2i(27, 16): 8,
+Vector2i(27, 17): 10,
+Vector2i(27, 18): 8,
+Vector2i(27, 19): 10,
+Vector2i(27, 20): 7,
+Vector2i(27, 21): 9
+}
+attrs = {}
+
+[sub_resource type="Resource" id="Resource_bo1a7"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_bemxf")
+object_ref_name = "Bubble"
+initial_pos = Vector2i(183, 144)
+flags = {}
+instance_variables = {
+"BOTTOM": 144,
+"DIR": 0,
+"TOP": 82,
+"Yd": 0
+}
+
+[sub_resource type="Resource" id="Resource_55kpx"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Enemy1"
+initial_pos = Vector2i(-16, 40)
+flags = {}
+instance_variables = {
+"ROOM": 0
+}
+
+[sub_resource type="Resource" id="Resource_qjl2n"]
+script = ExtResource("4_qbj13")
+object = SubResource("Resource_60d3b")
+object_ref_name = "Enemy17"
+initial_pos = Vector2i(120, -16)
+flags = {}
+instance_variables = {
+"ROOM": 1
+}
+
+[sub_resource type="Resource" id="Resource_dpjqr"]
+script = ExtResource("5_6363h")
+room_name = "ThirdRoom"
+map = SubResource("Resource_gn6o8")
+object_refs = Array[ExtResource("4_qbj13")]([SubResource("Resource_bo1a7"), SubResource("Resource_55kpx"), SubResource("Resource_qjl2n")])
+
+[sub_resource type="Resource" id="Resource_7o7d1"]
+script = ExtResource("9_n4ugm")
+room = SubResource("Resource_dpjqr")
+room_ref_name = "ThirdRoom"
+pos = Vector2i(256, 96)
+
+[sub_resource type="Resource" id="Resource_fv4dp"]
+script = ExtResource("1_d0ypq")
+rooms = Array[ExtResource("9_n4ugm")]([SubResource("Resource_gtucp"), SubResource("Resource_u7khs"), SubResource("Resource_7o7d1")])
+object_refs = Array[ExtResource("4_qbj13")]([SubResource("Resource_k1igi")])
+
+[sub_resource type="Resource" id="Resource_hvkwg"]
+script = ExtResource("1_n4mqh")
+variables = Array[ExtResource("4_vegmi")]([])
+nodes = {}
+connections = Array[ExtResource("2_xw80r")]([])
+
+[sub_resource type="Resource" id="Resource_42v28"]
+script = ExtResource("2_xw80r")
+from_node = "1b7c676e-55e2-450b-9729-ea834a4bbb0c"
+to_node = "bae4e005-2d62-4a09-84a7-a899e2f1075e"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_jeqaa"]
+script = ExtResource("2_xw80r")
+from_node = "b23bb649-5cee-4d30-bdd5-c1d0938a3b95"
+to_node = "bae4e005-2d62-4a09-84a7-a899e2f1075e"
+from_port = 3
+from_port_name = "y"
+to_port = 2
+to_port_name = "y"
+type = 1
+
+[sub_resource type="Resource" id="Resource_borv7"]
+script = ExtResource("2_xw80r")
+from_node = "b23bb649-5cee-4d30-bdd5-c1d0938a3b95"
+to_node = "8708b235-755b-45af-967c-663dd8268114"
+from_port = 2
+from_port_name = "x"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_adj3g"]
+script = ExtResource("2_xw80r")
+from_node = "8708b235-755b-45af-967c-663dd8268114"
+to_node = "bae4e005-2d62-4a09-84a7-a899e2f1075e"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "x"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ygpvs"]
+script = ExtResource("2_xw80r")
+from_node = "1fd0e2d1-67e0-415c-b285-e3a35949e7db"
+to_node = "93c95985-4b21-4601-8034-5bacaa8da7c0"
+from_port = 0
+from_port_name = "val"
+to_port = 0
+to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_c3qa8"]
+script = ExtResource("2_xw80r")
+from_node = "34dd6fef-de12-4531-ba94-5306036dc762"
+to_node = "93c95985-4b21-4601-8034-5bacaa8da7c0"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_81n7q"]
+script = ExtResource("2_xw80r")
+from_node = "93c95985-4b21-4601-8034-5bacaa8da7c0"
+to_node = "8708b235-755b-45af-967c-663dd8268114"
+from_port = 0
+from_port_name = "result"
+to_port = 1
+to_port_name = "b_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_ajgkl"]
+script = ExtResource("2_xw80r")
+from_node = "ca41649e-48d3-4089-93d7-8f1b44766c24"
+to_node = "ee3da91e-5317-4a82-ba81-324ec180a8a3"
+from_port = 0
+from_port_name = "flow_out"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_qee5o"]
+script = ExtResource("2_xw80r")
+from_node = "bae4e005-2d62-4a09-84a7-a899e2f1075e"
+to_node = "a2ff0504-5adc-42f5-920e-de7d2e409418"
+from_port = 0
+from_port_name = "flow"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_ht2tv"]
+script = ExtResource("2_xw80r")
+from_node = "a2ff0504-5adc-42f5-920e-de7d2e409418"
+to_node = "4d986988-7e73-4a38-9ef2-ade78419eaec"
+from_port = 1
+from_port_name = "flow_false"
+to_port = 0
+to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_6xghc"]
+script = ExtResource("3_jhs8i")
+id = "1b7c676e-55e2-450b-9729-ea834a4bbb0c"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {}
+position = Vector2(760, 140)
+
+[sub_resource type="Resource" id="Resource_p0u0v"]
+script = ExtResource("3_jhs8i")
+id = "1fd0e2d1-67e0-415c-b285-e3a35949e7db"
+type = "3fcab087-5e70-4d3f-8505-93631e535d51"
+properties = {
+"value": 5.0
+}
+position = Vector2(-260, 100)
+
+[sub_resource type="Resource" id="Resource_n3vux"]
+script = ExtResource("3_jhs8i")
+id = "34dd6fef-de12-4531-ba94-5306036dc762"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 0
+}
+position = Vector2(-260, 220)
+
+[sub_resource type="Resource" id="Resource_kb5yf"]
+script = ExtResource("3_jhs8i")
+id = "4d986988-7e73-4a38-9ef2-ade78419eaec"
+type = "42ea8ca4-440b-43db-b8d7-7841fb3959b3"
+properties = {}
+position = Vector2(1940, 360)
+
+[sub_resource type="Resource" id="Resource_wi1sw"]
+script = ExtResource("3_jhs8i")
+id = "8708b235-755b-45af-967c-663dd8268114"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 5,
+"operator": 0
+}
+position = Vector2(580, 280)
+
+[sub_resource type="Resource" id="Resource_okil1"]
+script = ExtResource("3_jhs8i")
+id = "93c95985-4b21-4601-8034-5bacaa8da7c0"
+type = "0e45e2d8-c81e-4b2d-bdee-f1d7195290b2"
+properties = {
+"const_opb": 0,
+"operator": 2
+}
+position = Vector2(200, 160)
+
+[sub_resource type="Resource" id="Resource_a1734"]
+script = ExtResource("3_jhs8i")
+id = "a2ff0504-5adc-42f5-920e-de7d2e409418"
+type = "626b3432-a655-4e03-9918-b00ac41f83bb"
+properties = {}
+position = Vector2(1600, 260)
+
+[sub_resource type="Resource" id="Resource_vp6eu"]
+script = ExtResource("3_jhs8i")
+id = "b23bb649-5cee-4d30-bdd5-c1d0938a3b95"
+type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
+properties = {}
+position = Vector2(-220, 500)
+
+[sub_resource type="Resource" id="Resource_byvqc"]
+script = ExtResource("3_jhs8i")
+id = "bae4e005-2d62-4a09-84a7-a899e2f1075e"
+type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(1240, 300)
+
+[sub_resource type="Resource" id="Resource_pfklx"]
+script = ExtResource("3_jhs8i")
+id = "ca41649e-48d3-4089-93d7-8f1b44766c24"
+type = "7eeabba5-a095-4ea1-9e3a-5c10d352574d"
+properties = {}
+position = Vector2(20, -320)
+
+[sub_resource type="Resource" id="Resource_25atq"]
+script = ExtResource("3_jhs8i")
+id = "ee3da91e-5317-4a82-ba81-324ec180a8a3"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 1,
+"variable": 0
+}
+position = Vector2(280, -300)
+
+[sub_resource type="Resource" id="Resource_61s2k"]
+script = ExtResource("4_vegmi")
+name = "DIR"
+type = 2
+
+[sub_resource type="Resource" id="Resource_rigd3"]
+script = ExtResource("1_n4mqh")
+variables = Array[ExtResource("4_vegmi")]([SubResource("Resource_61s2k")])
+nodes = {
+"1b7c676e-55e2-450b-9729-ea834a4bbb0c": SubResource("Resource_6xghc"),
+"1fd0e2d1-67e0-415c-b285-e3a35949e7db": SubResource("Resource_p0u0v"),
+"34dd6fef-de12-4531-ba94-5306036dc762": SubResource("Resource_n3vux"),
+"4d986988-7e73-4a38-9ef2-ade78419eaec": SubResource("Resource_kb5yf"),
+"8708b235-755b-45af-967c-663dd8268114": SubResource("Resource_wi1sw"),
+"93c95985-4b21-4601-8034-5bacaa8da7c0": SubResource("Resource_okil1"),
+"a2ff0504-5adc-42f5-920e-de7d2e409418": SubResource("Resource_a1734"),
+"b23bb649-5cee-4d30-bdd5-c1d0938a3b95": SubResource("Resource_vp6eu"),
+"bae4e005-2d62-4a09-84a7-a899e2f1075e": SubResource("Resource_byvqc"),
+"ca41649e-48d3-4089-93d7-8f1b44766c24": SubResource("Resource_pfklx"),
+"ee3da91e-5317-4a82-ba81-324ec180a8a3": SubResource("Resource_25atq")
+}
+connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_42v28"), SubResource("Resource_jeqaa"), SubResource("Resource_borv7"), SubResource("Resource_adj3g"), SubResource("Resource_ygpvs"), SubResource("Resource_c3qa8"), SubResource("Resource_81n7q"), SubResource("Resource_ajgkl"), SubResource("Resource_qee5o"), SubResource("Resource_ht2tv")])
+logic_container = null
+
+[sub_resource type="Resource" id="Resource_46s7c"]
+script = ExtResource("7_kqug1")
+sheet_name = "Sheet1"
+num_sprites = 1
+num_layers = 1
+sprite_width = 8
+sprite_height = 8
+num_pixels_per_sprite = 64
+sprite_data = [[Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])]]
+sprite_properties = Array[Dictionary]([{}])
+
+[sub_resource type="Resource" id="Resource_iu4fx"]
+script = ExtResource("2_lldes")
+object_name = "Bullet"
+animation_frames = Array[int]([0])
+animations = [Array[int]([0])]
+sprite_sheet = SubResource("Resource_46s7c")
+object_logic = SubResource("Resource_rigd3")
+draw_mode = 2
+num_dynamic = 5
+
+[sub_resource type="Resource" id="Resource_qm1oa"]
+script = ExtResource("7_kqug1")
+sheet_name = ""
+num_sprites = 17
+num_layers = 1
+sprite_width = 8
+sprite_height = 8
+num_pixels_per_sprite = 64
+sprite_data = [[Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0])], [Array[int]([0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0])], [Array[int]([1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0])], [Array[int]([0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0])], [Array[int]([0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1])], [Array[int]([1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0])], [Array[int]([0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1])], [Array[int]([0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0])]]
+sprite_properties = Array[Dictionary]([{
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": true
+}, {
+"solid": false
+}, {
+"solid": false
+}, {
+"solid": false
+}, {
+"solid": false
+}, {
+"solid": false
+}, {
+"solid": false
+}])
+
+[resource]
+script = ExtResource("6_fccv7")
+format_version_string = "0.1"
+sprite_sheets = Array[ExtResource("7_kqug1")]([SubResource("Resource_vh5fk"), SubResource("Resource_46s7c")])
+tile_sheet = SubResource("Resource_qm1oa")
+objects = Array[ExtResource("2_lldes")]([SubResource("Resource_bemxf"), SubResource("Resource_60d3b"), SubResource("Resource_t7lwl"), SubResource("Resource_iu4fx")])
+graph_resource = SubResource("Resource_hvkwg")
+rooms = Array[ExtResource("5_6363h")]([SubResource("Resource_h8yl2"), SubResource("Resource_70rae"), SubResource("Resource_dpjqr")])
+game_map = SubResource("Resource_fv4dp")

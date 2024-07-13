@@ -428,9 +428,9 @@ script = ExtResource("2_xw80r")
 from_node = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
 to_node = "4a07d4df-321f-4bc8-923d-661762027926"
 from_port = 0
-from_port_name = ""
+from_port_name = "flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_f0m26"]
@@ -438,9 +438,9 @@ script = ExtResource("2_xw80r")
 from_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
 to_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
 from_port = 0
-from_port_name = ""
+from_port_name = "true_flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_bwhsw"]
@@ -448,9 +448,9 @@ script = ExtResource("2_xw80r")
 from_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
 to_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
 from_port = 0
-from_port_name = ""
+from_port_name = "true_flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_mpmci"]
@@ -458,9 +458,9 @@ script = ExtResource("2_xw80r")
 from_node = "f53377c1-c007-4beb-bc53-d371eb313d43"
 to_node = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
 from_port = 0
-from_port_name = ""
+from_port_name = "val"
 to_port = 1
-to_port_name = ""
+to_port_name = "a_val"
 type = 1
 
 [sub_resource type="Resource" id="Resource_uul8p"]
@@ -468,9 +468,9 @@ script = ExtResource("2_xw80r")
 from_node = "e705d343-1b9a-43d3-b961-49c3f405ad51"
 to_node = "1ddec6bf-13af-4385-9fd2-574770cf2d04"
 from_port = 0
-from_port_name = ""
+from_port_name = "flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_ayx5c"]
@@ -478,9 +478,9 @@ script = ExtResource("2_xw80r")
 from_node = "c687700f-555b-4a5a-a4ff-f7a337b26958"
 to_node = "ef6b1b89-cd7f-43cb-bcea-81824abcde00"
 from_port = 1
-from_port_name = ""
+from_port_name = "false_flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_n5fl0"]
@@ -503,6 +503,18 @@ properties = {
 "variable_name": ""
 }
 position = Vector2(1020, -280)
+
+[sub_resource type="Resource" id="Resource_ul6br"]
+script = ExtResource("3_jhs8i")
+id = "1ddec6bf-13af-4385-9fd2-574770cf2d04"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 1,
+"object_type": 0,
+"variable": 2,
+"variable_name": ""
+}
+position = Vector2(1960, 1940)
 
 [sub_resource type="Resource" id="Resource_g1cqb"]
 script = ExtResource("3_jhs8i")
@@ -552,6 +564,18 @@ properties = {
 }
 position = Vector2(360, 1380)
 
+[sub_resource type="Resource" id="Resource_4dkdw"]
+script = ExtResource("3_jhs8i")
+id = "4a07d4df-321f-4bc8-923d-661762027926"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 2,
+"variable_name": ""
+}
+position = Vector2(1340, -280)
+
 [sub_resource type="Resource" id="Resource_gty1y"]
 script = ExtResource("3_jhs8i")
 id = "4b066cbe-4004-418f-9528-9be8a7dd6814"
@@ -598,6 +622,16 @@ id = "64290e75-a622-47fd-8cca-1f2ac19c529b"
 type = "ca52338c-d006-4083-9ed0-794f54f2c3ec"
 properties = {}
 position = Vector2(-520, 1160)
+
+[sub_resource type="Resource" id="Resource_ys3b5"]
+script = ExtResource("3_jhs8i")
+id = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 0,
+"const_opb": 0
+}
+position = Vector2(440, 1860)
 
 [sub_resource type="Resource" id="Resource_fea04"]
 script = ExtResource("3_jhs8i")
@@ -761,59 +795,6 @@ properties = {
 }
 position = Vector2(760, -280)
 
-[sub_resource type="Resource" id="Resource_h5d27"]
-script = ExtResource("3_jhs8i")
-id = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
-type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
-properties = {
-"comparator": 2,
-"const_opb": 0
-}
-position = Vector2(1960, 380)
-
-[sub_resource type="Resource" id="Resource_4dkdw"]
-script = ExtResource("3_jhs8i")
-id = "4a07d4df-321f-4bc8-923d-661762027926"
-type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
-properties = {
-"const": 0,
-"object_type": 0,
-"variable": 2,
-"variable_name": ""
-}
-position = Vector2(1340, -280)
-
-[sub_resource type="Resource" id="Resource_ycqkv"]
-script = ExtResource("3_jhs8i")
-id = "f53377c1-c007-4beb-bc53-d371eb313d43"
-type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
-properties = {
-"variable": 2
-}
-position = Vector2(20, 1900)
-
-[sub_resource type="Resource" id="Resource_ys3b5"]
-script = ExtResource("3_jhs8i")
-id = "71bf1f9e-053a-44c2-a1fb-85a722026f47"
-type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
-properties = {
-"comparator": 0,
-"const_opb": 0
-}
-position = Vector2(440, 1860)
-
-[sub_resource type="Resource" id="Resource_ul6br"]
-script = ExtResource("3_jhs8i")
-id = "1ddec6bf-13af-4385-9fd2-574770cf2d04"
-type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
-properties = {
-"const": 1,
-"object_type": 0,
-"variable": 2,
-"variable_name": ""
-}
-position = Vector2(1960, 1940)
-
 [sub_resource type="Resource" id="Resource_s0tno"]
 script = ExtResource("3_jhs8i")
 id = "ef6b1b89-cd7f-43cb-bcea-81824abcde00"
@@ -825,6 +806,25 @@ properties = {
 "variable_name": ""
 }
 position = Vector2(780, 2240)
+
+[sub_resource type="Resource" id="Resource_ycqkv"]
+script = ExtResource("3_jhs8i")
+id = "f53377c1-c007-4beb-bc53-d371eb313d43"
+type = "0a7dba4a-4b4c-4ff5-a123-a25221ed370e"
+properties = {
+"variable": 2
+}
+position = Vector2(20, 1900)
+
+[sub_resource type="Resource" id="Resource_h5d27"]
+script = ExtResource("3_jhs8i")
+id = "f988e749-12aa-470b-9bf8-ad107b1d41cf"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 2,
+"const_opb": 0
+}
+position = Vector2(1960, 380)
 
 [sub_resource type="Resource" id="Resource_67gsy"]
 script = ExtResource("4_vegmi")
@@ -1009,42 +1009,52 @@ Vector2i(11, 20): 7,
 Vector2i(11, 21): 9,
 Vector2i(12, 1): 8,
 Vector2i(12, 2): 10,
+Vector2i(12, 12): 0,
 Vector2i(12, 20): 8,
 Vector2i(12, 21): 10,
 Vector2i(13, 1): 7,
 Vector2i(13, 2): 9,
+Vector2i(13, 12): 0,
 Vector2i(13, 20): 7,
 Vector2i(13, 21): 9,
 Vector2i(14, 1): 8,
 Vector2i(14, 2): 10,
+Vector2i(14, 12): 0,
 Vector2i(14, 20): 8,
 Vector2i(14, 21): 10,
 Vector2i(15, 1): 7,
 Vector2i(15, 2): 9,
+Vector2i(15, 12): 0,
 Vector2i(15, 20): 7,
 Vector2i(15, 21): 9,
 Vector2i(16, 1): 8,
 Vector2i(16, 2): 10,
+Vector2i(16, 12): 0,
 Vector2i(16, 20): 8,
 Vector2i(16, 21): 10,
 Vector2i(17, 1): 7,
 Vector2i(17, 2): 9,
+Vector2i(17, 12): 0,
 Vector2i(17, 20): 7,
 Vector2i(17, 21): 9,
 Vector2i(18, 1): 8,
 Vector2i(18, 2): 10,
+Vector2i(18, 12): 0,
 Vector2i(18, 20): 8,
 Vector2i(18, 21): 10,
 Vector2i(19, 1): 7,
 Vector2i(19, 2): 9,
+Vector2i(19, 12): 0,
 Vector2i(19, 20): 7,
 Vector2i(19, 21): 9,
 Vector2i(20, 1): 8,
 Vector2i(20, 2): 10,
+Vector2i(20, 12): 0,
 Vector2i(20, 20): 8,
 Vector2i(20, 21): 10,
 Vector2i(21, 1): 7,
 Vector2i(21, 2): 9,
+Vector2i(21, 12): 0,
 Vector2i(21, 20): 7,
 Vector2i(21, 21): 9,
 Vector2i(22, 1): 8,
@@ -1219,96 +1229,115 @@ Vector2i(2, 1): {
 },
 Vector2i(2, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 3): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 4): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 5): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 6): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 7): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 8): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 9): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 10): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 11): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 12): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 13): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 14): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 15): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 16): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 17): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 18): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 19): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(2, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1324,11 +1353,13 @@ Vector2i(3, 1): {
 },
 Vector2i(3, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(3, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1344,11 +1375,13 @@ Vector2i(4, 1): {
 },
 Vector2i(4, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(4, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1364,11 +1397,13 @@ Vector2i(5, 1): {
 },
 Vector2i(5, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(5, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1384,11 +1419,13 @@ Vector2i(6, 1): {
 },
 Vector2i(6, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(6, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1404,11 +1441,13 @@ Vector2i(7, 1): {
 },
 Vector2i(7, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(7, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1424,11 +1463,13 @@ Vector2i(8, 1): {
 },
 Vector2i(8, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(8, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1444,11 +1485,13 @@ Vector2i(9, 1): {
 },
 Vector2i(9, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(9, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1464,6 +1507,7 @@ Vector2i(10, 1): {
 },
 Vector2i(10, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1483,6 +1527,7 @@ Vector2i(10, 19): {
 },
 Vector2i(10, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1498,6 +1543,7 @@ Vector2i(11, 1): {
 },
 Vector2i(11, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1518,6 +1564,7 @@ Vector2i(11, 19): {
 },
 Vector2i(11, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1533,11 +1580,19 @@ Vector2i(12, 1): {
 },
 Vector2i(12, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(12, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(12, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1553,11 +1608,19 @@ Vector2i(13, 1): {
 },
 Vector2i(13, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(13, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(13, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1573,11 +1636,19 @@ Vector2i(14, 1): {
 },
 Vector2i(14, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(14, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(14, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1593,11 +1664,19 @@ Vector2i(15, 1): {
 },
 Vector2i(15, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(15, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(15, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1613,11 +1692,19 @@ Vector2i(16, 1): {
 },
 Vector2i(16, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(16, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(16, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1633,11 +1720,19 @@ Vector2i(17, 1): {
 },
 Vector2i(17, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(17, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(17, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1653,11 +1748,19 @@ Vector2i(18, 1): {
 },
 Vector2i(18, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(18, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(18, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1673,11 +1776,19 @@ Vector2i(19, 1): {
 },
 Vector2i(19, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(19, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(19, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1693,11 +1804,19 @@ Vector2i(20, 1): {
 },
 Vector2i(20, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(20, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(20, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1713,11 +1832,19 @@ Vector2i(21, 1): {
 },
 Vector2i(21, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
+Vector2i(21, 12): {
+"bright": false,
+"collision": 1,
+"ink": 4,
+"paper": 0
+},
 Vector2i(21, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1733,11 +1860,13 @@ Vector2i(22, 1): {
 },
 Vector2i(22, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(22, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1753,11 +1882,13 @@ Vector2i(23, 1): {
 },
 Vector2i(23, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(23, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1773,11 +1904,13 @@ Vector2i(24, 1): {
 },
 Vector2i(24, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(24, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1793,11 +1926,13 @@ Vector2i(25, 1): {
 },
 Vector2i(25, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(25, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1813,11 +1948,13 @@ Vector2i(26, 1): {
 },
 Vector2i(26, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(26, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1833,11 +1970,13 @@ Vector2i(27, 1): {
 },
 Vector2i(27, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(27, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1853,11 +1992,13 @@ Vector2i(28, 1): {
 },
 Vector2i(28, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(28, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1873,11 +2014,13 @@ Vector2i(29, 1): {
 },
 Vector2i(29, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(29, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1893,56 +2036,67 @@ Vector2i(30, 1): {
 },
 Vector2i(30, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 7): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 8): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 9): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 10): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 11): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 12): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 13): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 14): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 15): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(30, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -1958,11 +2112,13 @@ Vector2i(31, 1): {
 },
 Vector2i(31, 2): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(31, 7): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -2003,11 +2159,13 @@ Vector2i(31, 14): {
 },
 Vector2i(31, 15): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
 Vector2i(31, 20): {
 "bright": false,
+"collision": 15,
 "ink": 2,
 "paper": 6
 },
@@ -2253,9 +2411,9 @@ script = ExtResource("2_xw80r")
 from_node = "1a3c08f1-b3ca-466a-be65-19199b533126"
 to_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
 from_port = 2
-from_port_name = ""
+from_port_name = "collided"
 to_port = 1
-to_port_name = ""
+to_port_name = "ref"
 type = 2
 
 [sub_resource type="Resource" id="Resource_j2hwo"]
@@ -2263,9 +2421,9 @@ script = ExtResource("2_xw80r")
 from_node = "0c532977-1a8a-4aad-8981-3ce1b4e9f9cf"
 to_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
 from_port = 1
-from_port_name = ""
+from_port_name = "false_flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_mgrvj"]
@@ -2273,9 +2431,9 @@ script = ExtResource("2_xw80r")
 from_node = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
 to_node = "8c1be0a3-3049-4403-848a-93da7c383fc7"
 from_port = 0
-from_port_name = ""
+from_port_name = "true_flow"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_i7qf5"]
@@ -2424,6 +2582,27 @@ properties = {
 }
 position = Vector2(1460, 820)
 
+[sub_resource type="Resource" id="Resource_lirys"]
+script = ExtResource("3_jhs8i")
+id = "8c1be0a3-3049-4403-848a-93da7c383fc7"
+type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
+properties = {
+"const": 0,
+"object_type": 0,
+"variable": 3,
+"variable_name": ""
+}
+position = Vector2(1500, 2080)
+
+[sub_resource type="Resource" id="Resource_g5qlt"]
+script = ExtResource("3_jhs8i")
+id = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
+type = "19244ef0-3b3f-4b5a-abc7-dfada8c4dfc3"
+properties = {
+"object_type": 3
+}
+position = Vector2(1180, 2060)
+
 [sub_resource type="Resource" id="Resource_teht4"]
 script = ExtResource("3_jhs8i")
 id = "c7119aac-b428-4dcf-a6a0-fa6e7f2e967b"
@@ -2487,27 +2666,6 @@ properties = {
 "variable": 3
 }
 position = Vector2(680, 1500)
-
-[sub_resource type="Resource" id="Resource_g5qlt"]
-script = ExtResource("3_jhs8i")
-id = "b9fc9b3f-4663-41a5-8f48-a65a3ff7462e"
-type = "19244ef0-3b3f-4b5a-abc7-dfada8c4dfc3"
-properties = {
-"object_type": 3
-}
-position = Vector2(1180, 2060)
-
-[sub_resource type="Resource" id="Resource_lirys"]
-script = ExtResource("3_jhs8i")
-id = "8c1be0a3-3049-4403-848a-93da7c383fc7"
-type = "27b41e9e-3c10-4493-87ff-1b4d4262ca66"
-properties = {
-"const": 0,
-"object_type": 0,
-"variable": 3,
-"variable_name": ""
-}
-position = Vector2(1500, 2080)
 
 [sub_resource type="Resource" id="Resource_6v2u1"]
 script = ExtResource("4_vegmi")
@@ -3402,27 +3560,27 @@ sprite_height = 8
 num_pixels_per_sprite = 64
 sprite_data = [[Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0])], [Array[int]([0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0])], [Array[int]([1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0])], [Array[int]([0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0])], [Array[int]([0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1])], [Array[int]([1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0])], [Array[int]([0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1])], [Array[int]([0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0])]]
 sprite_properties = Array[Dictionary]([{
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
-"solid": true
+"solid": false
 }, {
 "solid": false
 }, {

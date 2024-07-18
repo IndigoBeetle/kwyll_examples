@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=214 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=209 format=3]
 
 [ext_resource type="Script" path="res://game_map.gd" id="1_d0ypq"]
 [ext_resource type="Script" path="res://logic_graph.gd" id="1_n4mqh"]
@@ -12,36 +12,6 @@
 [ext_resource type="Script" path="res://game_data.gd" id="6_fccv7"]
 [ext_resource type="Script" path="res://sprite_sheet.gd" id="7_kqug1"]
 [ext_resource type="Script" path="res://room_ref.gd" id="9_n4ugm"]
-
-[sub_resource type="Resource" id="Resource_kvrkf"]
-script = ExtResource("2_xw80r")
-from_node = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
-to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
-from_port = 0
-from_port_name = "init_x"
-to_port = 1
-to_port_name = "x"
-type = 1
-
-[sub_resource type="Resource" id="Resource_676c1"]
-script = ExtResource("2_xw80r")
-from_node = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
-to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
-from_port = 1
-from_port_name = "init_y"
-to_port = 2
-to_port_name = "y"
-type = 1
-
-[sub_resource type="Resource" id="Resource_64ejs"]
-script = ExtResource("2_xw80r")
-from_node = "22cf0828-b25a-4ac6-a209-6b4db24b0149"
-to_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
-from_port = 0
-from_port_name = "flow_out"
-to_port = 0
-to_port_name = "flow_in"
-type = 0
 
 [sub_resource type="Resource" id="Resource_h6tff"]
 script = ExtResource("2_xw80r")
@@ -393,16 +363,6 @@ to_port = 2
 to_port_name = "val"
 type = 1
 
-[sub_resource type="Resource" id="Resource_5a5ke"]
-script = ExtResource("2_xw80r")
-from_node = "ea10c944-8baa-44f9-893d-5723c7b8b524"
-to_node = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
-from_port = 0
-from_port_name = "flow"
-to_port = 0
-to_port_name = "flow_in"
-type = 0
-
 [sub_resource type="Resource" id="Resource_kic2c"]
 script = ExtResource("2_xw80r")
 from_node = "27ccb65c-b471-4a6c-9c4a-a5229a1e70fa"
@@ -481,6 +441,16 @@ from_port = 1
 from_port_name = "false_flow"
 to_port = 0
 to_port_name = "flow_in"
+type = 0
+
+[sub_resource type="Resource" id="Resource_txbs1"]
+script = ExtResource("2_xw80r")
+from_node = "22cf0828-b25a-4ac6-a209-6b4db24b0149"
+to_node = "1cfc0f39-a6d1-4ac2-8f1b-7e5edb6f1a9a"
+from_port = 0
+from_port_name = ""
+to_port = 0
+to_port_name = ""
 type = 0
 
 [sub_resource type="Resource" id="Resource_n5fl0"]
@@ -647,13 +617,6 @@ type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
 properties = {}
 position = Vector2(-460, 1880)
 
-[sub_resource type="Resource" id="Resource_g4wfy"]
-script = ExtResource("3_jhs8i")
-id = "ab8977a0-ff4f-4ef2-beda-da73ccae67ef"
-type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
-properties = {}
-position = Vector2(260, -280)
-
 [sub_resource type="Resource" id="Resource_flpe6"]
 script = ExtResource("3_jhs8i")
 id = "aff8875f-c630-473b-b4af-4bfe1f625d17"
@@ -785,16 +748,6 @@ properties = {
 }
 position = Vector2(2360, 260)
 
-[sub_resource type="Resource" id="Resource_knc6f"]
-script = ExtResource("3_jhs8i")
-id = "ea10c944-8baa-44f9-893d-5723c7b8b524"
-type = "def0d1b7-0fbe-4fb7-9da4-38b3e0933a33"
-properties = {
-"const_x": 0,
-"const_y": 0
-}
-position = Vector2(760, -280)
-
 [sub_resource type="Resource" id="Resource_s0tno"]
 script = ExtResource("3_jhs8i")
 id = "ef6b1b89-cd7f-43cb-bcea-81824abcde00"
@@ -862,7 +815,6 @@ nodes = {
 "71bf1f9e-053a-44c2-a1fb-85a722026f47": SubResource("Resource_ys3b5"),
 "7c1b8777-6b4f-46f3-805a-5beb2646d366": SubResource("Resource_fea04"),
 "913a1a0b-f00a-47d6-ab10-8071c7a94bb0": SubResource("Resource_w4krg"),
-"ab8977a0-ff4f-4ef2-beda-da73ccae67ef": SubResource("Resource_g4wfy"),
 "aff8875f-c630-473b-b4af-4bfe1f625d17": SubResource("Resource_flpe6"),
 "b257d854-57cb-4b22-a761-38813656bba5": SubResource("Resource_c0we3"),
 "bf882903-40cc-4711-ae3b-41f01eabe23c": SubResource("Resource_hwqst"),
@@ -876,12 +828,11 @@ nodes = {
 "e5b543f7-3c43-4a28-9f01-1c2c1981ece7": SubResource("Resource_0twhk"),
 "e705d343-1b9a-43d3-b961-49c3f405ad51": SubResource("Resource_28dy3"),
 "e706927d-54c0-41f3-9c0e-7483349a1f80": SubResource("Resource_o805y"),
-"ea10c944-8baa-44f9-893d-5723c7b8b524": SubResource("Resource_knc6f"),
 "ef6b1b89-cd7f-43cb-bcea-81824abcde00": SubResource("Resource_s0tno"),
 "f53377c1-c007-4beb-bc53-d371eb313d43": SubResource("Resource_ycqkv"),
 "f988e749-12aa-470b-9bf8-ad107b1d41cf": SubResource("Resource_h5d27")
 }
-connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_kvrkf"), SubResource("Resource_676c1"), SubResource("Resource_64ejs"), SubResource("Resource_h6tff"), SubResource("Resource_5x25o"), SubResource("Resource_nwl0t"), SubResource("Resource_q606j"), SubResource("Resource_dm0vu"), SubResource("Resource_5fg3q"), SubResource("Resource_vsyw3"), SubResource("Resource_to750"), SubResource("Resource_ticmu"), SubResource("Resource_1dkbm"), SubResource("Resource_r6sly"), SubResource("Resource_imfua"), SubResource("Resource_iuvo1"), SubResource("Resource_wtkfo"), SubResource("Resource_dhbui"), SubResource("Resource_15d0y"), SubResource("Resource_k23ja"), SubResource("Resource_1b4qw"), SubResource("Resource_ou4jb"), SubResource("Resource_l5rsc"), SubResource("Resource_xenig"), SubResource("Resource_dfp0c"), SubResource("Resource_h30sb"), SubResource("Resource_mx1nx"), SubResource("Resource_1cy37"), SubResource("Resource_haxf2"), SubResource("Resource_heg5o"), SubResource("Resource_6g7yn"), SubResource("Resource_e6bg4"), SubResource("Resource_i3max"), SubResource("Resource_djv2l"), SubResource("Resource_ook0t"), SubResource("Resource_so62a"), SubResource("Resource_oj3bb"), SubResource("Resource_pa5dm"), SubResource("Resource_5a5ke"), SubResource("Resource_kic2c"), SubResource("Resource_qo8lr"), SubResource("Resource_mayv7"), SubResource("Resource_f0m26"), SubResource("Resource_bwhsw"), SubResource("Resource_mpmci"), SubResource("Resource_uul8p"), SubResource("Resource_ayx5c")])
+connections = Array[ExtResource("2_xw80r")]([SubResource("Resource_h6tff"), SubResource("Resource_5x25o"), SubResource("Resource_nwl0t"), SubResource("Resource_q606j"), SubResource("Resource_dm0vu"), SubResource("Resource_5fg3q"), SubResource("Resource_vsyw3"), SubResource("Resource_to750"), SubResource("Resource_ticmu"), SubResource("Resource_1dkbm"), SubResource("Resource_r6sly"), SubResource("Resource_imfua"), SubResource("Resource_iuvo1"), SubResource("Resource_wtkfo"), SubResource("Resource_dhbui"), SubResource("Resource_15d0y"), SubResource("Resource_k23ja"), SubResource("Resource_1b4qw"), SubResource("Resource_ou4jb"), SubResource("Resource_l5rsc"), SubResource("Resource_xenig"), SubResource("Resource_dfp0c"), SubResource("Resource_h30sb"), SubResource("Resource_mx1nx"), SubResource("Resource_1cy37"), SubResource("Resource_haxf2"), SubResource("Resource_heg5o"), SubResource("Resource_6g7yn"), SubResource("Resource_e6bg4"), SubResource("Resource_i3max"), SubResource("Resource_djv2l"), SubResource("Resource_ook0t"), SubResource("Resource_so62a"), SubResource("Resource_oj3bb"), SubResource("Resource_pa5dm"), SubResource("Resource_kic2c"), SubResource("Resource_qo8lr"), SubResource("Resource_mayv7"), SubResource("Resource_f0m26"), SubResource("Resource_bwhsw"), SubResource("Resource_mpmci"), SubResource("Resource_uul8p"), SubResource("Resource_ayx5c"), SubResource("Resource_txbs1")])
 logic_container = null
 
 [sub_resource type="Resource" id="Resource_vh5fk"]

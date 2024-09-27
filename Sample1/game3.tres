@@ -557,7 +557,8 @@ id = "1f953074-975d-4a7d-a214-e6c9988df43a"
 type = "65005ffa-d937-4887-b6a1-cd39b6cebee6"
 properties = {
 "animation": 4,
-"rate": 0
+"frame": -1,
+"rate": 10
 }
 position = Vector2(3720, 1120)
 
@@ -835,7 +836,8 @@ id = "e706927d-54c0-41f3-9c0e-7483349a1f80"
 type = "65005ffa-d937-4887-b6a1-cd39b6cebee6"
 properties = {
 "animation": 1,
-"rate": 0
+"frame": -1,
+"rate": 10
 }
 position = Vector2(4060, 1400)
 
@@ -944,6 +946,7 @@ timeline_animations = {}
 current_animation = ""
 current_frame = 0
 is_global = true
+animation_rate = 10
 
 [sub_resource type="Resource" id="Resource_1y3gs"]
 script = ExtResource("8_op5li")
@@ -2411,6 +2414,7 @@ timeline_animations = {}
 current_animation = ""
 current_frame = 0
 is_global = false
+animation_rate = 10
 
 [sub_resource type="Resource" id="Resource_lg4vp"]
 script = ExtResource("3_upiw6")
@@ -2443,6 +2447,7 @@ timeline_animations = {}
 current_animation = ""
 current_frame = 0
 is_global = false
+animation_rate = 10
 
 [sub_resource type="Resource" id="Resource_h8yl2"]
 script = ExtResource("9_mahqg")
@@ -4241,6 +4246,7 @@ timeline_animations = {}
 current_animation = ""
 current_frame = 0
 is_global = false
+animation_rate = 10
 
 [sub_resource type="Resource" id="Resource_3tl3l"]
 script = ExtResource("9_mahqg")

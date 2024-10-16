@@ -219,6 +219,7 @@ properties = {
 "const_y": 0
 }
 position = Vector2(2200, 220)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_mpnhr"]
 script = ExtResource("3_mh2v8")
@@ -228,6 +229,7 @@ properties = {
 "variable": 0
 }
 position = Vector2(80, 520)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_clclq"]
 script = ExtResource("3_mh2v8")
@@ -238,6 +240,7 @@ properties = {
 "operator": 2
 }
 position = Vector2(980, 800)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_65whd"]
 script = ExtResource("3_mh2v8")
@@ -247,6 +250,7 @@ properties = {
 "variable": 1
 }
 position = Vector2(1140, 240)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_bqmf4"]
 script = ExtResource("3_mh2v8")
@@ -258,6 +262,7 @@ properties = {
 "values": Array[int]([-1, 1, -1, 1])
 }
 position = Vector2(480, 520)
+node_size = Vector2(365.79, 750.649)
 
 [sub_resource type="Resource" id="Resource_cipxb"]
 script = ExtResource("3_mh2v8")
@@ -268,6 +273,7 @@ properties = {
 "variable": 1
 }
 position = Vector2(2680, 380)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_ktit7"]
 script = ExtResource("3_mh2v8")
@@ -278,6 +284,7 @@ properties = {
 "variable": 1
 }
 position = Vector2(720, 240)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_0di1r"]
 script = ExtResource("3_mh2v8")
@@ -288,13 +295,15 @@ properties = {
 "const_opb": 1
 }
 position = Vector2(340, 40)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_s2h3a"]
 script = ExtResource("3_mh2v8")
 id = "ad5eccd8-3133-4640-9b8b-dfe7d1dd0174"
 type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
 properties = {}
-position = Vector2(640, 1060)
+position = Vector2(580, 1440)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_11cwo"]
 script = ExtResource("3_mh2v8")
@@ -305,6 +314,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(1720, 520)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_6cbqm"]
 script = ExtResource("3_mh2v8")
@@ -318,6 +328,7 @@ properties = {
 "up": 0
 }
 position = Vector2(-420, 160)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_4yskb"]
 script = ExtResource("3_mh2v8")
@@ -328,6 +339,7 @@ properties = {
 "variable": 0
 }
 position = Vector2(3220, 440)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_6hkww"]
 script = ExtResource("3_mh2v8")
@@ -338,6 +350,7 @@ properties = {
 "operator": 2
 }
 position = Vector2(1108, 526)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_3sjfo"]
 script = ExtResource("3_mh2v8")
@@ -348,6 +361,7 @@ properties = {
 "const_opb": 0
 }
 position = Vector2(1540, 40)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_e8kvk"]
 script = ExtResource("3_mh2v8")
@@ -358,6 +372,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(1660, 900)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_o1nug"]
 script = ExtResource("3_mh2v8")
@@ -365,6 +380,7 @@ id = "f5f58033-43ed-4fc0-aa76-88f39bacafd3"
 type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
 properties = {}
 position = Vector2(-140, -20)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_xq6lg"]
 script = ExtResource("5_xlu82")

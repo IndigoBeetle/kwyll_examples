@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=71 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=74 format=3]
 
 [ext_resource type="Script" path="res://map.gd" id="1_jox0i"]
 [ext_resource type="Script" path="res://logic_connection.gd" id="1_qjlje"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://logic_graph.gd" id="5_fr0lu"]
 [ext_resource type="Script" path="res://game_data.gd" id="6_qvkru"]
 [ext_resource type="Script" path="res://sprite_sheet.gd" id="7_6du4j"]
+[ext_resource type="Script" path="res://screen.gd" id="11_qfse5"]
 
 [sub_resource type="Resource" id="Resource_xrubr"]
 script = ExtResource("1_qjlje")
@@ -18,7 +19,7 @@ from_node = "44e10524-1c53-4a13-a756-3f400daa0991"
 to_node = "87a430ac-5855-4fcc-8ff7-bf3261a9df52"
 from_port = 0
 from_port_name = "init_x"
-to_port = 1
+to_port = 2
 to_port_name = "x"
 type = 1
 
@@ -28,7 +29,7 @@ from_node = "44e10524-1c53-4a13-a756-3f400daa0991"
 to_node = "87a430ac-5855-4fcc-8ff7-bf3261a9df52"
 from_port = 1
 from_port_name = "init_y"
-to_port = 2
+to_port = 3
 to_port_name = "y"
 type = 1
 
@@ -128,7 +129,7 @@ from_node = "36212f3c-f18f-4f60-9c82-996ce663bd6c"
 to_node = "281f0c65-1fbe-45d6-a87b-0c70c2fd23f7"
 from_port = 0
 from_port_name = "result"
-to_port = 2
+to_port = 3
 to_port_name = "y"
 type = 1
 
@@ -138,7 +139,7 @@ from_node = "173bd245-9638-46ba-82f7-35eabd58d7cd"
 to_node = "281f0c65-1fbe-45d6-a87b-0c70c2fd23f7"
 from_port = 0
 from_port_name = "result"
-to_port = 1
+to_port = 2
 to_port_name = "x"
 type = 1
 
@@ -158,6 +159,7 @@ id = "07d33dc5-4779-4bf7-a407-73611dea71aa"
 type = "7eeabba5-a095-4ea1-9e3a-5c10d352574d"
 properties = {}
 position = Vector2(260, 300)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_k2gwu"]
 script = ExtResource("2_6lybm")
@@ -165,6 +167,7 @@ id = "1464f26b-674b-46d8-8f74-e34e2f8dd1b4"
 type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
 properties = {}
 position = Vector2(20, 1340)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_7nuyp"]
 script = ExtResource("2_6lybm")
@@ -175,6 +178,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(760, 1560)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_hw3e2"]
 script = ExtResource("2_6lybm")
@@ -185,6 +189,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(140, 1760)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_vfsmm"]
 script = ExtResource("2_6lybm")
@@ -195,6 +200,7 @@ properties = {
 "const_y": 0
 }
 position = Vector2(1260, 1280)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_f6f6v"]
 script = ExtResource("2_6lybm")
@@ -205,6 +211,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(780, 1960)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_c52je"]
 script = ExtResource("2_6lybm")
@@ -212,6 +219,7 @@ id = "44e10524-1c53-4a13-a756-3f400daa0991"
 type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
 properties = {}
 position = Vector2(240, 500)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_okkhp"]
 script = ExtResource("2_6lybm")
@@ -222,6 +230,7 @@ properties = {
 "const_y": 0
 }
 position = Vector2(720, 340)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_ndo0k"]
 script = ExtResource("2_6lybm")
@@ -229,6 +238,7 @@ id = "8b953877-ac60-4f87-9932-ee84a9e73ca2"
 type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
 properties = {}
 position = Vector2(20, 1100)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_hupxr"]
 script = ExtResource("2_6lybm")
@@ -239,6 +249,7 @@ properties = {
 "operator": 0
 }
 position = Vector2(160, 2060)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_efsn8"]
 script = ExtResource("2_6lybm")
@@ -252,9 +263,11 @@ properties = {
 "up": -1
 }
 position = Vector2(-460, 1820)
+node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_rpf6w"]
 script = ExtResource("5_fr0lu")
+graph_name = "Graph"
 variables = Array[Resource("res://logic_variable.gd")]([])
 nodes = {
 "07d33dc5-4779-4bf7-a407-73611dea71aa": SubResource("Resource_q4dgu"),
@@ -292,6 +305,7 @@ sprite_sheet = SubResource("Resource_wnpwt")
 object_logic = SubResource("Resource_rpf6w")
 draw_mode = 0
 num_dynamic = 0
+single_colour = -1
 
 [sub_resource type="Resource" id="Resource_m0jx0"]
 script = ExtResource("4_2dy5k")
@@ -303,46 +317,87 @@ flags = {
 "collide_background": true
 }
 instance_variables = {}
+timeline_animations = {}
+current_animation = ""
+current_frame = 0
+is_global = true
+animation_rate = 10
 
 [sub_resource type="Resource" id="Resource_2sxoj"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -354,40 +409,40 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(25, 0): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(25, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(3, 2): {
+Vector2i(26, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(3, 21): {
+Vector2i(26, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(4, 2): {
+Vector2i(27, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(4, 21): {
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -396,55 +451,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -457,74 +476,113 @@ script = ExtResource("2_83tb5")
 room_name = "new room"
 map = SubResource("Resource_2sxoj")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_pus2r"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_ov1a7")
 room_ref_name = "new room"
 pos = Vector2i(0, 0)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_j506g"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 2): 0,
-Vector2i(6, 2): 0,
-Vector2i(7, 2): 0,
-Vector2i(8, 2): 0,
-Vector2i(9, 2): 0,
-Vector2i(10, 2): 0,
-Vector2i(11, 2): 0,
-Vector2i(12, 2): 0,
-Vector2i(13, 2): 0,
-Vector2i(14, 2): 0,
-Vector2i(15, 2): 0,
-Vector2i(16, 2): 0,
-Vector2i(17, 2): 0,
-Vector2i(18, 2): 0,
-Vector2i(19, 2): 0,
-Vector2i(20, 2): 0,
-Vector2i(21, 2): 0,
-Vector2i(22, 2): 0,
-Vector2i(23, 2): 0,
-Vector2i(24, 2): 0,
-Vector2i(25, 2): 0,
-Vector2i(26, 2): 0,
+Vector2i(3, 0): 0,
+Vector2i(4, 0): 0,
+Vector2i(5, 0): 0,
+Vector2i(6, 0): 0,
+Vector2i(7, 0): 0,
+Vector2i(8, 0): 0,
+Vector2i(9, 0): 0,
+Vector2i(10, 0): 0,
+Vector2i(11, 0): 0,
+Vector2i(12, 0): 0,
+Vector2i(13, 0): 0,
+Vector2i(14, 0): 0,
+Vector2i(15, 0): 0,
+Vector2i(16, 0): 0,
+Vector2i(17, 0): 0,
+Vector2i(18, 0): 0,
+Vector2i(19, 0): 0,
+Vector2i(20, 0): 0,
+Vector2i(21, 0): 0,
+Vector2i(22, 0): 0,
+Vector2i(23, 0): 0,
+Vector2i(24, 0): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -536,169 +594,169 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(2, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(3, 2): {
+Vector2i(3, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(3, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(4, 2): {
+Vector2i(4, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(4, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(5, 2): {
+Vector2i(5, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(6, 2): {
+Vector2i(6, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(7, 2): {
+Vector2i(7, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(8, 2): {
+Vector2i(8, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(9, 2): {
+Vector2i(9, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(10, 2): {
+Vector2i(10, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(11, 2): {
+Vector2i(11, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(12, 2): {
+Vector2i(12, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(13, 2): {
+Vector2i(13, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(14, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(15, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(16, 2): {
+Vector2i(14, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(17, 2): {
+Vector2i(15, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(18, 2): {
+Vector2i(16, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(19, 2): {
+Vector2i(17, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(20, 2): {
+Vector2i(18, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(21, 2): {
+Vector2i(19, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(22, 2): {
+Vector2i(20, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(23, 2): {
+Vector2i(21, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(24, 2): {
+Vector2i(22, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(25, 2): {
+Vector2i(23, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(26, 2): {
+Vector2i(24, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
 "ink": 4,
@@ -710,55 +768,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -771,175 +793,214 @@ script = ExtResource("2_83tb5")
 room_name = "top_room"
 map = SubResource("Resource_j506g")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_xowsx"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_iutkw")
 room_ref_name = "top_room"
 pos = Vector2i(0, -160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_fxw3u"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
-Vector2i(2, 5): 0,
-Vector2i(2, 6): 0,
-Vector2i(2, 7): 0,
-Vector2i(2, 8): 0,
-Vector2i(2, 9): 0,
-Vector2i(2, 10): 0,
-Vector2i(2, 11): 0,
-Vector2i(2, 12): 0,
-Vector2i(2, 13): 0,
-Vector2i(2, 14): 0,
-Vector2i(2, 15): 0,
-Vector2i(2, 16): 0,
-Vector2i(2, 17): 0,
-Vector2i(2, 18): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 3): 0,
+Vector2i(0, 4): 0,
+Vector2i(0, 5): 0,
+Vector2i(0, 6): 0,
+Vector2i(0, 7): 0,
+Vector2i(0, 8): 0,
+Vector2i(0, 9): 0,
+Vector2i(0, 10): 0,
+Vector2i(0, 11): 0,
+Vector2i(0, 12): 0,
+Vector2i(0, 13): 0,
+Vector2i(0, 14): 0,
+Vector2i(0, 15): 0,
+Vector2i(0, 16): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 2): 0,
-Vector2i(6, 2): 0,
-Vector2i(7, 2): 0,
-Vector2i(8, 2): 0,
-Vector2i(9, 2): 0,
-Vector2i(10, 2): 0,
-Vector2i(11, 2): 0,
-Vector2i(12, 2): 0,
-Vector2i(13, 2): 0,
-Vector2i(14, 2): 0,
-Vector2i(15, 2): 0,
-Vector2i(16, 2): 0,
-Vector2i(17, 2): 0,
-Vector2i(18, 2): 0,
-Vector2i(19, 2): 0,
-Vector2i(20, 2): 0,
-Vector2i(21, 2): 0,
-Vector2i(22, 2): 0,
-Vector2i(23, 2): 0,
-Vector2i(24, 2): 0,
-Vector2i(25, 2): 0,
-Vector2i(26, 2): 0,
+Vector2i(3, 0): 0,
+Vector2i(4, 0): 0,
+Vector2i(5, 0): 0,
+Vector2i(6, 0): 0,
+Vector2i(7, 0): 0,
+Vector2i(8, 0): 0,
+Vector2i(9, 0): 0,
+Vector2i(10, 0): 0,
+Vector2i(11, 0): 0,
+Vector2i(12, 0): 0,
+Vector2i(13, 0): 0,
+Vector2i(14, 0): 0,
+Vector2i(15, 0): 0,
+Vector2i(16, 0): 0,
+Vector2i(17, 0): 0,
+Vector2i(18, 0): 0,
+Vector2i(19, 0): 0,
+Vector2i(20, 0): 0,
+Vector2i(21, 0): 0,
+Vector2i(22, 0): 0,
+Vector2i(23, 0): 0,
+Vector2i(24, 0): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 5): {
+Vector2i(0, 3): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 6): {
+Vector2i(0, 4): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 7): {
+Vector2i(0, 5): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 8): {
+Vector2i(0, 6): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 9): {
+Vector2i(0, 7): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 10): {
+Vector2i(0, 8): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 11): {
+Vector2i(0, 9): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 12): {
+Vector2i(0, 10): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 13): {
+Vector2i(0, 11): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 14): {
+Vector2i(0, 12): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 15): {
+Vector2i(0, 13): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 16): {
+Vector2i(0, 14): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 17): {
+Vector2i(0, 15): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 18): {
+Vector2i(0, 16): {
 "bright": false,
 "collision": 15,
 "ink": 3,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
 "paper": 0
 },
 Vector2i(2, 19): {
@@ -948,169 +1009,169 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(2, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(3, 2): {
+Vector2i(3, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(3, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(4, 2): {
+Vector2i(4, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(4, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(5, 2): {
+Vector2i(5, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(6, 2): {
+Vector2i(6, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(7, 2): {
+Vector2i(7, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(8, 2): {
+Vector2i(8, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(9, 2): {
+Vector2i(9, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(10, 2): {
+Vector2i(10, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(11, 2): {
+Vector2i(11, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(12, 2): {
+Vector2i(12, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(13, 2): {
+Vector2i(13, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(14, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(15, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(16, 2): {
+Vector2i(14, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(17, 2): {
+Vector2i(15, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(18, 2): {
+Vector2i(16, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(19, 2): {
+Vector2i(17, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(20, 2): {
+Vector2i(18, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(21, 2): {
+Vector2i(19, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(22, 2): {
+Vector2i(20, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(23, 2): {
+Vector2i(21, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(24, 2): {
+Vector2i(22, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(25, 2): {
+Vector2i(23, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(26, 2): {
+Vector2i(24, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
 "ink": 4,
@@ -1122,55 +1183,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -1183,88 +1208,127 @@ script = ExtResource("2_83tb5")
 room_name = "top_left_room"
 map = SubResource("Resource_fxw3u")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_fybn6"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_om4gj")
 room_ref_name = "top_left_room"
 pos = Vector2i(-224, -160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_btw63"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 2): 0,
-Vector2i(6, 2): 0,
-Vector2i(7, 2): 0,
-Vector2i(8, 2): 0,
-Vector2i(9, 2): 0,
-Vector2i(10, 2): 0,
-Vector2i(11, 2): 0,
-Vector2i(12, 2): 0,
-Vector2i(13, 2): 0,
-Vector2i(14, 2): 0,
-Vector2i(15, 2): 0,
-Vector2i(16, 2): 0,
-Vector2i(17, 2): 0,
-Vector2i(18, 2): 0,
-Vector2i(19, 2): 0,
-Vector2i(20, 2): 0,
-Vector2i(21, 2): 0,
-Vector2i(22, 2): 0,
-Vector2i(23, 2): 0,
-Vector2i(24, 2): 0,
-Vector2i(25, 2): 0,
-Vector2i(26, 2): 0,
+Vector2i(3, 0): 0,
+Vector2i(4, 0): 0,
+Vector2i(5, 0): 0,
+Vector2i(6, 0): 0,
+Vector2i(7, 0): 0,
+Vector2i(8, 0): 0,
+Vector2i(9, 0): 0,
+Vector2i(10, 0): 0,
+Vector2i(11, 0): 0,
+Vector2i(12, 0): 0,
+Vector2i(13, 0): 0,
+Vector2i(14, 0): 0,
+Vector2i(15, 0): 0,
+Vector2i(16, 0): 0,
+Vector2i(17, 0): 0,
+Vector2i(18, 0): 0,
+Vector2i(19, 0): 0,
+Vector2i(20, 0): 0,
+Vector2i(21, 0): 0,
+Vector2i(22, 0): 0,
+Vector2i(23, 0): 0,
+Vector2i(24, 0): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 5): 0,
-Vector2i(29, 6): 0,
-Vector2i(29, 7): 0,
-Vector2i(29, 8): 0,
-Vector2i(29, 9): 0,
-Vector2i(29, 10): 0,
-Vector2i(29, 11): 0,
-Vector2i(29, 12): 0,
-Vector2i(29, 13): 0,
-Vector2i(29, 14): 0,
-Vector2i(29, 15): 0,
-Vector2i(29, 16): 0,
-Vector2i(29, 17): 0,
-Vector2i(29, 18): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 3): 0,
+Vector2i(27, 4): 0,
+Vector2i(27, 5): 0,
+Vector2i(27, 6): 0,
+Vector2i(27, 7): 0,
+Vector2i(27, 8): 0,
+Vector2i(27, 9): 0,
+Vector2i(27, 10): 0,
+Vector2i(27, 11): 0,
+Vector2i(27, 12): 0,
+Vector2i(27, 13): 0,
+Vector2i(27, 14): 0,
+Vector2i(27, 15): 0,
+Vector2i(27, 16): 0,
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -1276,169 +1340,169 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(2, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(3, 2): {
+Vector2i(3, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(3, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(4, 2): {
+Vector2i(4, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(4, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(5, 2): {
+Vector2i(5, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(6, 2): {
+Vector2i(6, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(7, 2): {
+Vector2i(7, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(8, 2): {
+Vector2i(8, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(9, 2): {
+Vector2i(9, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(10, 2): {
+Vector2i(10, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(11, 2): {
+Vector2i(11, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(12, 2): {
+Vector2i(12, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(13, 2): {
+Vector2i(13, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(14, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(15, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(16, 2): {
+Vector2i(14, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(17, 2): {
+Vector2i(15, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(18, 2): {
+Vector2i(16, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(19, 2): {
+Vector2i(17, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(20, 2): {
+Vector2i(18, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(21, 2): {
+Vector2i(19, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(22, 2): {
+Vector2i(20, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(23, 2): {
+Vector2i(21, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(24, 2): {
+Vector2i(22, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(25, 2): {
+Vector2i(23, 0): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(26, 2): {
+Vector2i(24, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
 "ink": 4,
@@ -1450,139 +1514,103 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(28, 2): {
+Vector2i(27, 3): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(28, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 2): {
+Vector2i(27, 4): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 3): {
+Vector2i(27, 5): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 4): {
+Vector2i(27, 6): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 5): {
+Vector2i(27, 7): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 6): {
+Vector2i(27, 8): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 7): {
+Vector2i(27, 9): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 8): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 9): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 10): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 11): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 12): {
+Vector2i(27, 10): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 13): {
+Vector2i(27, 11): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 14): {
+Vector2i(27, 12): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 15): {
+Vector2i(27, 13): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 16): {
+Vector2i(27, 14): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 17): {
+Vector2i(27, 15): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 18): {
+Vector2i(27, 16): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 19): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 20): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -1595,66 +1623,105 @@ script = ExtResource("2_83tb5")
 room_name = "top_right_room"
 map = SubResource("Resource_btw63")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_8deb6"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_iu7et")
 room_ref_name = "top_right_room"
 pos = Vector2i(224, -160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_2fspn"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 5): 0,
-Vector2i(29, 6): 0,
-Vector2i(29, 7): 0,
-Vector2i(29, 8): 0,
-Vector2i(29, 9): 0,
-Vector2i(29, 10): 0,
-Vector2i(29, 11): 0,
-Vector2i(29, 12): 0,
-Vector2i(29, 13): 0,
-Vector2i(29, 14): 0,
-Vector2i(29, 15): 0,
-Vector2i(29, 16): 0,
-Vector2i(29, 17): 0,
-Vector2i(29, 18): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 3): 0,
+Vector2i(27, 4): 0,
+Vector2i(27, 5): 0,
+Vector2i(27, 6): 0,
+Vector2i(27, 7): 0,
+Vector2i(27, 8): 0,
+Vector2i(27, 9): 0,
+Vector2i(27, 10): 0,
+Vector2i(27, 11): 0,
+Vector2i(27, 12): 0,
+Vector2i(27, 13): 0,
+Vector2i(27, 14): 0,
+Vector2i(27, 15): 0,
+Vector2i(27, 16): 0,
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -1666,40 +1733,40 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(25, 0): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(25, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(3, 2): {
+Vector2i(26, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(3, 21): {
+Vector2i(26, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(4, 2): {
+Vector2i(27, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(4, 21): {
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -1708,139 +1775,103 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(28, 2): {
+Vector2i(27, 3): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(28, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 2): {
+Vector2i(27, 4): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 3): {
+Vector2i(27, 5): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 4): {
+Vector2i(27, 6): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 5): {
+Vector2i(27, 7): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 6): {
+Vector2i(27, 8): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 7): {
+Vector2i(27, 9): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 8): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 9): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 10): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 11): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 12): {
+Vector2i(27, 10): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 13): {
+Vector2i(27, 11): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 14): {
+Vector2i(27, 12): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 15): {
+Vector2i(27, 13): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 16): {
+Vector2i(27, 14): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 17): {
+Vector2i(27, 15): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 18): {
+Vector2i(27, 16): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 19): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 20): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -1853,88 +1884,127 @@ script = ExtResource("2_83tb5")
 room_name = "right_room"
 map = SubResource("Resource_2fspn")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_w7gkc"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_7wx62")
 room_ref_name = "right_room"
 pos = Vector2i(224, 0)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_188d4"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 21): 0,
-Vector2i(6, 21): 0,
-Vector2i(7, 21): 0,
-Vector2i(8, 21): 0,
-Vector2i(9, 21): 0,
-Vector2i(10, 21): 0,
-Vector2i(11, 21): 0,
-Vector2i(12, 21): 0,
-Vector2i(13, 21): 0,
-Vector2i(14, 21): 0,
-Vector2i(15, 21): 0,
-Vector2i(16, 21): 0,
-Vector2i(17, 21): 0,
-Vector2i(18, 21): 0,
-Vector2i(19, 21): 0,
-Vector2i(20, 21): 0,
-Vector2i(21, 21): 0,
-Vector2i(22, 21): 0,
-Vector2i(23, 21): 0,
-Vector2i(24, 21): 0,
-Vector2i(25, 21): 0,
-Vector2i(26, 21): 0,
+Vector2i(3, 19): 0,
+Vector2i(4, 19): 0,
+Vector2i(5, 19): 0,
+Vector2i(6, 19): 0,
+Vector2i(7, 19): 0,
+Vector2i(8, 19): 0,
+Vector2i(9, 19): 0,
+Vector2i(10, 19): 0,
+Vector2i(11, 19): 0,
+Vector2i(12, 19): 0,
+Vector2i(13, 19): 0,
+Vector2i(14, 19): 0,
+Vector2i(15, 19): 0,
+Vector2i(16, 19): 0,
+Vector2i(17, 19): 0,
+Vector2i(18, 19): 0,
+Vector2i(19, 19): 0,
+Vector2i(20, 19): 0,
+Vector2i(21, 19): 0,
+Vector2i(22, 19): 0,
+Vector2i(23, 19): 0,
+Vector2i(24, 19): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 5): 0,
-Vector2i(29, 6): 0,
-Vector2i(29, 7): 0,
-Vector2i(29, 8): 0,
-Vector2i(29, 9): 0,
-Vector2i(29, 10): 0,
-Vector2i(29, 11): 0,
-Vector2i(29, 12): 0,
-Vector2i(29, 13): 0,
-Vector2i(29, 14): 0,
-Vector2i(29, 15): 0,
-Vector2i(29, 16): 0,
-Vector2i(29, 17): 0,
-Vector2i(29, 18): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 3): 0,
+Vector2i(27, 4): 0,
+Vector2i(27, 5): 0,
+Vector2i(27, 6): 0,
+Vector2i(27, 7): 0,
+Vector2i(27, 8): 0,
+Vector2i(27, 9): 0,
+Vector2i(27, 10): 0,
+Vector2i(27, 11): 0,
+Vector2i(27, 12): 0,
+Vector2i(27, 13): 0,
+Vector2i(27, 14): 0,
+Vector2i(27, 15): 0,
+Vector2i(27, 16): 0,
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -1946,172 +2016,172 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(3, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(4, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(3, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(3, 21): {
+Vector2i(5, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(4, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(4, 21): {
+Vector2i(6, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(5, 21): {
+Vector2i(7, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(6, 21): {
+Vector2i(8, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(7, 21): {
+Vector2i(9, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(8, 21): {
+Vector2i(10, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(9, 21): {
+Vector2i(11, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(10, 21): {
+Vector2i(12, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(11, 21): {
+Vector2i(13, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(12, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(13, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(14, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(15, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(16, 21): {
+Vector2i(14, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(17, 21): {
+Vector2i(15, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(18, 21): {
+Vector2i(16, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(19, 21): {
+Vector2i(17, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(20, 21): {
+Vector2i(18, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(21, 21): {
+Vector2i(19, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(22, 21): {
+Vector2i(20, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(23, 21): {
+Vector2i(21, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(24, 21): {
+Vector2i(22, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(25, 21): {
+Vector2i(23, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(26, 21): {
+Vector2i(24, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
+"bright": false,
+"collision": 15,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -2120,139 +2190,103 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(28, 2): {
+Vector2i(27, 3): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(28, 21): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 2): {
+Vector2i(27, 4): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 3): {
+Vector2i(27, 5): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 4): {
+Vector2i(27, 6): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 5): {
+Vector2i(27, 7): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 6): {
+Vector2i(27, 8): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 7): {
+Vector2i(27, 9): {
 "bright": false,
 "collision": 15,
 "ink": 4,
 "paper": 0
 },
-Vector2i(29, 8): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 9): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 10): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 11): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 12): {
+Vector2i(27, 10): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 13): {
+Vector2i(27, 11): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 14): {
+Vector2i(27, 12): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 15): {
+Vector2i(27, 13): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 16): {
+Vector2i(27, 14): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 17): {
+Vector2i(27, 15): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 18): {
+Vector2i(27, 16): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 19): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 20): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -2265,74 +2299,113 @@ script = ExtResource("2_83tb5")
 room_name = "bottom_right_room"
 map = SubResource("Resource_188d4")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_gn4re"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_1xtp7")
 room_ref_name = "bottom_right_room"
 pos = Vector2i(224, 160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_pi7et"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 21): 0,
-Vector2i(6, 21): 0,
-Vector2i(7, 21): 0,
-Vector2i(8, 21): 0,
-Vector2i(9, 21): 0,
-Vector2i(10, 21): 0,
-Vector2i(11, 21): 0,
-Vector2i(12, 21): 0,
-Vector2i(13, 21): 0,
-Vector2i(14, 21): 0,
-Vector2i(15, 21): 0,
-Vector2i(16, 21): 0,
-Vector2i(17, 21): 0,
-Vector2i(18, 21): 0,
-Vector2i(19, 21): 0,
-Vector2i(20, 21): 0,
-Vector2i(21, 21): 0,
-Vector2i(22, 21): 0,
-Vector2i(23, 21): 0,
-Vector2i(24, 21): 0,
-Vector2i(25, 21): 0,
-Vector2i(26, 21): 0,
+Vector2i(3, 19): 0,
+Vector2i(4, 19): 0,
+Vector2i(5, 19): 0,
+Vector2i(6, 19): 0,
+Vector2i(7, 19): 0,
+Vector2i(8, 19): 0,
+Vector2i(9, 19): 0,
+Vector2i(10, 19): 0,
+Vector2i(11, 19): 0,
+Vector2i(12, 19): 0,
+Vector2i(13, 19): 0,
+Vector2i(14, 19): 0,
+Vector2i(15, 19): 0,
+Vector2i(16, 19): 0,
+Vector2i(17, 19): 0,
+Vector2i(18, 19): 0,
+Vector2i(19, 19): 0,
+Vector2i(20, 19): 0,
+Vector2i(21, 19): 0,
+Vector2i(22, 19): 0,
+Vector2i(23, 19): 0,
+Vector2i(24, 19): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
@@ -2344,172 +2417,172 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(3, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(4, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(3, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(3, 21): {
+Vector2i(5, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(4, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(4, 21): {
+Vector2i(6, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(5, 21): {
+Vector2i(7, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(6, 21): {
+Vector2i(8, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(7, 21): {
+Vector2i(9, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(8, 21): {
+Vector2i(10, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(9, 21): {
+Vector2i(11, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(10, 21): {
+Vector2i(12, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(11, 21): {
+Vector2i(13, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(12, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(13, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(14, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(15, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(16, 21): {
+Vector2i(14, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(17, 21): {
+Vector2i(15, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(18, 21): {
+Vector2i(16, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(19, 21): {
+Vector2i(17, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(20, 21): {
+Vector2i(18, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(21, 21): {
+Vector2i(19, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(22, 21): {
+Vector2i(20, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(23, 21): {
+Vector2i(21, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(24, 21): {
+Vector2i(22, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(25, 21): {
+Vector2i(23, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(26, 21): {
+Vector2i(24, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
+"bright": false,
+"collision": 15,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -2518,55 +2591,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -2579,175 +2616,214 @@ script = ExtResource("2_83tb5")
 room_name = "bottom_room"
 map = SubResource("Resource_pi7et")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_sne20"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_7nltf")
 room_ref_name = "bottom_room"
 pos = Vector2i(0, 160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_m3xne"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
-Vector2i(2, 5): 0,
-Vector2i(2, 6): 0,
-Vector2i(2, 7): 0,
-Vector2i(2, 8): 0,
-Vector2i(2, 9): 0,
-Vector2i(2, 10): 0,
-Vector2i(2, 11): 0,
-Vector2i(2, 12): 0,
-Vector2i(2, 13): 0,
-Vector2i(2, 14): 0,
-Vector2i(2, 15): 0,
-Vector2i(2, 16): 0,
-Vector2i(2, 17): 0,
-Vector2i(2, 18): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 3): 0,
+Vector2i(0, 4): 0,
+Vector2i(0, 5): 0,
+Vector2i(0, 6): 0,
+Vector2i(0, 7): 0,
+Vector2i(0, 8): 0,
+Vector2i(0, 9): 0,
+Vector2i(0, 10): 0,
+Vector2i(0, 11): 0,
+Vector2i(0, 12): 0,
+Vector2i(0, 13): 0,
+Vector2i(0, 14): 0,
+Vector2i(0, 15): 0,
+Vector2i(0, 16): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
-Vector2i(5, 21): 0,
-Vector2i(6, 21): 0,
-Vector2i(7, 21): 0,
-Vector2i(8, 21): 0,
-Vector2i(9, 21): 0,
-Vector2i(10, 21): 0,
-Vector2i(11, 21): 0,
-Vector2i(12, 21): 0,
-Vector2i(13, 21): 0,
-Vector2i(14, 21): 0,
-Vector2i(15, 21): 0,
-Vector2i(16, 21): 0,
-Vector2i(17, 21): 0,
-Vector2i(18, 21): 0,
-Vector2i(19, 21): 0,
-Vector2i(20, 21): 0,
-Vector2i(21, 21): 0,
-Vector2i(22, 21): 0,
-Vector2i(23, 21): 0,
-Vector2i(24, 21): 0,
-Vector2i(25, 21): 0,
-Vector2i(26, 21): 0,
+Vector2i(3, 19): 0,
+Vector2i(4, 19): 0,
+Vector2i(5, 19): 0,
+Vector2i(6, 19): 0,
+Vector2i(7, 19): 0,
+Vector2i(8, 19): 0,
+Vector2i(9, 19): 0,
+Vector2i(10, 19): 0,
+Vector2i(11, 19): 0,
+Vector2i(12, 19): 0,
+Vector2i(13, 19): 0,
+Vector2i(14, 19): 0,
+Vector2i(15, 19): 0,
+Vector2i(16, 19): 0,
+Vector2i(17, 19): 0,
+Vector2i(18, 19): 0,
+Vector2i(19, 19): 0,
+Vector2i(20, 19): 0,
+Vector2i(21, 19): 0,
+Vector2i(22, 19): 0,
+Vector2i(23, 19): 0,
+Vector2i(24, 19): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 5): {
+Vector2i(0, 3): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 6): {
+Vector2i(0, 4): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 7): {
+Vector2i(0, 5): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 8): {
+Vector2i(0, 6): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 9): {
+Vector2i(0, 7): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 10): {
+Vector2i(0, 8): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 11): {
+Vector2i(0, 9): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 12): {
+Vector2i(0, 10): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 13): {
+Vector2i(0, 11): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 14): {
+Vector2i(0, 12): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 15): {
+Vector2i(0, 13): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 16): {
+Vector2i(0, 14): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 17): {
+Vector2i(0, 15): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 18): {
+Vector2i(0, 16): {
 "bright": false,
 "collision": 15,
 "ink": 3,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
 "paper": 0
 },
 Vector2i(2, 19): {
@@ -2756,172 +2832,172 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(3, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(4, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(3, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(3, 21): {
+Vector2i(5, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(4, 2): {
-"bright": false,
-"collision": 15,
-"ink": 2,
-"paper": 0
-},
-Vector2i(4, 21): {
+Vector2i(6, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(5, 21): {
+Vector2i(7, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(6, 21): {
+Vector2i(8, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(7, 21): {
+Vector2i(9, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(8, 21): {
+Vector2i(10, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(9, 21): {
+Vector2i(11, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(10, 21): {
+Vector2i(12, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(11, 21): {
+Vector2i(13, 19): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(12, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(13, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(14, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(15, 21): {
-"bright": false,
-"collision": 15,
-"ink": 3,
-"paper": 0
-},
-Vector2i(16, 21): {
+Vector2i(14, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(17, 21): {
+Vector2i(15, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(18, 21): {
+Vector2i(16, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(19, 21): {
+Vector2i(17, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(20, 21): {
+Vector2i(18, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(21, 21): {
+Vector2i(19, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(22, 21): {
+Vector2i(20, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(23, 21): {
+Vector2i(21, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(24, 21): {
+Vector2i(22, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(25, 21): {
+Vector2i(23, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(26, 21): {
+Vector2i(24, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
+"paper": 0
+},
+Vector2i(25, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(25, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(26, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(26, 19): {
+"bright": false,
+"collision": 15,
+"ink": 5,
+"paper": 0
+},
+Vector2i(27, 0): {
+"bright": false,
+"collision": 15,
+"ink": 4,
+"paper": 0
+},
+Vector2i(27, 1): {
+"bright": false,
+"collision": 15,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -2930,55 +3006,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -2991,153 +3031,192 @@ script = ExtResource("2_83tb5")
 room_name = "bottom_left_room"
 map = SubResource("Resource_m3xne")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_64ted"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_g8oe6")
 room_ref_name = "bottom_left_room"
 pos = Vector2i(-224, 160)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_474gf"]
 script = ExtResource("1_jox0i")
 map_name = "unnamed"
 cells = {
-Vector2i(2, 2): 0,
-Vector2i(2, 3): 0,
-Vector2i(2, 4): 0,
-Vector2i(2, 5): 0,
-Vector2i(2, 6): 0,
-Vector2i(2, 7): 0,
-Vector2i(2, 8): 0,
-Vector2i(2, 9): 0,
-Vector2i(2, 10): 0,
-Vector2i(2, 11): 0,
-Vector2i(2, 12): 0,
-Vector2i(2, 13): 0,
-Vector2i(2, 14): 0,
-Vector2i(2, 15): 0,
-Vector2i(2, 16): 0,
-Vector2i(2, 17): 0,
-Vector2i(2, 18): 0,
+Vector2i(0, 0): 0,
+Vector2i(0, 1): 0,
+Vector2i(0, 2): 0,
+Vector2i(0, 3): 0,
+Vector2i(0, 4): 0,
+Vector2i(0, 5): 0,
+Vector2i(0, 6): 0,
+Vector2i(0, 7): 0,
+Vector2i(0, 8): 0,
+Vector2i(0, 9): 0,
+Vector2i(0, 10): 0,
+Vector2i(0, 11): 0,
+Vector2i(0, 12): 0,
+Vector2i(0, 13): 0,
+Vector2i(0, 14): 0,
+Vector2i(0, 15): 0,
+Vector2i(0, 16): 0,
+Vector2i(0, 17): 0,
+Vector2i(0, 18): 0,
+Vector2i(0, 19): 0,
+Vector2i(1, 0): 0,
+Vector2i(1, 19): 0,
+Vector2i(2, 0): 0,
 Vector2i(2, 19): 0,
-Vector2i(2, 20): 0,
-Vector2i(2, 21): 0,
-Vector2i(3, 2): 0,
-Vector2i(3, 21): 0,
-Vector2i(4, 2): 0,
-Vector2i(4, 21): 0,
+Vector2i(25, 0): 0,
+Vector2i(25, 19): 0,
+Vector2i(26, 0): 0,
+Vector2i(26, 19): 0,
+Vector2i(27, 0): 0,
+Vector2i(27, 1): 0,
 Vector2i(27, 2): 0,
-Vector2i(27, 21): 0,
-Vector2i(28, 2): 0,
-Vector2i(28, 21): 0,
-Vector2i(29, 2): 0,
-Vector2i(29, 3): 0,
-Vector2i(29, 4): 0,
-Vector2i(29, 19): 0,
-Vector2i(29, 20): 0,
-Vector2i(29, 21): 0
+Vector2i(27, 17): 0,
+Vector2i(27, 18): 0,
+Vector2i(27, 19): 0
 }
 attrs = {
-Vector2i(2, 2): {
+Vector2i(0, 0): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 3): {
+Vector2i(0, 1): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 4): {
+Vector2i(0, 2): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 5): {
+Vector2i(0, 3): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 6): {
+Vector2i(0, 4): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 7): {
+Vector2i(0, 5): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 8): {
+Vector2i(0, 6): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 9): {
+Vector2i(0, 7): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 10): {
+Vector2i(0, 8): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 11): {
+Vector2i(0, 9): {
 "bright": false,
 "collision": 15,
 "ink": 2,
 "paper": 0
 },
-Vector2i(2, 12): {
+Vector2i(0, 10): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 13): {
+Vector2i(0, 11): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 14): {
+Vector2i(0, 12): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 15): {
+Vector2i(0, 13): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 16): {
+Vector2i(0, 14): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 17): {
+Vector2i(0, 15): {
 "bright": false,
 "collision": 15,
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 18): {
+Vector2i(0, 16): {
 "bright": false,
 "collision": 15,
 "ink": 3,
+"paper": 0
+},
+Vector2i(0, 17): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 18): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(0, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(1, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
+"paper": 0
+},
+Vector2i(1, 19): {
+"bright": false,
+"collision": 15,
+"ink": 3,
+"paper": 0
+},
+Vector2i(2, 0): {
+"bright": false,
+"collision": 15,
+"ink": 2,
 "paper": 0
 },
 Vector2i(2, 19): {
@@ -3146,40 +3225,40 @@ Vector2i(2, 19): {
 "ink": 3,
 "paper": 0
 },
-Vector2i(2, 20): {
+Vector2i(25, 0): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
-Vector2i(2, 21): {
+Vector2i(25, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(3, 2): {
+Vector2i(26, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(3, 21): {
+Vector2i(26, 19): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 5,
 "paper": 0
 },
-Vector2i(4, 2): {
+Vector2i(27, 0): {
 "bright": false,
 "collision": 15,
-"ink": 2,
+"ink": 4,
 "paper": 0
 },
-Vector2i(4, 21): {
+Vector2i(27, 1): {
 "bright": false,
 "collision": 15,
-"ink": 3,
+"ink": 4,
 "paper": 0
 },
 Vector2i(27, 2): {
@@ -3188,55 +3267,19 @@ Vector2i(27, 2): {
 "ink": 4,
 "paper": 0
 },
-Vector2i(27, 21): {
+Vector2i(27, 17): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(28, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(28, 21): {
+Vector2i(27, 18): {
 "bright": false,
 "collision": 15,
 "ink": 5,
 "paper": 0
 },
-Vector2i(29, 2): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 3): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 4): {
-"bright": false,
-"collision": 15,
-"ink": 4,
-"paper": 0
-},
-Vector2i(29, 19): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 20): {
-"bright": false,
-"collision": 15,
-"ink": 5,
-"paper": 0
-},
-Vector2i(29, 21): {
+Vector2i(27, 19): {
 "bright": false,
 "collision": 15,
 "ink": 5,
@@ -3249,12 +3292,15 @@ script = ExtResource("2_83tb5")
 room_name = "left_room"
 map = SubResource("Resource_474gf")
 object_refs = Array[ExtResource("4_2dy5k")]([])
+markers = Array[Resource("res://marker.gd")]([])
 
 [sub_resource type="Resource" id="Resource_l0ugq"]
 script = ExtResource("3_akha6")
 room = SubResource("Resource_k50rf")
 room_ref_name = "left_room"
 pos = Vector2i(-224, 0)
+ink_colour = 7
+paper_colour = 0
 
 [sub_resource type="Resource" id="Resource_r3ltg"]
 script = ExtResource("4_qd2k5")
@@ -3263,9 +3309,27 @@ object_refs = Array[ExtResource("4_2dy5k")]([SubResource("Resource_m0jx0")])
 
 [sub_resource type="Resource" id="Resource_hvkwg"]
 script = ExtResource("5_fr0lu")
+graph_name = "Graph"
 variables = Array[Resource("res://logic_variable.gd")]([])
 nodes = {}
 connections = Array[ExtResource("1_qjlje")]([])
+
+[sub_resource type="Resource" id="Resource_qxcmu"]
+script = ExtResource("5_fr0lu")
+graph_name = "Graph"
+variables = Array[Resource("res://logic_variable.gd")]([])
+nodes = {}
+connections = Array[ExtResource("1_qjlje")]([])
+
+[sub_resource type="Resource" id="Resource_xi38l"]
+script = ExtResource("11_qfse5")
+screen_name = "Default"
+is_game_screen = true
+window_position = Vector2i(16, 16)
+instruments = Array[Resource("res://instrument.gd")]([])
+screen_logic = SubResource("Resource_qxcmu")
+background_colour = 0
+properties = {}
 
 [sub_resource type="Resource" id="Resource_qm1oa"]
 script = ExtResource("7_6du4j")
@@ -3280,6 +3344,9 @@ sprite_properties = Array[Dictionary]([{}])
 
 [resource]
 script = ExtResource("6_qvkru")
+major_version = 0
+minor_version = 0
+build_version = 43
 window = Rect2i(16, 16, 224, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("7_6du4j")]([SubResource("Resource_wnpwt")])
@@ -3288,3 +3355,5 @@ objects = Array[ExtResource("2_gmiox")]([SubResource("Resource_rmfki")])
 graph_resource = SubResource("Resource_hvkwg")
 rooms = Array[ExtResource("2_83tb5")]([SubResource("Resource_ov1a7"), SubResource("Resource_iutkw"), SubResource("Resource_om4gj"), SubResource("Resource_iu7et"), SubResource("Resource_7nltf"), SubResource("Resource_g8oe6"), SubResource("Resource_1xtp7"), SubResource("Resource_k50rf"), SubResource("Resource_7wx62")])
 game_map = SubResource("Resource_r3ltg")
+screens = Array[ExtResource("11_qfse5")]([SubResource("Resource_xi38l")])
+initial_screen = 0

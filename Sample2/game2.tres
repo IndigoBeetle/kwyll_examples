@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=230 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=233 format=3]
 
 [ext_resource type="Script" path="res://logic_connection.gd" id="1_j7sh7"]
 [ext_resource type="Script" path="res://logic_node.gd" id="2_knwh0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://room.gd" id="9_ehtp6"]
 [ext_resource type="Script" path="res://room_ref.gd" id="10_tdtqn"]
 [ext_resource type="Script" path="res://game_map.gd" id="11_ejuko"]
+[ext_resource type="Script" path="res://screen.gd" id="12_0i5gs"]
 [ext_resource type="Script" path="res://game_data.gd" id="12_ikshi"]
 
 [sub_resource type="Resource" id="Resource_imfua"]
@@ -557,6 +558,16 @@ properties = {
 position = Vector2(620, 820)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_8oj6i"]
+script = ExtResource("2_knwh0")
+id = "0e436216-8c07-4e08-81ba-839ab758cb7b"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Check if the requested y position is the same as the actual y position. If not, player has collided with something, i.e. landed."
+}
+position = Vector2(-1380, 2420)
+node_size = Vector2(411.06, 345.74)
+
 [sub_resource type="Resource" id="Resource_b8mec"]
 script = ExtResource("2_knwh0")
 id = "0e5454c0-2773-4c35-a1fd-53eb3d99af5e"
@@ -585,6 +596,16 @@ type = "ca52338c-d006-4083-9ed0-794f54f2c3ec"
 properties = {}
 position = Vector2(2100, 380)
 node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_xocis"]
+script = ExtResource("2_knwh0")
+id = "1250bda1-ec47-4fc2-a626-57944a605ab2"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "If jump button pressed, and not currently in mid air, initiate a jump but setting the jump offset. Also mark as in air, so no more jump until landed."
+}
+position = Vector2(2620, 440)
+node_size = Vector2(756.121, 226.83)
 
 [sub_resource type="Resource" id="Resource_7kypx"]
 script = ExtResource("2_knwh0")
@@ -667,6 +688,16 @@ properties = {
 }
 position = Vector2(-800, 2780)
 node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_60jin"]
+script = ExtResource("2_knwh0")
+id = "3fe531af-7261-42f4-abb3-fe9666914cc5"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Add to jump offset, and adjust y position if not at apex."
+}
+position = Vector2(1640, 1180)
+node_size = Vector2(473.98, 171.5)
 
 [sub_resource type="Resource" id="Resource_8w55l"]
 script = ExtResource("2_knwh0")
@@ -782,6 +813,16 @@ properties = {
 position = Vector2(-900, 1440)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_mvfhu"]
+script = ExtResource("2_knwh0")
+id = "89e03245-277d-42a0-b2a3-3d12ca446398"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Do Jump logic. Checks if jumping and continues if so, else checks if jump key pressed and starts a jump if so."
+}
+position = Vector2(-1480, 40)
+node_size = Vector2(406.38, 307.038)
+
 [sub_resource type="Resource" id="Resource_sny7w"]
 script = ExtResource("2_knwh0")
 id = "90b73df6-b605-4d8d-81e6-81ebace1a4d2"
@@ -815,6 +856,16 @@ properties = {
 position = Vector2(220, 820)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_cje61"]
+script = ExtResource("2_knwh0")
+id = "9a61bd29-cc1e-4524-978f-701b36debda0"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Delay one frame for jumping."
+}
+position = Vector2(180, 1120)
+node_size = Vector2(324.733, 178.531)
+
 [sub_resource type="Resource" id="Resource_hjm70"]
 script = ExtResource("2_knwh0")
 id = "9b101151-3dd9-4577-aa2f-f126080d187d"
@@ -832,6 +883,16 @@ type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
 properties = {}
 position = Vector2(-980, -400)
 node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_mpcss"]
+script = ExtResource("2_knwh0")
+id = "b0220581-0907-406a-8969-2c138a8cb416"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Set sprite animation based on direction. -1 (left) will be clamped to 0 so animation 1, 1 (right) will be animation 1."
+}
+position = Vector2(2860, 1880)
+node_size = Vector2(577.314, 273.382)
 
 [sub_resource type="Resource" id="Resource_c0we3"]
 script = ExtResource("2_knwh0")
@@ -866,6 +927,16 @@ properties = {
 position = Vector2(580, 1440)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_juidr"]
+script = ExtResource("2_knwh0")
+id = "bda236f0-9971-4d43-bdba-078f97f9f30e"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Do the move, take into account left right buttons, and the requested y position from the jump logic above."
+}
+position = Vector2(-1420, 1380)
+node_size = Vector2(417.914, 326.808)
+
 [sub_resource type="Resource" id="Resource_qdsho"]
 script = ExtResource("2_knwh0")
 id = "be4450cd-7b03-4679-8c72-eecebaa4f870"
@@ -884,6 +955,16 @@ properties = {
 }
 position = Vector2(400, 2460)
 node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_utpha"]
+script = ExtResource("2_knwh0")
+id = "bef4b927-5bcb-411c-91fe-6589b37c80a7"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Add gravity to requested y position"
+}
+position = Vector2(500, 320)
+node_size = Vector2(527.22, 144.88)
 
 [sub_resource type="Resource" id="Resource_xr8w7"]
 script = ExtResource("2_knwh0")
@@ -935,6 +1016,26 @@ type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
 properties = {}
 position = Vector2(500, 1940)
 node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_f7sl5"]
+script = ExtResource("2_knwh0")
+id = "cfdd6beb-472f-474b-b4c1-5a85494ceb68"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Set the air flag to 0, indicating the player has landed and can now jump again."
+}
+position = Vector2(840, 2480)
+node_size = Vector2(406.22, 270.72)
+
+[sub_resource type="Resource" id="Resource_fwh2r"]
+script = ExtResource("2_knwh0")
+id = "d08a8696-2c9d-4a93-9e3b-98d723460420"
+type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
+properties = {
+"text": "Increase gravity up to a limit, so falling accelerates."
+}
+position = Vector2(1480, -60)
+node_size = Vector2(444, 171)
 
 [sub_resource type="Resource" id="Resource_5ixih"]
 script = ExtResource("2_knwh0")
@@ -1062,106 +1163,6 @@ type = "dbdcce8d-d479-45dd-93d0-fcb65460bfa7"
 properties = {}
 position = Vector2(-760, 2980)
 node_size = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_mvfhu"]
-script = ExtResource("2_knwh0")
-id = "89e03245-277d-42a0-b2a3-3d12ca446398"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Do Jump logic. Checks if jumping and continues if so, else checks if jump key pressed and starts a jump if so."
-}
-position = Vector2(-1480, 40)
-node_size = Vector2(406.38, 307.038)
-
-[sub_resource type="Resource" id="Resource_cje61"]
-script = ExtResource("2_knwh0")
-id = "9a61bd29-cc1e-4524-978f-701b36debda0"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Delay one frame for jumping."
-}
-position = Vector2(180, 1120)
-node_size = Vector2(324.733, 178.531)
-
-[sub_resource type="Resource" id="Resource_60jin"]
-script = ExtResource("2_knwh0")
-id = "3fe531af-7261-42f4-abb3-fe9666914cc5"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Add to jump offset, and adjust y position if not at apex."
-}
-position = Vector2(1640, 1180)
-node_size = Vector2(473.98, 171.5)
-
-[sub_resource type="Resource" id="Resource_utpha"]
-script = ExtResource("2_knwh0")
-id = "bef4b927-5bcb-411c-91fe-6589b37c80a7"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Add gravity to requested y position"
-}
-position = Vector2(500, 320)
-node_size = Vector2(527.22, 144.88)
-
-[sub_resource type="Resource" id="Resource_fwh2r"]
-script = ExtResource("2_knwh0")
-id = "d08a8696-2c9d-4a93-9e3b-98d723460420"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Increase gravity up to a limit, so falling accelerates."
-}
-position = Vector2(1480, -60)
-node_size = Vector2(444, 171)
-
-[sub_resource type="Resource" id="Resource_xocis"]
-script = ExtResource("2_knwh0")
-id = "1250bda1-ec47-4fc2-a626-57944a605ab2"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "If jump button pressed, and not currently in mid air, initiate a jump but setting the jump offset. Also mark as in air, so no more jump until landed."
-}
-position = Vector2(2620, 440)
-node_size = Vector2(756.121, 226.83)
-
-[sub_resource type="Resource" id="Resource_juidr"]
-script = ExtResource("2_knwh0")
-id = "bda236f0-9971-4d43-bdba-078f97f9f30e"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Do the move, take into account left right buttons, and the requested y position from the jump logic above."
-}
-position = Vector2(-1420, 1380)
-node_size = Vector2(417.914, 326.808)
-
-[sub_resource type="Resource" id="Resource_mpcss"]
-script = ExtResource("2_knwh0")
-id = "b0220581-0907-406a-8969-2c138a8cb416"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Set sprite animation based on direction. -1 (left) will be clamped to 0 so animation 1, 1 (right) will be animation 1."
-}
-position = Vector2(2860, 1880)
-node_size = Vector2(577.314, 273.382)
-
-[sub_resource type="Resource" id="Resource_8oj6i"]
-script = ExtResource("2_knwh0")
-id = "0e436216-8c07-4e08-81ba-839ab758cb7b"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Check if the requested y position is the same as the actual y position. If not, player has collided with something, i.e. landed."
-}
-position = Vector2(-1380, 2420)
-node_size = Vector2(411.06, 345.74)
-
-[sub_resource type="Resource" id="Resource_f7sl5"]
-script = ExtResource("2_knwh0")
-id = "cfdd6beb-472f-474b-b4c1-5a85494ceb68"
-type = "8f566861-9c93-4c74-a6bb-ce19067a4c0b"
-properties = {
-"text": "Set the air flag to 0, indicating the player has landed and can now jump again."
-}
-position = Vector2(840, 2480)
-node_size = Vector2(406.22, 270.72)
 
 [sub_resource type="Resource" id="Resource_67gsy"]
 script = ExtResource("4_t3ndr")
@@ -1314,8 +1315,10 @@ instance_variables = {
 "YPOS": 0,
 "Y_POS": 0
 }
+var_array = [0, 0, 0, 0, 0, 0, 0]
 timeline_animations = {}
-current_animation = ""
+timeline_anim_array = []
+current_animation = 0
 current_frame = 0
 is_global = true
 animation_rate = 10
@@ -3121,8 +3124,10 @@ instance_variables = {
 "TOP": 104,
 "Yd": 0
 }
+var_array = [104, 144, 0, 0]
 timeline_animations = {}
-current_animation = ""
+timeline_anim_array = []
+current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
@@ -3682,8 +3687,10 @@ instance_variables = {
 "TOP": 72,
 "Yd": 0
 }
+var_array = [72, 144, 0, 0]
 timeline_animations = {}
-current_animation = ""
+timeline_anim_array = []
+current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
@@ -3972,7 +3979,7 @@ Vector2i(4, 2): {
 "collision": 15
 },
 Vector2i(4, 8): {
-"collision": 1
+"collision": 5
 },
 Vector2i(4, 20): {
 "collision": 15
@@ -4243,8 +4250,10 @@ instance_variables = {
 "TOP": 82,
 "Yd": 0
 }
+var_array = [82, 144, 0, 0]
 timeline_animations = {}
-current_animation = ""
+timeline_anim_array = []
+current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
@@ -4527,6 +4536,25 @@ draw_mode = 2
 num_dynamic = 5
 single_colour = -1
 
+[sub_resource type="Resource" id="Resource_xf41n"]
+script = ExtResource("3_8cafv")
+graph_name = "Graph"
+variables = Array[ExtResource("4_t3ndr")]([])
+nodes = {}
+connections = Array[ExtResource("1_j7sh7")]([])
+
+[sub_resource type="Resource" id="Resource_ejx76"]
+script = ExtResource("12_0i5gs")
+screen_name = "Default"
+is_game_screen = true
+window_position = Vector2i(0, 0)
+instruments = Array[Resource("res://instrument.gd")]([])
+screen_logic = SubResource("Resource_xf41n")
+background_colour = 0
+ink_colour = 7
+properties = {}
+var_array = []
+
 [sub_resource type="Resource" id="Resource_qm1oa"]
 script = ExtResource("6_r74gj")
 sheet_name = ""
@@ -4574,6 +4602,9 @@ sprite_properties = Array[Dictionary]([{
 
 [resource]
 script = ExtResource("12_ikshi")
+major_version = 0
+minor_version = 0
+build_version = 49
 window = Rect2i(0, 0, 256, 192)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("6_r74gj")]([SubResource("Resource_vh5fk"), SubResource("Resource_46s7c")])
@@ -4582,3 +4613,6 @@ objects = Array[ExtResource("5_gvgvu")]([SubResource("Resource_bemxf"), SubResou
 graph_resource = SubResource("Resource_hvkwg")
 rooms = Array[ExtResource("9_ehtp6")]([SubResource("Resource_h8yl2"), SubResource("Resource_70rae"), SubResource("Resource_dpjqr")])
 game_map = SubResource("Resource_fv4dp")
+screens = Array[ExtResource("12_0i5gs")]([SubResource("Resource_ejx76")])
+initial_screen = 0
+text_data = []

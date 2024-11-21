@@ -17,12 +17,11 @@
 [ext_resource type="Script" path="res://instrument.gd" id="15_nw1q4"]
 [ext_resource type="Script" path="res://game_data.gd" id="16_3glqy"]
 
-[sub_resource type="Resource" id="Resource_ct2bw"]
+[sub_resource type="Resource" id="Resource_ehf1r"]
 script = ExtResource("1_p35b7")
 contents = [[{
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -30,7 +29,6 @@ contents = [[{
 }, {
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -38,7 +36,6 @@ contents = [[{
 }], [{
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -46,7 +43,6 @@ contents = [[{
 }, {
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -54,7 +50,6 @@ contents = [[{
 }], [{
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -62,7 +57,6 @@ contents = [[{
 }, {
 "attr": {
 "bright": false,
-"collision": 15,
 "ink": 2,
 "paper": 0
 },
@@ -433,37 +427,31 @@ Vector2i(9, 7): 6
 attrs = {
 Vector2i(8, 5): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 },
 Vector2i(8, 6): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 },
 Vector2i(8, 7): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 },
 Vector2i(9, 5): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 },
 Vector2i(9, 6): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 },
 Vector2i(9, 7): {
 "bright": false,
-"collision": 15,
 "ink": 4,
 "paper": 0
 }
@@ -566,13 +554,25 @@ sprite_width = 8
 sprite_height = 8
 num_pixels_per_sprite = 64
 sprite_data = [[Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0])], [Array[int]([0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0])], [Array[int]([0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0])], [Array[int]([1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1])], [Array[int]([0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0])], [Array[int]([1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1])], [Array[int]([1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1])]]
-sprite_properties = Array[Dictionary]([{}, {}, {}, {}, {}, {}, {}])
+sprite_properties = Array[Dictionary]([{}, {}, {}, {
+"collision": 15,
+"type": 0
+}, {
+"collision": 15,
+"type": 0
+}, {
+"collision": 0,
+"type": 0
+}, {
+"collision": 0,
+"type": 0
+}])
 
 [resource]
 script = ExtResource("16_3glqy")
 major_version = 0
 minor_version = 0
-build_version = 54
+build_version = 65
 window = Rect2i(24, 16, 208, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("8_j4v3u")]([SubResource("Resource_e3flb"), SubResource("Resource_vh5fk")])
@@ -585,4 +585,4 @@ game_map = SubResource("Resource_r3ltg")
 screens = Array[ExtResource("14_8nm2l")]([SubResource("Resource_nmf3q")])
 initial_screen = 0
 text_data = []
-brushes = Array[ExtResource("1_p35b7")]([SubResource("Resource_ct2bw")])
+brushes = Array[ExtResource("1_p35b7")]([SubResource("Resource_ehf1r")])

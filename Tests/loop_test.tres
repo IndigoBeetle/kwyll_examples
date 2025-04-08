@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=60 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=61 format=3]
 
 [ext_resource type="Script" path="res://brush.gd" id="1_aspw7"]
 [ext_resource type="Script" path="res://object_ref.gd" id="2_jkinr"]
@@ -23,20 +23,20 @@
 script = ExtResource("14_5ecfs")
 map_name = "unnamed"
 cells = {
-Vector2i(13, 19): 0,
-Vector2i(13, 20): 0,
-Vector2i(13, 21): 0,
+Vector2i(13, 16): 0,
+Vector2i(13, 17): 0,
+Vector2i(13, 18): 0,
+Vector2i(14, 15): 0,
+Vector2i(14, 16): 0,
+Vector2i(14, 17): 0,
 Vector2i(14, 18): 0,
-Vector2i(14, 19): 0,
-Vector2i(14, 20): 0,
-Vector2i(14, 21): 0,
+Vector2i(15, 15): 0,
+Vector2i(15, 16): 0,
+Vector2i(15, 17): 0,
 Vector2i(15, 18): 0,
-Vector2i(15, 19): 0,
-Vector2i(15, 20): 0,
-Vector2i(15, 21): 0,
-Vector2i(16, 19): 0,
-Vector2i(16, 20): 0,
-Vector2i(16, 21): 0
+Vector2i(16, 16): 0,
+Vector2i(16, 17): 0,
+Vector2i(16, 18): 0
 }
 attrs = {}
 brushes = {}
@@ -325,8 +325,8 @@ room = SubResource("Resource_dfdvn")
 room_ref_name = "room"
 pos = Vector2i(0, 0)
 props = {
-"ink": 7,
-"paper": 0
+"ink_colour": 7,
+"paper_colour": 0
 }
 ink_colour = -1
 paper_colour = -1
@@ -375,6 +375,22 @@ object_logic = SubResource("Resource_xx43s")
 draw_mode = 1
 num_dynamic = 0
 single_colour = -1
+properties = {}
+
+[sub_resource type="Resource" id="Resource_a3v1x"]
+script = ExtResource("13_4syks")
+instrument_name = "instrument"
+grid_position = Vector2i(8, 176)
+grid_size = Vector2i(240, 8)
+type = 1
+value = 0
+properties = {
+"bright": 2
+}
+ink_colour = 7
+paper_colour = 0
+ignore_ink_colour = true
+ignore_paper_colour = true
 
 [sub_resource type="Resource" id="Resource_56ehb"]
 script = ExtResource("14_5ecfs")
@@ -395,11 +411,14 @@ script = ExtResource("12_qqi8b")
 screen_name = "Default"
 is_game_screen = true
 window_position = Vector2i(0, 0)
-instruments = Array[ExtResource("13_4syks")]([])
+instruments = Array[ExtResource("13_4syks")]([SubResource("Resource_a3v1x")])
 screen_logic = SubResource("Resource_t2qij")
-background_colour = 0
-ink_colour = 7
-properties = {}
+background_colour = -1
+ink_colour = -1
+properties = {
+"ink_colour": 7,
+"paper_colour": 0
+}
 var_array = []
 def_var_array = []
 map = SubResource("Resource_56ehb")
@@ -447,8 +466,8 @@ sprite_properties = Array[Dictionary]([{}])
 script = ExtResource("15_4e00u")
 major_version = 0
 minor_version = 0
-build_version = 79
-window = Rect2i(0, 0, 256, 192)
+build_version = 80
+window = Rect2i(0, 0, 256, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("10_e5g3m")]([SubResource("Resource_wnpwt"), SubResource("Resource_wh1l4")])
 tile_sheet = SubResource("Resource_qm1oa")
@@ -459,7 +478,7 @@ rooms = Array[ExtResource("11_rko7w")]([SubResource("Resource_dfdvn")])
 game_map = SubResource("Resource_r3ltg")
 screens = Array[ExtResource("12_qqi8b")]([SubResource("Resource_f4ul4")])
 initial_screen = 0
-text_data = []
+text_data = ["2 Rows of 5 offset by -1"]
 brushes = Array[ExtResource("1_aspw7")]([])
 sounds = {
 "beep_fx": [SubResource("Resource_h5due")]

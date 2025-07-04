@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=75 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=80 format=3]
 
 [ext_resource type="Script" path="res://object_ref.gd" id="1_imofj"]
 [ext_resource type="Script" path="res://brush.gd" id="1_o5spn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://marker.gd" id="4_yqtme"]
 [ext_resource type="Script" path="res://logic_graph.gd" id="5_wi2uq"]
 [ext_resource type="Script" path="res://logic_variable.gd" id="6_0c4so"]
+[ext_resource type="Script" path="res://logic_frame.gd" id="7_5gybm"]
 [ext_resource type="Script" path="res://object.gd" id="7_ullhn"]
 [ext_resource type="Script" path="res://room.gd" id="8_nnn3l"]
 [ext_resource type="Script" path="res://screen.gd" id="9_yv80v"]
@@ -70,9 +71,9 @@ script = ExtResource("4_qbus4")
 from_node = "d4e6db1c-6f85-4be1-a0ed-62234775047c"
 to_node = "c67d8c77-11f2-489b-94a5-9bfa25051981"
 from_port = 0
-from_port_name = ""
+from_port_name = "flow_out"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_4q83n"]
@@ -161,9 +162,19 @@ from_node = "08107a4f-9f16-486a-93cf-7d2409652594"
 to_node = "c39043d6-420d-49c6-851d-c2b3111237f1"
 from_port = 0
 from_port_name = "val"
-to_port = 1
+to_port = 3
 to_port_name = "value"
 type = 1
+
+[sub_resource type="Resource" id="Resource_6uyrg"]
+script = ExtResource("4_qbus4")
+from_node = "c22440d8-57a2-4d7f-b529-841aaea6351f"
+to_node = "7ce59cd7-ef7d-4a04-aa48-f38f590731d5"
+from_port = 0
+from_port_name = "ref"
+to_port = 1
+to_port_name = "room"
+type = 3
 
 [sub_resource type="Resource" id="Resource_i4y11"]
 script = ExtResource("11_67l27")
@@ -232,7 +243,7 @@ type = "ed8d3797-bbab-456f-b34f-8aae9d3d8663"
 properties = {
 "room": 1
 }
-position = Vector2(1466.41, 2246.41)
+position = Vector2(1880, 2220)
 node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_6ttjf"]
@@ -248,6 +259,16 @@ properties = {
 "up": 1
 }
 position = Vector2(466.41, 2446.41)
+node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_6rqg1"]
+script = ExtResource("11_67l27")
+id = "c22440d8-57a2-4d7f-b529-841aaea6351f"
+type = "7fff28de-4ac3-4a6e-b420-c4dca07fd92b"
+properties = {
+"location": 1
+}
+position = Vector2(1500, 2380)
 node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_hixsy"]
@@ -346,6 +367,7 @@ nodes = {
 "70b0607e-9f75-4626-9133-acbc3d1b5919": SubResource("Resource_n0dhn"),
 "7ce59cd7-ef7d-4a04-aa48-f38f590731d5": SubResource("Resource_4ml8g"),
 "aece3d51-d83c-4aae-a143-b3dff3d05a3d": SubResource("Resource_6ttjf"),
+"c22440d8-57a2-4d7f-b529-841aaea6351f": SubResource("Resource_6rqg1"),
 "c39043d6-420d-49c6-851d-c2b3111237f1": SubResource("Resource_hixsy"),
 "c67d8c77-11f2-489b-94a5-9bfa25051981": SubResource("Resource_10ark"),
 "cfe42372-101e-418a-984d-5ad0380d209f": SubResource("Resource_6p34n"),
@@ -354,7 +376,8 @@ nodes = {
 "e41c0e4f-16f4-497a-a67d-3337b9498375": SubResource("Resource_g7m5j"),
 "ef3d2d63-f75a-4f1f-ac86-7452bf83b7ec": SubResource("Resource_j7nr3")
 }
-connections = Array[ExtResource("4_qbus4")]([SubResource("Resource_65juw"), SubResource("Resource_vst8b"), SubResource("Resource_4q83n"), SubResource("Resource_j700l"), SubResource("Resource_n03n3"), SubResource("Resource_5hgug"), SubResource("Resource_8ecd5"), SubResource("Resource_fpcip"), SubResource("Resource_v204w"), SubResource("Resource_ibkte"), SubResource("Resource_ij3ku")])
+connections = Array[ExtResource("4_qbus4")]([SubResource("Resource_65juw"), SubResource("Resource_vst8b"), SubResource("Resource_4q83n"), SubResource("Resource_j700l"), SubResource("Resource_n03n3"), SubResource("Resource_5hgug"), SubResource("Resource_8ecd5"), SubResource("Resource_fpcip"), SubResource("Resource_v204w"), SubResource("Resource_ibkte"), SubResource("Resource_ij3ku"), SubResource("Resource_6uyrg")])
+frames = Array[ExtResource("7_5gybm")]([])
 
 [sub_resource type="Resource" id="Resource_okkvh"]
 script = ExtResource("8_nnn3l")
@@ -472,6 +495,16 @@ to_port = 1
 to_port_name = "a_val"
 type = 1
 
+[sub_resource type="Resource" id="Resource_y0i1o"]
+script = ExtResource("4_qbus4")
+from_node = "5805564e-1e4f-42b7-af5f-8c357182e15f"
+to_node = "9801ac7c-85bd-4e07-8542-0718b3618956"
+from_port = 0
+from_port_name = "ref"
+to_port = 1
+to_port_name = "room"
+type = 3
+
 [sub_resource type="Resource" id="Resource_hu74u"]
 script = ExtResource("11_67l27")
 id = "1a9ded33-c610-4e49-8eb4-aca57449477a"
@@ -513,6 +546,16 @@ properties = {
 position = Vector2(760, 1400)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_3u1cf"]
+script = ExtResource("11_67l27")
+id = "5805564e-1e4f-42b7-af5f-8c357182e15f"
+type = "7fff28de-4ac3-4a6e-b420-c4dca07fd92b"
+properties = {
+"location": 0
+}
+position = Vector2(1520, 2200)
+node_size = Vector2(0, 0)
+
 [sub_resource type="Resource" id="Resource_8wihy"]
 script = ExtResource("11_67l27")
 id = "84f894d9-c3b6-4aa1-a645-a34b383ec04f"
@@ -532,7 +575,7 @@ type = "ed8d3797-bbab-456f-b34f-8aae9d3d8663"
 properties = {
 "room": 0
 }
-position = Vector2(1320, 2100)
+position = Vector2(2000, 2080)
 node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_xuim6"]
@@ -567,12 +610,14 @@ nodes = {
 "385e2f6d-33d7-4b0b-8088-c6024e958f01": SubResource("Resource_d7bvw"),
 "4b4fb6db-7561-453e-a31c-08a34d72f6c1": SubResource("Resource_qiptc"),
 "4cf09e13-8efc-45c6-bd8f-64ce3ce9aeb3": SubResource("Resource_y32bj"),
+"5805564e-1e4f-42b7-af5f-8c357182e15f": SubResource("Resource_3u1cf"),
 "84f894d9-c3b6-4aa1-a645-a34b383ec04f": SubResource("Resource_8wihy"),
 "9801ac7c-85bd-4e07-8542-0718b3618956": SubResource("Resource_l2cd8"),
 "a678150a-b215-4ab0-b77e-62b1a70df79b": SubResource("Resource_xuim6"),
 "cf00a66e-2d70-46d6-b3ce-5be64d3e361d": SubResource("Resource_27085")
 }
-connections = Array[ExtResource("4_qbus4")]([SubResource("Resource_f2rst"), SubResource("Resource_qrb5m"), SubResource("Resource_stuls"), SubResource("Resource_w7vmb"), SubResource("Resource_d6sos")])
+connections = Array[ExtResource("4_qbus4")]([SubResource("Resource_f2rst"), SubResource("Resource_qrb5m"), SubResource("Resource_stuls"), SubResource("Resource_w7vmb"), SubResource("Resource_d6sos"), SubResource("Resource_y0i1o")])
+frames = Array[ExtResource("7_5gybm")]([])
 
 [sub_resource type="Resource" id="Resource_r32px"]
 script = ExtResource("8_nnn3l")
@@ -608,6 +653,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("6_0c4so")]([])
 nodes = {}
 connections = Array[ExtResource("4_qbus4")]([])
+frames = Array[ExtResource("7_5gybm")]([])
 
 [sub_resource type="Resource" id="Resource_8hhvn"]
 script = ExtResource("10_uq0uw")
@@ -665,6 +711,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("6_0c4so")]([])
 nodes = {}
 connections = Array[ExtResource("4_qbus4")]([])
+frames = Array[ExtResource("7_5gybm")]([])
 
 [sub_resource type="Resource" id="Resource_f4ul4"]
 script = ExtResource("9_yv80v")
@@ -709,7 +756,7 @@ sprite_properties = Array[Dictionary]([{}])
 script = ExtResource("12_b3bxr")
 major_version = 0
 minor_version = 0
-build_version = 80
+build_version = 95
 window = Rect2i(0, 0, 240, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("13_2mxyh")]([SubResource("Resource_wnpwt")])
@@ -724,3 +771,5 @@ initial_screen = 0
 text_data = []
 brushes = Array[ExtResource("1_o5spn")]([])
 sounds = {}
+images = {}
+breakpoints = {}

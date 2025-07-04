@@ -198,9 +198,9 @@ script = ExtResource("5_56hqn")
 from_node = "6b7fcc79-b8fe-4fd6-a516-ebf8136bf84b"
 to_node = "472b7354-e2a1-4e0d-bff6-0ffbea37ffb9"
 from_port = 0
-from_port_name = ""
+from_port_name = "flow_out"
 to_port = 0
-to_port_name = ""
+to_port_name = "flow_in"
 type = 0
 
 [sub_resource type="Resource" id="Resource_pks2r"]
@@ -208,9 +208,9 @@ script = ExtResource("5_56hqn")
 from_node = "be596070-ee0e-46b2-9c6c-cf98da30e964"
 to_node = "472b7354-e2a1-4e0d-bff6-0ffbea37ffb9"
 from_port = 0
-from_port_name = ""
+from_port_name = "result"
 to_port = 2
-to_port_name = ""
+to_port_name = "x"
 type = 1
 
 [sub_resource type="Resource" id="Resource_0s4io"]
@@ -218,9 +218,9 @@ script = ExtResource("5_56hqn")
 from_node = "db8c0cd2-c352-4acb-83e1-70c089009405"
 to_node = "472b7354-e2a1-4e0d-bff6-0ffbea37ffb9"
 from_port = 0
-from_port_name = ""
+from_port_name = "result"
 to_port = 3
-to_port_name = ""
+to_port_name = "y"
 type = 1
 
 [sub_resource type="Resource" id="Resource_b7w4n"]
@@ -239,6 +239,17 @@ properties = {
 "fx": 0
 }
 position = Vector2(960, 1720)
+node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_4ojgd"]
+script = ExtResource("9_xf50u")
+id = "472b7354-e2a1-4e0d-bff6-0ffbea37ffb9"
+type = "53f3a6c9-2666-4c7f-8094-327c49e6771f"
+properties = {
+"const_x": 0,
+"const_y": 0
+}
+position = Vector2(2120, 360)
 node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_3np71"]
@@ -318,17 +329,6 @@ properties = {
 position = Vector2(240, 740)
 node_size = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_4ojgd"]
-script = ExtResource("9_xf50u")
-id = "472b7354-e2a1-4e0d-bff6-0ffbea37ffb9"
-type = "53f3a6c9-2666-4c7f-8094-327c49e6771f"
-properties = {
-"const_x": 0,
-"const_y": 0
-}
-position = Vector2(2120, 360)
-node_size = Vector2(0, 0)
-
 [sub_resource type="Resource" id="Resource_4x7qc"]
 script = ExtResource("6_5jc4w")
 graph_name = "Graph"
@@ -369,10 +369,7 @@ object_logic = SubResource("Resource_4x7qc")
 draw_mode = 3
 num_dynamic = 0
 single_colour = -1
-properties = {
-"bright": 0,
-"paper_colour": 0
-}
+properties = {}
 
 [sub_resource type="Resource" id="Resource_vmm7j"]
 script = ExtResource("2_q2qpf")
@@ -653,7 +650,7 @@ sprite_properties = Array[Dictionary]([{
 script = ExtResource("16_vo22r")
 major_version = 0
 minor_version = 0
-build_version = 80
+build_version = 82
 window = Rect2i(0, 0, 224, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("10_seudv")]([SubResource("Resource_w0juo")])

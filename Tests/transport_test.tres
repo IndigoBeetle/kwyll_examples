@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=52 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=53 format=3]
 
 [ext_resource type="Script" path="res://brush.gd" id="1_0tw0a"]
 [ext_resource type="Script" path="res://map.gd" id="1_pqxkf"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://marker.gd" id="5_cbu5q"]
 [ext_resource type="Script" path="res://sprite_sheet.gd" id="6_61dp4"]
 [ext_resource type="Script" path="res://object_ref.gd" id="7_3o1tb"]
+[ext_resource type="Script" path="res://logic_frame.gd" id="7_dhidq"]
 [ext_resource type="Script" path="res://room.gd" id="8_s3ttp"]
 [ext_resource type="Script" path="res://logic_variable.gd" id="9_0ry50"]
 [ext_resource type="Script" path="res://room_ref.gd" id="9_lyfsq"]
@@ -181,6 +182,7 @@ properties = {
 "down": 1,
 "fire": 1,
 "left": 1,
+"mode": 0,
 "right": 1,
 "up": 1
 }
@@ -211,6 +213,7 @@ nodes = {
 }
 connections = Array[ExtResource("2_yy6ka")]([SubResource("Resource_18kfy"), SubResource("Resource_tfekf"), SubResource("Resource_qc4wr"), SubResource("Resource_fwcdj")])
 logic_container = null
+frames = Array[ExtResource("7_dhidq")]([])
 
 [sub_resource type="Resource" id="Resource_wnpwt"]
 script = ExtResource("6_61dp4")
@@ -255,6 +258,7 @@ current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
+properties = {}
 
 [sub_resource type="Resource" id="Resource_lq3iw"]
 script = ExtResource("2_yy6ka")
@@ -325,6 +329,17 @@ properties = {
 position = Vector2(60, -60)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_syf0v"]
+script = ExtResource("3_kfh8u")
+id = "b222a76b-13c5-4d6c-967d-73b362e7d4fd"
+type = "53f3a6c9-2666-4c7f-8094-327c49e6771f"
+properties = {
+"const_x": 0,
+"const_y": 30
+}
+position = Vector2(1280, -20)
+node_size = Vector2(0, 0)
+
 [sub_resource type="Resource" id="Resource_mtkv5"]
 script = ExtResource("3_kfh8u")
 id = "c44d318a-bf9d-4307-8fdd-db856707c9f8"
@@ -340,17 +355,6 @@ properties = {
 position = Vector2(0, 200)
 node_size = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_syf0v"]
-script = ExtResource("3_kfh8u")
-id = "b222a76b-13c5-4d6c-967d-73b362e7d4fd"
-type = "53f3a6c9-2666-4c7f-8094-327c49e6771f"
-properties = {
-"const_x": 0,
-"const_y": 30
-}
-position = Vector2(1280, -20)
-node_size = Vector2(0, 0)
-
 [sub_resource type="Resource" id="Resource_wf8q2"]
 script = ExtResource("4_tqfir")
 graph_name = "Graph"
@@ -364,6 +368,7 @@ nodes = {
 }
 connections = Array[ExtResource("2_yy6ka")]([SubResource("Resource_lq3iw"), SubResource("Resource_4fajb"), SubResource("Resource_pj2g3"), SubResource("Resource_xm64n")])
 logic_container = null
+frames = Array[ExtResource("7_dhidq")]([])
 
 [sub_resource type="Resource" id="Resource_ylsa2"]
 script = ExtResource("5_1iddb")
@@ -400,6 +405,7 @@ current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
+properties = {}
 
 [sub_resource type="Resource" id="Resource_n4pyv"]
 script = ExtResource("4_tqfir")
@@ -407,6 +413,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("9_0ry50")]([])
 nodes = {}
 connections = Array[ExtResource("2_yy6ka")]([])
+frames = Array[ExtResource("7_dhidq")]([])
 
 [sub_resource type="Resource" id="Resource_i5qpy"]
 script = ExtResource("8_s3ttp")
@@ -442,6 +449,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("9_0ry50")]([])
 nodes = {}
 connections = Array[ExtResource("2_yy6ka")]([])
+frames = Array[ExtResource("7_dhidq")]([])
 
 [sub_resource type="Resource" id="Resource_cjd3l"]
 script = ExtResource("1_pqxkf")
@@ -456,6 +464,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("9_0ry50")]([])
 nodes = {}
 connections = Array[ExtResource("2_yy6ka")]([])
+frames = Array[ExtResource("7_dhidq")]([])
 
 [sub_resource type="Resource" id="Resource_4k1fy"]
 script = ExtResource("14_gemk0")
@@ -489,7 +498,7 @@ sprite_properties = Array[Dictionary]([{}])
 script = ExtResource("11_eo3xb")
 major_version = 0
 minor_version = 0
-build_version = 80
+build_version = 96
 window = Rect2i(0, 0, 256, 192)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("6_61dp4")]([SubResource("Resource_wnpwt")])
@@ -504,3 +513,5 @@ initial_screen = 0
 text_data = []
 brushes = Array[ExtResource("1_0tw0a")]([])
 sounds = {}
+images = {}
+breakpoints = {}

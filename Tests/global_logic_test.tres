@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=49 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=50 format=3]
 
 [ext_resource type="Script" path="res://brush.gd" id="1_3u4vm"]
 [ext_resource type="Script" path="res://object_ref.gd" id="1_5rn0y"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://logic_connection.gd" id="4_rgpt5"]
 [ext_resource type="Script" path="res://logic_graph.gd" id="5_xumoh"]
 [ext_resource type="Script" path="res://logic_variable.gd" id="6_jrc0v"]
+[ext_resource type="Script" path="res://logic_frame.gd" id="7_76yim"]
 [ext_resource type="Script" path="res://object.gd" id="7_hsk83"]
 [ext_resource type="Script" path="res://logic_node.gd" id="8_q7fvq"]
 [ext_resource type="Script" path="res://sprite_sheet.gd" id="9_1va4f"]
@@ -228,6 +229,7 @@ nodes = {
 }
 connections = Array[ExtResource("4_rgpt5")]([SubResource("Resource_lltko"), SubResource("Resource_xh6ev"), SubResource("Resource_xpwcx"), SubResource("Resource_sg3ta"), SubResource("Resource_ulrkj")])
 logic_container = null
+frames = Array[ExtResource("7_76yim")]([])
 
 [sub_resource type="Resource" id="Resource_wnpwt"]
 script = ExtResource("9_1va4f")
@@ -256,20 +258,35 @@ properties = {}
 script = ExtResource("1_5rn0y")
 object = SubResource("Resource_qig66")
 object_ref_name = "Bubble"
-initial_pos = Vector2i(112, 60)
+initial_pos = Vector2i(40, 60)
 flags = {
 "active": true,
+"collide": false,
+"collide_background": false,
+"player": false,
 "visible": true
 }
 instance_variables = {}
 var_array = []
 def_var_array = []
 timeline_animations = {}
-timeline_anim_array = []
+timeline_anim_array = [{
+0: {
+"position": Vector2i(40, 60),
+"trigger": false,
+"trigger_value": 0
+},
+50: {
+"position": Vector2i(170, 60),
+"trigger": false,
+"trigger_value": 0
+}
+}]
 current_animation = 0
 current_frame = 0
 is_global = false
 animation_rate = 10
+properties = {}
 
 [sub_resource type="Resource" id="Resource_3j0ni"]
 script = ExtResource("5_xumoh")
@@ -277,6 +294,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("6_jrc0v")]([])
 nodes = {}
 connections = Array[ExtResource("4_rgpt5")]([])
+frames = Array[ExtResource("7_76yim")]([])
 
 [sub_resource type="Resource" id="Resource_aq38x"]
 script = ExtResource("10_t14b8")
@@ -373,6 +391,7 @@ nodes = {
 "e562db93-f7e3-4d16-9220-ec707a854cc1": SubResource("Resource_yit8c")
 }
 connections = Array[ExtResource("4_rgpt5")]([SubResource("Resource_f0qi4"), SubResource("Resource_ep38j")])
+frames = Array[ExtResource("7_76yim")]([])
 
 [sub_resource type="Resource" id="Resource_vvvc1"]
 script = ExtResource("14_15wy5")
@@ -402,6 +421,7 @@ graph_name = "Graph"
 variables = Array[ExtResource("6_jrc0v")]([])
 nodes = {}
 connections = Array[ExtResource("4_rgpt5")]([])
+frames = Array[ExtResource("7_76yim")]([])
 
 [sub_resource type="Resource" id="Resource_f4ul4"]
 script = ExtResource("13_l8s66")
@@ -435,7 +455,7 @@ sprite_properties = Array[Dictionary]([{}])
 script = ExtResource("15_mujnj")
 major_version = 0
 minor_version = 0
-build_version = 80
+build_version = 92
 window = Rect2i(0, 0, 240, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("9_1va4f")]([SubResource("Resource_wnpwt")])
@@ -450,3 +470,4 @@ initial_screen = 0
 text_data = []
 brushes = Array[ExtResource("1_3u4vm")]([])
 sounds = {}
+images = {}

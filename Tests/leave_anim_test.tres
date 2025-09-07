@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=85 format=3]
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=86 format=3]
 
 [ext_resource type="Script" path="res://brush.gd" id="1_pyu54"]
 [ext_resource type="Script" path="res://object_ref.gd" id="2_dxo4o"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://game_data.gd" id="16_75fmq"]
 [ext_resource type="Script" path="res://beep_fx_block.gd" id="17_kgjel"]
 [ext_resource type="Script" path="res://beep_fx.gd" id="18_fkqa1"]
+[ext_resource type="Script" path="res://sub_graph.gd" id="20_5avji"]
 
 [sub_resource type="Resource" id="Resource_6wj2r"]
 script = ExtResource("4_0mnm5")
@@ -291,7 +292,7 @@ script = ExtResource("8_dxo4o")
 id = "d4b9ff09-6c0c-4ff8-9227-3e60bac0f60e"
 type = "4fcd5499-6aee-4fef-939f-8560262e53ad"
 properties = {
-"max": 2
+"max": 1
 }
 position = Vector2(1400, 1780)
 node_size = Vector2(0, 0)
@@ -335,6 +336,8 @@ nodes = {
 connections = Array[ExtResource("6_ctath")]([SubResource("Resource_5avji"), SubResource("Resource_bxlg8"), SubResource("Resource_dxo4o"), SubResource("Resource_0mnm5"), SubResource("Resource_ctath"), SubResource("Resource_vj7j3"), SubResource("Resource_75fmq"), SubResource("Resource_kgjel"), SubResource("Resource_fkqa1"), SubResource("Resource_n2xfg"), SubResource("Resource_gp5mj"), SubResource("Resource_auft6")])
 logic_container = null
 frames = Array[ExtResource("7_yy3de")]([])
+inputs = Array[String]([])
+outputs = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_n2bqw"]
 script = ExtResource("11_u13fq")
@@ -371,6 +374,8 @@ flags = {
 "player": false,
 "visible": true
 }
+on_layers = 1
+intersect_layers = 1
 instance_variables = {}
 var_array = [1]
 def_var_array = [0]
@@ -393,6 +398,8 @@ nodes = {}
 connections = Array[ExtResource("6_ctath")]([])
 logic_container = null
 frames = Array[ExtResource("7_yy3de")]([])
+inputs = Array[String]([])
+outputs = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_gduus"]
 script = ExtResource("10_my5v4")
@@ -418,6 +425,8 @@ flags = {
 "player": false,
 "visible": true
 }
+on_layers = 1
+intersect_layers = 1
 instance_variables = {}
 var_array = []
 def_var_array = []
@@ -502,6 +511,31 @@ to_port = 1
 to_port_name = "ref"
 type = 2
 
+[sub_resource type="Resource" id="Resource_nb6pq"]
+script = ExtResource("8_dxo4o")
+id = "21d95410-28f2-4302-8424-815f9e9d1e34"
+type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
+properties = {
+"order": 0
+}
+position = Vector2(461.051, 1961.05)
+node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_6ax7w"]
+script = ExtResource("8_dxo4o")
+id = "25260db7-c6ca-4420-b766-a14c31066ea4"
+type = "ca52338c-d006-4083-9ed0-794f54f2c3ec"
+properties = {
+"down": 0,
+"fire": 1,
+"left": 0,
+"mode": 0,
+"right": 0,
+"up": 0
+}
+position = Vector2(421.051, 2281.05)
+node_size = Vector2(0, 0)
+
 [sub_resource type="Resource" id="Resource_o07w8"]
 script = ExtResource("8_dxo4o")
 id = "2ebda728-802a-4dd2-86fb-478758c18cec"
@@ -527,61 +561,6 @@ properties = {
 position = Vector2(452, 450)
 node_size = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_xs5gf"]
-script = ExtResource("8_dxo4o")
-id = "d7f4913e-310c-492c-a0e3-eb5ca3d0b891"
-type = "7d1a9cfb-73e0-40d6-96f5-0b6147ae2084"
-properties = {}
-position = Vector2(1400, 480)
-node_size = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_i33be"]
-script = ExtResource("8_dxo4o")
-id = "d8d88eb3-9d3a-497d-b2af-a20aa78eb617"
-type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
-properties = {
-"comparator": 5,
-"const_opb": 0
-}
-position = Vector2(920, 480)
-node_size = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_nb6pq"]
-script = ExtResource("8_dxo4o")
-id = "21d95410-28f2-4302-8424-815f9e9d1e34"
-type = "ea060114-986d-40b8-8197-fd1408d3d6d3"
-properties = {
-"order": 0
-}
-position = Vector2(461.051, 1961.05)
-node_size = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_6jl45"]
-script = ExtResource("8_dxo4o")
-id = "9fc96c9b-1329-46cf-8c9a-3ddfc05fc63b"
-type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
-properties = {
-"comparator": 5,
-"const_opb": 0
-}
-position = Vector2(961.051, 1961.05)
-node_size = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_6ax7w"]
-script = ExtResource("8_dxo4o")
-id = "25260db7-c6ca-4420-b766-a14c31066ea4"
-type = "ca52338c-d006-4083-9ed0-794f54f2c3ec"
-properties = {
-"down": 0,
-"fire": 1,
-"left": 0,
-"mode": 0,
-"right": 0,
-"up": 0
-}
-position = Vector2(421.051, 2281.05)
-node_size = Vector2(0, 0)
-
 [sub_resource type="Resource" id="Resource_pgpyu"]
 script = ExtResource("8_dxo4o")
 id = "39d06b16-039c-43ad-8446-e09960478d80"
@@ -605,6 +584,36 @@ properties = {
 position = Vector2(1040, 2380)
 node_size = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_6jl45"]
+script = ExtResource("8_dxo4o")
+id = "9fc96c9b-1329-46cf-8c9a-3ddfc05fc63b"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 5,
+"const_opb": 0
+}
+position = Vector2(961.051, 1961.05)
+node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_xs5gf"]
+script = ExtResource("8_dxo4o")
+id = "d7f4913e-310c-492c-a0e3-eb5ca3d0b891"
+type = "7d1a9cfb-73e0-40d6-96f5-0b6147ae2084"
+properties = {}
+position = Vector2(1400, 480)
+node_size = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_i33be"]
+script = ExtResource("8_dxo4o")
+id = "d8d88eb3-9d3a-497d-b2af-a20aa78eb617"
+type = "9700ab27-9c03-4439-9aef-c7556a9f204e"
+properties = {
+"comparator": 5,
+"const_opb": 0
+}
+position = Vector2(920, 480)
+node_size = Vector2(0, 0)
+
 [sub_resource type="Resource" id="Resource_tbymw"]
 script = ExtResource("8_wm6d2")
 graph_name = "Graph"
@@ -622,6 +631,8 @@ nodes = {
 }
 connections = Array[ExtResource("6_ctath")]([SubResource("Resource_cbfnx"), SubResource("Resource_37tlo"), SubResource("Resource_df0wj"), SubResource("Resource_ylgee"), SubResource("Resource_kmvps"), SubResource("Resource_hsy30"), SubResource("Resource_8wm3n")])
 frames = Array[ExtResource("7_yy3de")]([])
+inputs = Array[String]([])
+outputs = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_e1a7q"]
 script = ExtResource("12_n2xfg")
@@ -658,6 +669,8 @@ variables = Array[ExtResource("9_x8ig4")]([])
 nodes = {}
 connections = Array[ExtResource("6_ctath")]([])
 frames = Array[ExtResource("7_yy3de")]([])
+inputs = Array[String]([])
+outputs = Array[String]([])
 
 [sub_resource type="Resource" id="Resource_08t5x"]
 script = ExtResource("15_auft6")
@@ -713,6 +726,8 @@ variables = Array[ExtResource("9_x8ig4")]([])
 nodes = {}
 connections = Array[ExtResource("6_ctath")]([])
 frames = Array[ExtResource("7_yy3de")]([])
+inputs = Array[String]([])
+outputs = Array[String]([])
 metadata/_custom_type_script = "uid://cx1khln4eb0rb"
 
 [sub_resource type="Resource" id="Resource_f4ul4"]
@@ -764,7 +779,7 @@ sprite_properties = Array[Dictionary]([])
 script = ExtResource("16_75fmq")
 major_version = 0
 minor_version = 0
-build_version = 107
+build_version = 119
 window = Rect2i(0, 0, 240, 152)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("11_u13fq")]([SubResource("Resource_n2bqw")])
@@ -783,3 +798,7 @@ sounds = {
 }
 images = {}
 breakpoints = {}
+properties = {}
+max_dynamic_objects = 10
+subgraphs = Array[ExtResource("20_5avji")]([])
+controller_keycodes = Array[int]([512, 256, 1281, 1280, 1792])

@@ -1,0 +1,214 @@
+[gd_resource type="Resource" script_class="IB_GT_GameData" load_steps=34 format=3]
+
+[ext_resource type="Script" path="res://brush.gd" id="1_33wmk"]
+[ext_resource type="Script" path="res://object_ref.gd" id="2_tcaox"]
+[ext_resource type="Script" path="res://room_ref.gd" id="3_44duu"]
+[ext_resource type="Script" path="res://map.gd" id="4_rlimf"]
+[ext_resource type="Script" path="res://marker.gd" id="5_kyno8"]
+[ext_resource type="Script" path="res://logic_connection.gd" id="6_lgfqt"]
+[ext_resource type="Script" path="res://logic_frame.gd" id="7_mqasi"]
+[ext_resource type="Script" path="res://logic_graph.gd" id="8_wv120"]
+[ext_resource type="Script" path="res://logic_variable.gd" id="9_kfh1v"]
+[ext_resource type="Script" path="res://room.gd" id="10_vxejs"]
+[ext_resource type="Script" path="res://game_map.gd" id="11_4mw2f"]
+[ext_resource type="Script" path="res://object.gd" id="12_q58fx"]
+[ext_resource type="Script" path="res://screen.gd" id="13_umfg4"]
+[ext_resource type="Script" path="res://instrument.gd" id="14_fqwr2"]
+[ext_resource type="Script" path="res://game_data.gd" id="15_fdgor"]
+[ext_resource type="Script" path="res://beep_fx_block.gd" id="16_kll41"]
+[ext_resource type="Script" path="res://beep_fx.gd" id="17_7uke7"]
+[ext_resource type="Script" path="res://sprite_sheet.gd" id="18_s31oc"]
+[ext_resource type="Script" path="res://sub_graph.gd" id="19_8la10"]
+
+[sub_resource type="Resource" id="Resource_2d6f7"]
+script = ExtResource("1_33wmk")
+contents = [[{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": null
+}, {
+"attr": null,
+"tile": 0
+}], [{
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": 0
+}, {
+"attr": null,
+"tile": 0
+}]]
+
+[sub_resource type="Resource" id="Resource_061ye"]
+script = ExtResource("4_rlimf")
+cells = {
+Vector2i(12, 3): 0,
+Vector2i(12, 4): 0,
+Vector2i(12, 5): 0,
+Vector2i(12, 6): 0,
+Vector2i(12, 7): 0,
+Vector2i(12, 8): 0,
+Vector2i(12, 9): 0,
+Vector2i(12, 10): 0,
+Vector2i(12, 11): 0,
+Vector2i(13, 3): 0,
+Vector2i(13, 11): 0,
+Vector2i(14, 3): 0,
+Vector2i(14, 4): 0,
+Vector2i(14, 5): 0,
+Vector2i(14, 6): 0,
+Vector2i(14, 7): 0,
+Vector2i(14, 8): 0,
+Vector2i(14, 9): 0,
+Vector2i(14, 10): 0,
+Vector2i(14, 11): 0
+}
+brushes = {
+Vector2i(1, -3): 0,
+Vector2i(11, 27): 0,
+Vector2i(29, 21): 0,
+Vector2i(36, 11): 0
+}
+
+[sub_resource type="Resource" id="Resource_wyc1u"]
+script = ExtResource("8_wv120")
+
+[sub_resource type="Resource" id="Resource_7moqw"]
+script = ExtResource("10_vxejs")
+room_name = "new room"
+map = SubResource("Resource_061ye")
+room_logic = SubResource("Resource_wyc1u")
+
+[sub_resource type="Resource" id="Resource_kjado"]
+script = ExtResource("3_44duu")
+room = SubResource("Resource_7moqw")
+room_ref_name = "new room"
+
+[sub_resource type="Resource" id="Resource_r3ltg"]
+script = ExtResource("11_4mw2f")
+rooms = Array[ExtResource("3_44duu")]([SubResource("Resource_kjado")])
+
+[sub_resource type="Resource" id="Resource_hvkwg"]
+script = ExtResource("8_wv120")
+
+[sub_resource type="Resource" id="Resource_3rjlj"]
+script = ExtResource("4_rlimf")
+metadata/_custom_type_script = "uid://bstlhmjgmke7a"
+
+[sub_resource type="Resource" id="Resource_oe7tb"]
+script = ExtResource("8_wv120")
+metadata/_custom_type_script = "uid://cx1khln4eb0rb"
+
+[sub_resource type="Resource" id="Resource_f4ul4"]
+script = ExtResource("13_umfg4")
+screen_name = "Default"
+is_game_screen = true
+screen_logic = SubResource("Resource_oe7tb")
+map = SubResource("Resource_3rjlj")
+
+[sub_resource type="Resource" id="Resource_2eind"]
+script = ExtResource("16_kll41")
+frames = 20
+pitch = 2000
+pitch_slide = -50
+
+[sub_resource type="Resource" id="Resource_h5due"]
+script = ExtResource("17_7uke7")
+fx_name = "Fire"
+blocks = Array[ExtResource("16_kll41")]([SubResource("Resource_2eind")])
+
+[sub_resource type="Resource" id="Resource_wnpwt"]
+script = ExtResource("18_s31oc")
+sheet_name = "Main"
+num_layers = 2
+sprite_width = 16
+sprite_height = 16
+num_pixels_per_sprite = 256
+
+[sub_resource type="Resource" id="Resource_qm1oa"]
+script = ExtResource("18_s31oc")
+num_sprites = 1
+num_pixels_per_sprite = 64
+sprite_data = [[Array[int]([1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1])]]
+sprite_properties = Array[Dictionary]([{}])
+
+[resource]
+script = ExtResource("15_fdgor")
+window = Rect2i(0, 0, 256, 192)
+format_version_string = "0.1"
+sprite_sheets = Array[ExtResource("18_s31oc")]([SubResource("Resource_wnpwt")])
+tile_sheet = SubResource("Resource_qm1oa")
+graph_resource = SubResource("Resource_hvkwg")
+rooms = Array[ExtResource("10_vxejs")]([SubResource("Resource_7moqw")])
+game_map = SubResource("Resource_r3ltg")
+screens = Array[ExtResource("13_umfg4")]([SubResource("Resource_f4ul4")])
+brushes = Array[ExtResource("1_33wmk")]([SubResource("Resource_2d6f7")])
+sounds = {
+"beep_fx": [SubResource("Resource_h5due")]
+}

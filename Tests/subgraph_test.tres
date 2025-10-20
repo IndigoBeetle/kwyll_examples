@@ -407,16 +407,6 @@ to_port = 0
 to_port_name = "flow_in"
 type = 0
 
-[sub_resource type="Resource" id="Resource_yqrr6"]
-script = ExtResource("3_1k0qk")
-from_node = "b0697bbf-c57d-43e0-845c-f547c456386a"
-to_node = "9128a88c-b402-4cd6-b0fc-9e944f948130"
-from_port = 0
-from_port_name = "val"
-to_port = 1
-to_port_name = "b_val"
-type = 1
-
 [sub_resource type="Resource" id="Resource_laj5l"]
 script = ExtResource("3_1k0qk")
 from_node = "2e3c0aaf-22fc-41b5-9709-27ead6e79ac9"
@@ -445,6 +435,16 @@ from_port = 0
 from_port_name = "val"
 to_port = 0
 to_port_name = "a_val"
+type = 1
+
+[sub_resource type="Resource" id="Resource_yqrr6"]
+script = ExtResource("3_1k0qk")
+from_node = "b0697bbf-c57d-43e0-845c-f547c456386a"
+to_node = "9128a88c-b402-4cd6-b0fc-9e944f948130"
+from_port = 0
+from_port_name = "val"
+to_port = 1
+to_port_name = "b_val"
 type = 1
 
 [sub_resource type="Resource" id="Resource_3ihcp"]
@@ -566,7 +566,7 @@ properties = {
 "index": 0,
 "name": "HSpeed"
 }
-position = Vector2(355.795, 1175.79)
+position = Vector2(300, 1180)
 node_size = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_wfmkj"]
@@ -622,7 +622,7 @@ nodes = {
 "e3e0cda8-51b3-40be-ab91-b07a868b735a": SubResource("Resource_1cotd"),
 "ef13ce81-3958-42f7-b5ee-a822966c8066": SubResource("Resource_1oe4m")
 }
-connections = Array[ExtResource("3_1k0qk")]([SubResource("Resource_ffljh"), SubResource("Resource_g15lk"), SubResource("Resource_xf6r7"), SubResource("Resource_sfngq"), SubResource("Resource_unwaw"), SubResource("Resource_e0yaq"), SubResource("Resource_c51y6"), SubResource("Resource_fi4vy"), SubResource("Resource_hfx1t"), SubResource("Resource_xhp5u"), SubResource("Resource_q1208"), SubResource("Resource_0o20p"), SubResource("Resource_yqrr6"), SubResource("Resource_laj5l"), SubResource("Resource_8fclx"), SubResource("Resource_5puq3")])
+connections = Array[ExtResource("3_1k0qk")]([SubResource("Resource_ffljh"), SubResource("Resource_g15lk"), SubResource("Resource_xf6r7"), SubResource("Resource_sfngq"), SubResource("Resource_unwaw"), SubResource("Resource_e0yaq"), SubResource("Resource_c51y6"), SubResource("Resource_fi4vy"), SubResource("Resource_hfx1t"), SubResource("Resource_xhp5u"), SubResource("Resource_q1208"), SubResource("Resource_0o20p"), SubResource("Resource_laj5l"), SubResource("Resource_8fclx"), SubResource("Resource_5puq3"), SubResource("Resource_yqrr6")])
 frames = Array[ExtResource("4_53pxw")]([])
 inputs = Array[String](["HSpeed", "VSpeed", "X", "Y"])
 outputs = Array[String](["X", "Y"])
@@ -735,6 +735,7 @@ def_var_array = []
 timeline_animations = {}
 timeline_anim_array = []
 current_animation = 0
+initial_animation = 0
 animation = 0
 current_frame = 0
 is_global = true
@@ -841,6 +842,7 @@ def_var_array = []
 timeline_animations = {}
 timeline_anim_array = []
 current_animation = 0
+initial_animation = 0
 animation = 0
 current_frame = 0
 is_global = false
@@ -1047,7 +1049,7 @@ sprite_properties = Array[Dictionary]([{}, {}, {}, {
 script = ExtResource("16_xfduv")
 major_version = 0
 minor_version = 0
-build_version = 112
+build_version = 128
 window = Rect2i(24, 16, 208, 160)
 format_version_string = "0.1"
 sprite_sheets = Array[ExtResource("8_0obyk")]([SubResource("Resource_e3flb"), SubResource("Resource_vh5fk")])
@@ -1067,3 +1069,6 @@ breakpoints = {}
 properties = {}
 max_dynamic_objects = 10
 subgraphs = Array[ExtResource("8_6jv2g")]([SubResource("Resource_lk3kn"), SubResource("Resource_bwcaa")])
+controller_keycodes = Array[int]([512, 256, 1281, 1280, 1792])
+max_animated_tiles = 20
+throttle = 50
